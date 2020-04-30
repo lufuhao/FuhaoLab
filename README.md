@@ -11,9 +11,11 @@
 在你的~/.bashrc里面添加如下行
 
 export PROGPATH=${HOME}/Programs
+
 export BIODATABASES=${HOME}/Databases
 
-其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+    其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+
     ${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
 
 ---
