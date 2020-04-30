@@ -1,4 +1,5 @@
 #!/bin/bash
+### Require: tbb
 source FuhaoLab.conf
 
 
@@ -6,24 +7,21 @@ PackageName="bowtie"
 PackageVers="v1.2.3"
 InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
 NameUncompress="bowtie-1.2.3"
-
+TestCmd="./bowtie --help"
 
 
 NameCompress=$PackageName-$PackageVers.tar.gz
-CheckPath bowtie v1.2.3
+CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
-tar xzvf $NameCompress
-cd $NameUncompress
-make
-make prefix=$PWD/../x86_64 install
-cd $PWD/../x86_64/bin
-./bowtie
+RunCmds "tar xzvf $NameCompress"
+cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
+RunCmds "make"
+RunCmds "make prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 install"
+cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
+bash $TestCmd
 if [ $? -ne 0 ]; then
-	echo "Info: if you want it in effect immediately"
-	echo "export PATH=$PWD:\$PATH"
-	echo "Info: adding to PATH to ~/.bashrc"
-	echo "### $PackageName-$PackageVers" >> ~/.bashrc
-	echo "export PATH=$PWD:\$PATH" >> ~/.bashrc
+	cd ../
+	AddEnvironVariable $PWD "$PackageName-$PackageVers"
 else
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
