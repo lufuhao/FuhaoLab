@@ -16,9 +16,21 @@ export PROGPATH=${HOME}/Programs
 
 此仓库的脚本都会默认安装到此目录下
 
+---
+
 # 新软件的安装/编译问题
 
 请到Issue下面提出问题
+
+---
+
+# Routine libraries
+
+sudo apt-get install libtbb-dev
+
+## Bowtie
+
+> libtbb-dev
 
 ---
 
