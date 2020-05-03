@@ -38,6 +38,10 @@ sudo apt-get install libbz2-dev libtbb-dev zlib1g-dev
 
 > zlib bzip2
 
+## Trimmomatic
+
+> jdk
+
 ---
 
 ## Author:
