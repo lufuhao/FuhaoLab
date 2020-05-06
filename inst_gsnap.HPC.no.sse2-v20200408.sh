@@ -21,12 +21,12 @@ cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
 if [ ! -d $BIODATABASES/gmapdb ]; then
 	mkdir -p $BIODATABASES/gmapdb
 fi
-#RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib --disable-sse2"
-#RunCmds "make"
-#RunCmds "make check"
-#RunCmds "make install"
+RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib --disable-sse2"
+RunCmds "make"
+RunCmds "make check"
+RunCmds "make install"
 cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
-./gsnap -h
+./gsnap --help
 if [ $? -ne 0 ]; then
 	cd ../
 	AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
