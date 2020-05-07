@@ -42,9 +42,8 @@ cd $PROGPATH/$PackageName/$PackageVers/x86_64
 sed -i 's/\/usr\/bin\/perl/\/usr\/bin\/env perl/' trim_galore
 bash $TestCmd
 if [ $? -ne 0 ]; then
-	cd ../
-	AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-else
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
+cd $PROGPATH/$PackageName/$PackageVers/x86_64
+AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"

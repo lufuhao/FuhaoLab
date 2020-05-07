@@ -23,9 +23,9 @@ RunCmds "make install"
 cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
 bash $TestCmd
 if [ $? -ne 0 ]; then
-	cd ../
-	AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-else
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
+
+cd $PROGPATH/$PackageName/$PackageVers/x86_64
+AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"

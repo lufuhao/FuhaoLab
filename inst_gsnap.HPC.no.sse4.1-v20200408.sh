@@ -28,10 +28,9 @@ RunCmds "make install"
 cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
 ./gsnap --help
 if [ $? -ne 0 ]; then
-	cd ../
-	AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-	echo "Info: GMAPDB was set to $BIODATABASES/gmapdb"
-else
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
+cd $PROGPATH/$PackageName/$PackageVers/x86_64
+AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
+PrintInfo "Info: GMAPDB was set to $BIODATABASES/gmapdb"

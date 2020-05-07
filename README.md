@@ -28,7 +28,10 @@ export BIODATABASES=${HOME}/Databases
 
 # Routine libraries
 
-sudo apt-get install libbz2-dev libtbb-dev zlib1g-dev
+sudo apt-get install curl libbz2-dev libtbb-dev python3-dev zlib1g-dev
+
+perl -MCPAN -e 'install Log::Log4perl'
+
 
 ## Bowtie
 
@@ -44,7 +47,7 @@ sudo apt-get install libbz2-dev libtbb-dev zlib1g-dev
 
 ## Trimmomatic
 
-> jdk
+> JavaSE
 
 ---
 
