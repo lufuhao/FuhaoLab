@@ -16,16 +16,16 @@ if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb"
+RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
 RunCmds "make"
 RunCmds "make check"
 RunCmds "make install"
-cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 bash $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
 
-cd $PROGPATH/$PackageName/$PackageVers/x86_64
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"

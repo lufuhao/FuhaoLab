@@ -1,6 +1,7 @@
 #!/bin/bash
 source FuhaoLab.conf
-
+### For Perl module: Bio::DB::Sam
+echo "Info: Compile samtools for Bio::DB::Sam"
 
 PackageName="samtools"
 PackageVers="v0.1.20"
