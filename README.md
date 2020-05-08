@@ -52,12 +52,13 @@ perl -MCPAN -e 'install File::Copy'
 
 perl -MCPAN -e 'install File::Which'
 
+perl -MCPAN -e 'install FindBin'
+
 perl -MCPAN -e 'install Scalar::Util'
 
 perl -MCPAN -e 'install Statistics::Basic'
 
 perl -MCPAN -e 'install Storable'
-
 
 ---
 
@@ -73,15 +74,15 @@ perl -MCPAN -e 'install Storable'
 
 > Python modules: 
 
+## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
+
+> Perl modules: FindBin, Getopt::Long
+
 ## [FuhaoPerl5Lib](https://github.com/lufuhao/FuhaoPerl5Lib)
 
 > Perl: BioPerl,Bio::DB::Sam,Cwd,Data::Dumper,File::Copy,File::Which,Scalar::Util,Statistics::Basic,Storable
 
-> samtools
-
-> seqtk
-
-> CDBtools
+> samtools,seqtk,CDBtools
 
 ## [HTSlib](https://github.com/samtools/htslib)
 
