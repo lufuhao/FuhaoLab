@@ -26,9 +26,17 @@ export BIODATABASES=${HOME}/Databases
 
 ---
 
-# Routine libraries
+# Requirements
 
-sudo apt-get install autoconf automake curl gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev zlib1g-dev
+## Routine libraries
+
+sudo apt-get install autoconf automake curl gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev python-pip python3-pip python-setuptools python3-setuptools zlib1g-dev
+
+## Python modules
+
+sudo pip3 install cython
+
+## Perl modules
 
 perl -MCPAN -e 'force install BioPerl'
 
@@ -51,13 +59,21 @@ perl -MCPAN -e 'install Statistics::Basic'
 perl -MCPAN -e 'install Storable'
 
 
+---
+
+# Softwares
+
 ## Bowtie
 
 > libtbb-dev
 
-## FuhaoPerl5Lib
+## [CutAdapt](https://github.com/marcelm/cutadapt)
 
-### https://github.com/lufuhao/FuhaoPerl5Lib
+> python-pip python3-pip python-setuptools python3-setuptools
+
+> Python modules: 
+
+## [FuhaoPerl5Lib](https://github.com/lufuhao/FuhaoPerl5Lib)
 
 > Perl: BioPerl,Bio::DB::Sam,Cwd,Data::Dumper,File::Copy,File::Which,Scalar::Util,Statistics::Basic,Storable
 
@@ -67,9 +83,17 @@ perl -MCPAN -e 'install Storable'
 
 > CDBtools
 
+## [HTSlib](https://github.com/samtools/htslib)
+
+> zlib, autoconf, make
+
 ## GMAP/GSNAP
 
 > zlib, bzip2
+
+## [picard](https://github.com/broadinstitute/picard)
+
+> JavaSE
 
 ## samtools
 
