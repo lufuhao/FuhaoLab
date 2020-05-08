@@ -28,18 +28,52 @@ export BIODATABASES=${HOME}/Databases
 
 # Routine libraries
 
-sudo apt-get install curl libbz2-dev libtbb-dev python3-dev zlib1g-dev
+sudo apt-get install autoconf automake curl gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev zlib1g-dev
 
-perl -MCPAN -e 'install Log::Log4perl'
+perl -MCPAN -e 'force install BioPerl'
+
+perl -MCPAN -e 'install Bio::DB::Sam'
+
+> need samtools compiled using fPic
+
+perl -MCPAN -e 'install Cwd'
+
+perl -MCPAN -e 'install Data::Dumper'
+
+perl -MCPAN -e 'install File::Copy'
+
+perl -MCPAN -e 'install File::Which'
+
+perl -MCPAN -e 'install Scalar::Util'
+
+perl -MCPAN -e 'install Statistics::Basic'
+
+perl -MCPAN -e 'install Storable'
 
 
 ## Bowtie
 
 > libtbb-dev
 
+## FuhaoPerl5Lib
+
+### https://github.com/lufuhao/FuhaoPerl5Lib
+
+> Perl: BioPerl,Bio::DB::Sam,Cwd,Data::Dumper,File::Copy,File::Which,Scalar::Util,Statistics::Basic,Storable
+
+> samtools
+
+> seqtk
+
+> CDBtools
+
 ## GMAP/GSNAP
 
-> zlib bzip2
+> zlib, bzip2
+
+## samtools
+
+> zlib, GNU ncurses, HTSlib
 
 ## Trim_galore
 
