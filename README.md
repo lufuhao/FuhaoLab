@@ -84,6 +84,10 @@ perl -MCPAN -e 'install Storable'
 
 > samtools,seqtk,CDBtools
 
+## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
+
+> JavaSE
+
 ## [HTSlib](https://github.com/samtools/htslib)
 
 > zlib, autoconf, make

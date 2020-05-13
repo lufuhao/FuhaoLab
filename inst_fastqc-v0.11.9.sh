@@ -28,3 +28,5 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+
+exit 0
