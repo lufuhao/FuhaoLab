@@ -30,7 +30,9 @@ export BIODATABASES=${HOME}/Databases
 
 ## Routine libraries
 
-sudo apt-get install autoconf automake build-essential curl fig2dev gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev python-pip python3-pip python-setuptools python3-setuptools xfig zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libcurl4-openssl-dev libexpat1-dev libgd-dev libglu1-mesa-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python-pip python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+
+
 
 ## Python modules
 
@@ -95,6 +97,11 @@ perl -MCPAN -e 'install Storable'
 ## GMAP/GSNAP
 
 > zlib, bzip2
+
+## GNUplot(http://www.gnuplot.info/)
+
+> texdir, GD, libreadline-dev
+
 
 ## MUMmer
 
