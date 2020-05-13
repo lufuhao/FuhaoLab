@@ -35,6 +35,11 @@ if [ ! -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
+if [ -s $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin/mummerplot ]; then
+	sed -i '1c #!/usr/bin/env perl' $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin/mummerplot
+fi
+
+
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
