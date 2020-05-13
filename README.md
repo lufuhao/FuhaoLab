@@ -30,7 +30,7 @@ export BIODATABASES=${HOME}/Databases
 
 ## Routine libraries
 
-sudo apt-get install autoconf automake curl gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev python-pip python3-pip python-setuptools python3-setuptools zlib1g-dev
+sudo apt-get install autoconf automake build-essential curl fig2dev gcc libbz2-dev libcurl4-gnutls-dev liblzma-dev libncurses5-dev libncurses5-dev libssl-dev libtbb-dev make perl python3-dev python-pip python3-pip python-setuptools python3-setuptools xfig zlib1g-dev
 
 ## Python modules
 
@@ -95,6 +95,22 @@ perl -MCPAN -e 'install Storable'
 ## GMAP/GSNAP
 
 > zlib, bzip2
+
+## MUMmer
+
+### [MUMmer4](http://mummer4.github.io)
+
+> g++ version >= 4.7, GNU make, ar, perl >=5.6.0, sh, sed, awk, tcsh
+
+>> sudo apt-get build-essential
+
+> fig2dev (3.2.3)
+
+> gnuplot (4.0)
+
+> xfig (3.2)
+
+> yaggo
 
 ## [picard](https://github.com/broadinstitute/picard)
 

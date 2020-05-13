@@ -25,13 +25,13 @@ RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$M
 RunCmds "make"
 RunCmds "make test"
 RunCmds "make install"
-if [ ! -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/include ]; then
+if [ ! -d $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE/include ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+cd $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE
 
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddEnvironVariable $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 rm -rf ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 exit 0
