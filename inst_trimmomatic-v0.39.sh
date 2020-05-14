@@ -25,8 +25,8 @@ cd $PROGPATH/$PackageName/$PackageVers/x86_64
 if [ -s $PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar ]; then
 	PrintInfo "export PATH_TRIMMOMATIC_JAR=$PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar"
 	export PATH_TRIMMOMATIC_JAR=$PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar
-	echo "### $PackageName-$PackageVers" >> ${HOME}/.bashrc
-	echo "export PATH_TRIMMOMATIC_JAR=$PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar" >> ${HOME}/.bashrc
+	echo "### $PackageName-$PackageVers" >> $EnvironFilePath
+	echo "export PATH_TRIMMOMATIC_JAR=$PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar" >> $EnvironFilePath
 else
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100

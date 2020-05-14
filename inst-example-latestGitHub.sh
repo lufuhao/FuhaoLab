@@ -19,7 +19,7 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 #AC_INIT([MUMmer], [4.0.0beta2], [gmarcais@umd.edu])
-PackageVers="v"$(grep 'AC_INIT([MUMmer]' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | cut -f 2, -d ',' | perl -lne 's/^.*\[//;s/\].*$//;print;')
+PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | sed 's/^AC_INIT.*jellyfish\], \[//;s/\].*$//g')
 PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
 
@@ -27,7 +27,10 @@ RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "make"
 RunCmds "make test"
 RunCmds "make install"
-if [ ! -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/include ]; then
+
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+$TestCmd
+if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
@@ -36,4 +39,5 @@ cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 rm -rf ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+
 exit 0

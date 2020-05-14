@@ -30,6 +30,6 @@ RunCmds 'make'
 mv filter filter_sam_vcf
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/filter_sam_vcf "$PackageName-filter_sam_vcf"
 PrintInfo "export PATH_HANDS2_JAR=$PROGPATH/$PackageName/$PackageVers/$NameUncompress/hands2.jar"
-echo "export PATH_HANDS2_JAR=$PROGPATH/$PackageName/$PackageVers/$NameUncompress/hands2.jar" >> ~/.bashrc
+echo "export PATH_HANDS2_JAR=$PROGPATH/$PackageName/$PackageVers/$NameUncompress/hands2.jar" >> $EnvironFilePath
 
 exit 0

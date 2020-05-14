@@ -31,9 +31,9 @@ cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 PrintInfo "export GNUPLOT=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
-echo "export GNUPLOT=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE" >> ~/.bashrc
+echo "export GNUPLOT=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE" >> $EnvironFilePath
 PrintInfo "export GNUPLOT_PS_DIR=\${GNUPLOT}share/gnuplot/4.6/PostScript"
-echo "export GNUPLOT_PS_DIR=\${GNUPLOT}/share/gnuplot/4.6/PostScript" >> ~/.bashrc
+echo "export GNUPLOT_PS_DIR=\${GNUPLOT}/share/gnuplot/4.6/PostScript" >> $EnvironFilePath
 
 rm -rf ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 exit 0
