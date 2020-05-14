@@ -98,10 +98,13 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, bzip2
 
-## GNUplot(http://www.gnuplot.info/)
+## [GNUplot](http://www.gnuplot.info/)
 
 > texdir, GD, libreadline-dev
 
+## [Jellyfish](https://github.com/gmarcais/Jellyfish)
+
+> autoreconf, gcc, make
 
 ## MUMmer
 
