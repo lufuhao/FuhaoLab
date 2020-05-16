@@ -40,7 +40,7 @@ fi
 mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/x86_64
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
 sed -i 's/\/usr\/bin\/perl/\/usr\/bin\/env perl/' trim_galore
-bash $TestCmd
+$TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100

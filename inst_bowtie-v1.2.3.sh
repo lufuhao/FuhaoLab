@@ -18,7 +18,7 @@ cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
 RunCmds "make"
 RunCmds "make prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 install"
 cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
-bash $TestCmd
+$TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100

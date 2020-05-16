@@ -66,15 +66,13 @@ perl -MCPAN -e 'install Storable'
 
 # Softwares
 
-## Bowtie
+## [Bowtie](https://github.com/BenLangmead/bowtie)
 
 > libtbb-dev
 
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
-> python-pip python3-pip python-setuptools python3-setuptools
-
-> Python modules: 
+> Python modules: python-pip python3-pip python-setuptools python3-setuptools
 
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
@@ -94,7 +92,7 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, autoconf, make
 
-## GMAP/GSNAP
+## [GMAP/GSNAP](http://research-pub.gene.com/gmap/)
 
 > zlib, bzip2
 
@@ -105,6 +103,10 @@ perl -MCPAN -e 'install Storable'
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
 > autoreconf, gcc, make
+
+## MACS2(https://github.com/taoliu/MACS)
+
+> Gcc 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
 ## MUMmer
 
@@ -126,15 +128,21 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
-## samtools
+## [Primer3](https://github.com/primer3-org/primer3)
+
+> build-essential g++ cmake git-all
+
+## [samtools](https://github.com/samtools/samtools)
 
 > zlib, GNU ncurses, HTSlib
 
-## Trim_galore
+> inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
+
+## [Trim_galore](https://github.com/FelixKrueger/TrimGalore)
 
 > python3-dev 
 
-## Trimmomatic
+## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
 > JavaSE
 

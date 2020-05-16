@@ -2,7 +2,7 @@
 source FuhaoLab.conf
 
 
-PythonModules2install="cutadapt"
+PythonModules2install="pip install MACS2"
 
 if CheckPythonModules $PythonModules2install; then
 	echo "Info: PythonModules2install installed, now checking upgrades"

@@ -19,7 +19,7 @@ DownloadWget $InternetLink $NameCompress
 echo '#!/bin/bash' > picard
 echo "java -jar $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin \"\$@\"" >> picard
 chmod +x picard
-bash $TestCmd
+$TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
