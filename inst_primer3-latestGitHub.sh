@@ -5,7 +5,7 @@ source FuhaoLab.conf
 
 PackageName="primer3"
 PackageVersTemp="version"
-InternetLink='git@github.com:primer3-org/primer3.git'
+InternetLink='https://github.com/primer3-org/primer3.git'
 NameUncompress="primer3"
 TestCmd="./primer3_core --help"
 #return 255

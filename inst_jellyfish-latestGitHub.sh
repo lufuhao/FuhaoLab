@@ -1,11 +1,11 @@
 #!/bin/bash
-#https://github.com/gmarcais/Jellyfish/
+#https://github.com/gmarcais/Jellyfish
 source FuhaoLab.conf
 
 
 PackageName="jellyfish"
 PackageVersTemp="version"
-InternetLink='git@github.com:gmarcais/Jellyfish.git'
+InternetLink='https://github.com/gmarcais/Jellyfish.git'
 NameUncompress="Jellyfish"
 TestCmd="./jellyfish --version"
 

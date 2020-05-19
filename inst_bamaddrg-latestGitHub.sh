@@ -28,7 +28,7 @@ DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 mv ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools
-git clone git@github.com:pezmaster31/bamtools.git
+git clone https://github.com/pezmaster31/bamtools.git
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download BamTools" >&2
 	exit 100

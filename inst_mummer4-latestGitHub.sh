@@ -6,7 +6,7 @@ source FuhaoLab.conf
 
 PackageName="mummer4"
 PackageVersTemp="version"
-InternetLink='git@github.com:mummer4/mummer.git'
+InternetLink='https://github.com/mummer4/mummer.git'
 NameUncompress="mummer"
 TestCmd="./bowtie --help"
 
