@@ -66,6 +66,14 @@ perl -MCPAN -e 'install Storable'
 
 # Softwares
 
+## [bamaddrg](https://github.com/lufuhao/bamaddrg)
+
+> BamTools, g++
+
+## [BamTools]
+
+> Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
+
 ## [Bowtie](https://github.com/BenLangmead/bowtie)
 
 > libtbb-dev
