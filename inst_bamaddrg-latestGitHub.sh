@@ -38,7 +38,7 @@ mv ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools ${PROGPATH}/$Package
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools_Src
 mkdir ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools_Src/build
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools_Src/build
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=$PWD/../../bamtools .."
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools .."
 RunCmds "make"
 RunCmds "make install"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools_Src
