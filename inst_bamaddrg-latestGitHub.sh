@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="bamaddrg"
 PackageVers="version"
-InternetLink='git@github.com:lufuhao/bamaddrg.git'
+InternetLink='https://github.com/lufuhao/bamaddrg.git'
 NameUncompress="bamaddrg"
 TestCmd="./bamaddrg --help"
 
