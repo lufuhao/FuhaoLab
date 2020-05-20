@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="htslib"
 PackageVersTemp="version"
-InternetLink='git@github.com:samtools/htslib.git'
+InternetLink='https://github.com/samtools/htslib.git'
 NameUncompress="htslib"
 
 CheckLibPath $PackageName
@@ -17,8 +17,11 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-PackageVers="v"$(bash ${PROGPATH}/libraries/$PackageName/$NameUncompress/version.sh)
+
 cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
+
+PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
+PrintInfo "Version: $PackageVers"
 RunCmds "autoheader"
 RunCmds "autoconf"
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
@@ -33,5 +36,6 @@ cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
-rm -rf ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+RunCmds "rm -rf ${PROGPATH}/$PackageName/$NameUncompress"
+
 exit 0

@@ -30,9 +30,11 @@ export BIODATABASES=${HOME}/Databases
 
 ## Routine libraries
 
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libcurl4-openssl-dev libexpat1-dev libgd-dev libglu1-mesa-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python-pip python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
 
+> libcurl4-openssl-dev
 
+> python-pip 
 
 ## Python modules
 
@@ -70,6 +72,10 @@ perl -MCPAN -e 'install Storable'
 
 > BamTools, g++
 
+## [bambam](http://sourceforge.net/projects/bambam/)
+
+>
+
 ## [BamTools]
 
 > Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
@@ -82,6 +88,10 @@ perl -MCPAN -e 'install Storable'
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
 
+## [Eagle]https://github.com/tony-kuo/eagle)
+
+> [HTSLIB](https://github.com/samtools/htslib)
+
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
 > Perl modules: FindBin, Getopt::Long
@@ -92,17 +102,25 @@ perl -MCPAN -e 'install Storable'
 
 > samtools,seqtk,CDBtools
 
+## [gffread](https://github.com/gpertea/gffread)
+
+> [gclib](https://github.com/gpertea/gclib), make
+
+## [GMAP/GSNAP](http://research-pub.gene.com/gmap/)
+
+> zlib, bzip2
+
 ## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
 
 > JavaSE
 
 ## [HTSlib](https://github.com/samtools/htslib)
 
-> zlib, autoconf, make
+> autoconf, make, autoheader, gcc/g++/clang, perl
 
-## [GMAP/GSNAP](http://research-pub.gene.com/gmap/)
+> zlib, libbz2, liblzma, libcurl, libcrypto
 
-> zlib, bzip2
+> $ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 
 ## [GNUplot](http://www.gnuplot.info/)
 
@@ -112,9 +130,19 @@ perl -MCPAN -e 'install Storable'
 
 > autoreconf, gcc, make
 
+## [killisto](https://pachterlab.github.io/kallisto/download.html)
+
+>
+
+## [LAST](http://last.cbrc.jp/)
+
+> g++; >2G memory
+
+> if errors are reported in 'make', try to comment line20 and uncomment line21 or line22
+
 ## MACS2(https://github.com/taoliu/MACS)
 
-> Gcc 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
+> GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
 ## MUMmer
 
@@ -140,15 +168,31 @@ perl -MCPAN -e 'install Storable'
 
 > build-essential g++ cmake git-all
 
+## [R](https://cloud.r-project.org/)
+
+>
+
+## [Salmon](https://combine-lab.github.io/salmon/)
+
+> 
+
 ## [samtools](https://github.com/samtools/samtools)
 
 > zlib, GNU ncurses, HTSlib
 
 > inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
+## [STAR](https://github.com/alexdobin/STAR)
+
+> 
+
+## [subread](http://subread.sourceforge.net/)
+
+> 
+
 ## [Trim_galore](https://github.com/FelixKrueger/TrimGalore)
 
-> python3-dev 
+> python3-dev
 
 ## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 

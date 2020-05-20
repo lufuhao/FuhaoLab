@@ -16,6 +16,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
+cd ${PROGPATH}/$PackageName/$NameUncompress
 #AC_INIT([MUMmer], [4.0.0beta2], [gmarcais@umd.edu])
 PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | sed 's/^AC_INIT.*jellyfish\], \[//;s/\].*$//g')
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
@@ -38,6 +39,6 @@ cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
-rm -rf ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+RunCmds "rm -rf ${PROGPATH}/$PackageName/$NameUncompress"
 
 exit 0
