@@ -2,7 +2,7 @@
 source FuhaoLab.conf
 
 
-PackageName=" mummer4"
+PackageName="mummer4"
 PackageVersTemp="version"
 InternetLink='git@github.com:mummer4/mummer.git'
 NameUncompress="mummer"
@@ -10,9 +10,7 @@ TestCmd="./bowtie --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
-if [ -d ${PROGPATH}/$PackageName/$NameUncompress ]; then
-	RunCmds "rm -rf ${PROGPATH}/$PackageName/$NameUncompress"
-fi
+DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 git clone $InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
@@ -27,6 +25,7 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "make"
 RunCmds "make test"
+DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE

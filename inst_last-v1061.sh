@@ -2,25 +2,26 @@
 source FuhaoLab.conf
 
 
-PackageName="bowtie"
-PackageVers="v1.2.3"
-InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
-NameUncompress="bowtie-1.2.3"
-TestCmd="./bowtie --help"
+PackageName="last"
+PackageVers="v1061"
+InternetLink="http://last.cbrc.jp/last-1061.zip"
+NameUncompress="last-1061"
+TestCmd="./lastal --help"
 
 
-NameCompress=$PackageName-$PackageVers.tar.gz
+NameCompress=$PackageName-$PackageVers.zip
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
-	RunCmds "tar xzvf $NameCompress"
+	RunCmds "unzip $NameCompress"
 fi
+
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
 RunCmds "make"
-RunCmds "make check"
+#RunCmds "make CXXFLAGS=-O3"
+#RunCmds "make CXXFLAGS='-O3 -std=c++11 -pthread -DHAS_CXX_THREADS'"
 DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make install"
+RunCmds "make install prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE"
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 $TestCmd
 if [ $? -ne 0 ]; then
