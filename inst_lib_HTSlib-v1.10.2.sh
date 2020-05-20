@@ -11,6 +11,7 @@ NameUncompress="htslib-1.10.2"
 NameCompress=$PackageName-$PackageVers.tar.gz
 CheckLibPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
+DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
@@ -20,6 +21,7 @@ RunCmds "autoconf"
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "make"
 RunCmds "make test"
+DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 if [ ! -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include ]; then
@@ -29,6 +31,8 @@ fi
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "export HTSDIR=$PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE"
 
 rm -rf ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+
 exit 0
