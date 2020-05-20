@@ -24,7 +24,12 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 mkdir ${PROGPATH}/$PackageName/$NameUncompress/build
 cd ${PROGPATH}/$PackageName/$NameUncompress/build
 RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE .."
+RunCmds "make all"
+DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
+if [ -s ${PROGPATH}/$PackageName/$NameUncompress/build/src/utils/libbamtools-utils.a ]; then
+	cp ${PROGPATH}/$PackageName/$NameUncompress/build/src/utils/libbamtools-utils.a ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib
+fi
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 $TestCmd
 if [ $? -ne 0 ]; then

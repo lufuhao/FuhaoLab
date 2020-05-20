@@ -74,7 +74,9 @@ perl -MCPAN -e 'install Storable'
 
 ## [bambam](http://sourceforge.net/projects/bambam/)
 
->
+> [SAMtools](https://github.com/samtools/samtools), [BAMtools](https://github.com/pezmaster31/bamtools)
+
+> BioPerl
 
 ## [BamTools]
 
