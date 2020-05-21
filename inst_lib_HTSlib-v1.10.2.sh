@@ -16,6 +16,7 @@ if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+unset LIBRARY_PATH; unset LD_LIBRARY_PATH;
 RunCmds "autoheader"
 RunCmds "autoconf"
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
