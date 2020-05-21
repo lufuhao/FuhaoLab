@@ -30,7 +30,7 @@ export BIODATABASES=${HOME}/Databases
 
 ## Routine libraries
 
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libhdf5-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
 
 > libcurl4-openssl-dev
 
@@ -78,7 +78,9 @@ perl -MCPAN -e 'install Storable'
 
 > BioPerl
 
-## [BamTools]
+> Following files must be found in your LIBRARY_PATH variable: libbam.a, libhts.a, libbamtools.a, libbamtools-utils.a, libz.a
+
+## [BamTools](https://github.com/pezmaster31/bamtools)
 
 > Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
 
@@ -90,7 +92,7 @@ perl -MCPAN -e 'install Storable'
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
 
-## [Eagle]https://github.com/tony-kuo/eagle)
+## [Eagle](https://github.com/tony-kuo/eagle)
 
 > [HTSLIB](https://github.com/samtools/htslib)
 
@@ -132,9 +134,13 @@ perl -MCPAN -e 'install Storable'
 
 > autoreconf, gcc, make
 
-## [killisto](https://pachterlab.github.io/kallisto/download.html)
+## [killisto](https://pachterlab.github.io/kallisto/download.html): [github](https://github.com/pachterlab/kallisto)
 
->
+> cmake, zlib, HDF5 C libraries
+
+> sudo apt install cmake zlib1g-dev libhdf5-dev
+
+> try to unset 
 
 ## [LAST](http://last.cbrc.jp/)
 
@@ -142,7 +148,7 @@ perl -MCPAN -e 'install Storable'
 
 > if errors are reported in 'make', try to comment line20 and uncomment line21 or line22
 
-## MACS2(https://github.com/taoliu/MACS)
+## [MACS2](https://github.com/taoliu/MACS)
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
@@ -176,7 +182,11 @@ perl -MCPAN -e 'install Storable'
 
 ## [Salmon](https://combine-lab.github.io/salmon/)
 
-> 
+> libbz2, liblzma, Boost, Cereal, libtbb, libcurl, PkgConfig, libgff, Jemalloc, libstadenio, pufferfish, zlib1g, 
+
+> Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
+
+> sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
 
 ## [samtools](https://github.com/samtools/samtools)
 
