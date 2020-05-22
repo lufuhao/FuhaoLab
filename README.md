@@ -30,7 +30,7 @@ export BIODATABASES=${HOME}/Databases
 
 ## Routine libraries
 
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libhdf5-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libhdf5-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
 
 > libcurl4-openssl-dev
 
@@ -114,6 +114,10 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, bzip2
 
+## [GNUplot](http://www.gnuplot.info/)
+
+> texdir, GD, libreadline-dev
+
 ## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
 
 > JavaSE
@@ -126,13 +130,15 @@ perl -MCPAN -e 'install Storable'
 
 > $ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 
-## [GNUplot](http://www.gnuplot.info/)
-
-> texdir, GD, libreadline-dev
-
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
 > autoreconf, gcc, make
+
+## [KAT](https://github.com/TGAC/KAT)
+
+> v4.8+, make, autoconf V2.53+, automake  V1.11+, libtool V2.4.2+, pthreads, zlib, Python V3.5+, Sphinx-doc V1.3+
+
+> sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
 
 ## [killisto](https://pachterlab.github.io/kallisto/download.html): [github](https://github.com/pachterlab/kallisto)
 
@@ -178,7 +184,7 @@ perl -MCPAN -e 'install Storable'
 
 ## [R](https://cloud.r-project.org/)
 
->
+> 
 
 ## [Salmon](https://combine-lab.github.io/salmon/)
 
