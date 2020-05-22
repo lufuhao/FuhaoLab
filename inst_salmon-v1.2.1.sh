@@ -26,6 +26,8 @@ if [ $? -ne 0 ]; then
 fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+#AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "### $PackageName-$PackageVers"
+AddBashrc "export PATH=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
 
 exit 0
