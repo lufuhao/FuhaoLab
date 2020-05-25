@@ -6,7 +6,7 @@ if [ ! -d $PROGPATH/jdk ]; then
 fi
 cd $PROGPATH/jdk
 
-declare -a JdkFiles=($(ls jdk-8u*-linux-*.tar.gz ))
+declare -a JdkFiles=($(ls jdk-11.*_linux-x64_*.tar.gz ))
 if [[ ${#JdkFiles[@]} -lt 1 ]]; then
 	PrintInfo "Please visit https://www.oracle.com/java/technologies/javase-downloads.html"
 	PrintInfo "Download jdk-xxxx-linux-xxx.tar.gz to this folder: $PROGPATH/jdk"
@@ -16,17 +16,20 @@ elif [[ ${#JdkFiles[@]} -gt 1 ]]; then
 	exit 100
 fi
 
-#jdk-8u251-linux-x64.tar.gz
-#jdk-8u251-linux-i586.tar.gz
+
+
+
+
+#jdk-11.0.7_linux-x64_bin.tar.gz
 
 PackageName="jdk"
 NameCompress=${JdkFiles[0]}
 TestCmd="./java -version"
-PackageVers1=${NameCompress%-linux*}
-PackageVers2=${PackageVers1#jdk-8u}
-PackageVers="v1.8.0.$PackageVers2"
+PackageVers1=${PackageVers1#jdk-}
+PackageVers2=${NameCompress%_linux*}
+PackageVers="v$PackageVers2"
 PackagePlfm1=${NameCompress#*linux-}
-PackagePlfm2=${PackagePlfm1%.tar.gz}
+PackagePlfm2=${PackagePlfm1%_bin.tar.gz}
 if [[ "$PackagePlfm2" == "x64" ]]; then
 	PackagePlfm="x64"
 elif [[ "$PackagePlfm2" == "i586" ]]; then
@@ -35,7 +38,7 @@ else
 	PrintInfo "Error: unknown platform: $PackagePlfm2" >&2
 	exit 100
 fi
-NameUncompress="jdk1.8.0_$PackageVers2"
+NameUncompress="jdk-$PackageVers2"
 
 CheckPath $PackageName $PackageVers
 cd $PROGPATH/$PackageName/$PackageVers
@@ -53,10 +56,9 @@ fi
 cd $PROGPATH/$PackageName/$PackageVers/$PackagePlfm
 AddBashrc "### JDK $PackageName-$PackageVers"
 AddBashrc "export JAVA_HOME=$PROGPATH/$PackageName/$PackageVers/$PackagePlfm"
-AddBashrc "export JRE_HOME=\${JAVA_HOME}/jre"
 AddBashrc "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\$CLASSPATH"
-AddBashrc "export JAVA_PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin"
-AddBashrc "export PATH=\${JAVA_PATH}:\$PATH"
+AddBashrc "export PATH=\${JAVA_HOME}/bin:\$PATH"
 
 mv $PROGPATH/$PackageName/$NameCompress $PROGPATH/$PackageName/$PackageVers
+
 exit 0

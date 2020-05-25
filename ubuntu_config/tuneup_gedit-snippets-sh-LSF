@@ -22,10 +22,9 @@ fi
 if [ ! -s $TargetFile ]; then
 	TestEmptyFile=1
 
-	$TestSudo bash -c "cat>>$TargetFile<<END111
-<?xml version="1.0" encoding="UTF-8"?>
-<snippets language="sh">
-"
+	$TestSudo bash -c "echo \"
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<snippets language=\"sh\" >>$TargetFile"
 fi
 
 $TestSudo bash -c "sed -i '/<\/snippets>/d' $TargetFile"
@@ -34,12 +33,12 @@ $TestSudo bash -c "echo '  <snippet id=\"lsf\">
     <text><![CDATA[#!/bin/bash
 
 #BSUB -a openmpi
-#BSUB -J \$1
-#BSUB -oo %J.\$2.out
-#BSUB -e %J.\$2.err
-#BSUB -R \"rusage[mem=\$3]\"
-#BSUB -q \$4
-#BSUB -n \$5
+#BSUB -J \${1:jobname}
+#BSUB -oo %J.\${2:data-time}.out
+#BSUB -e %J.\${2:data-time}.err
+#BSUB -R \"rusage[mem=\${3:30000}]\"
+#BSUB -q \${4:normal/fat}
+#BSUB -n \${5:1}
 
 ]]></text>
     <description>lsf</description>

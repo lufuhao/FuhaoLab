@@ -1,7 +1,7 @@
 #!/bin/bash
 source FuhaoLab.conf
-TargetFile=/usr/share/gedit/plugins/snippets/sh.xml
-#TargetFile=${HOME}/.config/gedit/snippets/sh.xml
+TargetFile=/usr/share/gedit/plugins/snippets/perl.xml
+#TargetFile=${HOME}/.config/gedit/snippets/perl.xml
 Endingline="</snippets>"
 TestEmptyFile=0
 TestSudo=""
@@ -22,30 +22,34 @@ fi
 if [ ! -s $TargetFile ]; then
 	TestEmptyFile=1
 
-	$TestSudo bash -c "cat>>$TargetFile<<END111
-<?xml version="1.0" encoding="UTF-8"?>
-<snippets language="sh">
-END111
-"
+	$TestSudo bash -c "echo \"
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<snippets language=\"Perl\" >>$TargetFile"
 fi
 
 $TestSudo bash -c "sed -i '/<\/snippets>/d' $TargetFile"
 
-$TestSudo bash -c "echo '  <snippet id=\"lsf\">
-    <text><![CDATA[#!/bin/bash
+$TestSudo bash -c "echo '  <snippet id=\"simhelp\">
+    <text><![CDATA[#!/usr/bin/env perl
+use strict;
+use warnings;
+use constant USAGE =><<EOH;
 
-#BSUB -a openmpi
-#BSUB -J \$1
-#BSUB -oo %J.\$2.out
-#BSUB -e %J.\$2.err
-#BSUB -R \"rusage[mem=\$3]\"
-#BSUB -q \$4
-#BSUB -n \$5
+usage: \\\$0 \$1
+
+Version: 20\$2
+
+Descriptions
+\$3
+
+EOH
+die USAGE if (scalar(@ARGV) != 3);
+
 
 ]]></text>
-    <description>lsf</description>
-    <tag>lsf</tag>
-  </snippet>' >> $TargetFile" 
+    <description>simhelp</description>
+    <tag>simhelp</tag>
+  </snippet>' >> $TargetFile"
 
 if [ $TestEmptyFile -eq 0 ]; then
 #	echo "$LastLine" >> $TargetFile

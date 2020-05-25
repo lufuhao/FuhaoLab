@@ -22,11 +22,9 @@ fi
 if [ ! -s $TargetFile ]; then
 	TestEmptyFile=1
 
-	$TestSudo bash -c "cat>>$TargetFile<<END111
-<?xml version="1.0" encoding="UTF-8"?>
-<snippets language="sh">
-END111
-"
+	$TestSudo bash -c "echo \"
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<snippets language=\"sh\" >>$TargetFile"
 fi
 
 $TestSudo bash -c "sed -i '/<\/snippets>/d' $TargetFile"
