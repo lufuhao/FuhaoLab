@@ -6,7 +6,7 @@ if [ ! -d $PROGPATH/jdk ]; then
 fi
 cd $PROGPATH/jdk
 
-declare -a JdkFiles=($(ls jdk-11.*_linux-x64_*.tar.gz ))
+declare -a JdkFiles=($(ls jdk-11.*_linux-x64_bin.tar.gz ))
 if [[ ${#JdkFiles[@]} -lt 1 ]]; then
 	PrintInfo "Please visit https://www.oracle.com/java/technologies/javase-downloads.html"
 	PrintInfo "Download jdk-xxxx-linux-xxx.tar.gz to this folder: $PROGPATH/jdk"
@@ -25,11 +25,12 @@ fi
 PackageName="jdk"
 NameCompress=${JdkFiles[0]}
 TestCmd="./java -version"
-PackageVers1=${PackageVers1#jdk-}
-PackageVers2=${NameCompress%_linux*}
+PackageVers1=${NameCompress%_linux*}
+PackageVers2=${PackageVers1#jdk-}
 PackageVers="v$PackageVers2"
 PackagePlfm1=${NameCompress#*linux-}
 PackagePlfm2=${PackagePlfm1%_bin.tar.gz}
+PrintInfo "Version: $PackageVers; Platform: $PackagePlfm2"
 if [[ "$PackagePlfm2" == "x64" ]]; then
 	PackagePlfm="x64"
 elif [[ "$PackagePlfm2" == "i586" ]]; then
@@ -56,7 +57,7 @@ fi
 cd $PROGPATH/$PackageName/$PackageVers/$PackagePlfm
 AddBashrc "### JDK $PackageName-$PackageVers"
 AddBashrc "export JAVA_HOME=$PROGPATH/$PackageName/$PackageVers/$PackagePlfm"
-AddBashrc "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\$CLASSPATH"
+AddBashrc "export CLASSPATH=.:\${JAVA_HOME}/lib:\$CLASSPATH"
 AddBashrc "export PATH=\${JAVA_HOME}/bin:\$PATH"
 
 mv $PROGPATH/$PackageName/$NameCompress $PROGPATH/$PackageName/$PackageVers
