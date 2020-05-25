@@ -1,0 +1,69 @@
+#!/bin/bash
+source FuhaoLab.conf
+TargetFile=/usr/share/gedit/plugins/snippets/sh.xml
+#TargetFile=${HOME}/.config/gedit/snippets/sh.xml
+Endingline="</snippets>"
+TestEmptyFile=0
+TestSudo=""
+UseSudo=0
+
+
+if [[ "$TargetFile" =~ \/usr\/ ]]; then
+	PrintInfo "Info: need sudo to run following CMDs"
+	TestSudo="sudo "
+	UseSudo=1
+else
+	PrintInfo "Info: N need sudo"
+	UseSudo=0
+fi
+
+
+
+if [ ! -s $TargetFile ]; then
+	TestEmptyFile=1
+
+	$TestSudo bash -c "cat>>$TargetFile<<END111
+<?xml version="1.0" encoding="UTF-8"?>
+<snippets language="sh">
+END111
+"
+fi
+
+$TestSudo bash -c "sed -i '/<\/snippets>/d' $TargetFile"
+
+$TestSudo bash -c "echo '  <snippet id=\"slurm\">
+    <text><![CDATA[#!/bin/bash
+#SBATCH -o \${1:running}.log
+#SBATCH -e \${1:running}.err
+#SBATCH -c 1
+#SBATCH --ntasks 1
+#SBATCH -J \${2:JOBNAME}
+#SBATCH -p \${3:nbi-development}
+#SBATCH --mail-user=Fu-Hao.Lu@jic.ac.uk
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mem=\${4:30000}
+#SBATCH -N 1
+
+###SBATCH --dependency=<dependency_list>
+###after:job_id[:jobid...]
+###afterany:job_id[:jobid...]
+###afternotok:job_id[:jobid...]
+###afterok:job_id[:jobid...]
+###expand:job_id
+###singleton
+
+
+]]></text>
+    <description>slurm</description>
+    <tag>slurm/tag>
+  </snippet>' >> $TargetFile" 
+
+if [ $TestEmptyFile -eq 0 ]; then
+#	echo "$LastLine" >> $TargetFile
+	$TestSudo bash -c "echo \"$Endingline\" >> $TargetFile"
+
+else
+	$TestSudo bash -c "echo \"$Endingline\" >> $TargetFile"
+fi
+
+exit 0

@@ -1,0 +1,59 @@
+#!/bin/bash
+source FuhaoLab.conf
+TargetFile=/usr/share/gedit/plugins/snippets/sh.xml
+#TargetFile=${HOME}/.config/gedit/snippets/sh.xml
+Endingline="</snippets>"
+TestEmptyFile=0
+TestSudo=""
+UseSudo=0
+
+
+if [[ "$TargetFile" =~ \/usr\/ ]]; then
+	PrintInfo "Info: need sudo to run following CMDs"
+	TestSudo="sudo "
+	UseSudo=1
+else
+	PrintInfo "Info: N need sudo"
+	UseSudo=0
+fi
+
+
+
+if [ ! -s $TargetFile ]; then
+	TestEmptyFile=1
+
+	$TestSudo bash -c "cat>>$TargetFile<<END111
+<?xml version="1.0" encoding="UTF-8"?>
+<snippets language="sh">
+END111
+"
+fi
+
+$TestSudo bash -c "sed -i '/<\/snippets>/d' $TargetFile"
+
+$TestSudo bash -c "echo '  <snippet id=\"lsf\">
+    <text><![CDATA[#!/bin/bash
+
+#BSUB -a openmpi
+#BSUB -J \$1
+#BSUB -oo %J.\$2.out
+#BSUB -e %J.\$2.err
+#BSUB -R \"rusage[mem=\$3]\"
+#BSUB -q \$4
+#BSUB -n \$5
+
+]]></text>
+    <description>lsf</description>
+    <tag>lsf</tag>
+  </snippet>
+' >> $TargetFile" 
+
+if [ $TestEmptyFile -eq 0 ]; then
+#	echo "$LastLine" >> $TargetFile
+	$TestSudo bash -c "echo \"$Endingline\" >> $TargetFile"
+
+else
+	$TestSudo bash -c "echo \"$Endingline\" >> $TargetFile"
+fi
+
+exit 0
