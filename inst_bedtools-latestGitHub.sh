@@ -2,11 +2,11 @@
 source FuhaoLab.conf
 
 
-PackageName="mummer4"
+PackageName="bedtools"
 PackageVersTemp="version"
-InternetLink='git@github.com:mummer4/mummer.git'
-NameUncompress="mummer"
-TestCmd="./bowtie --help"
+InternetLink='https://github.com/arq5x/bedtools2.git'
+NameUncompress="bedtools2"
+TestCmd="./bedtools --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
@@ -16,25 +16,25 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
-#AC_INIT([MUMmer], [4.0.0beta2], [gmarcais@umd.edu])
-PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | sed 's/^AC_INIT.*jellyfish\], \[//;s/\].*$//g')
-PrintInfo "Version: $PackageVers"
+#VERSION_FILE=./src/utils/version/version_git.h
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
-PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --always --tags --dirty)
-PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
+#PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --always --tags --dirty)
+#PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
 
-RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+unset C_INCLUDE_PATH
+unset CPATH
 RunCmds "make"
 RunCmds "make test"
 DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make install"
+RunCmds "make prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE install"
 
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
