@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo apt-get install arj autoconf automake build-essential cmake convmv cython3 fig2dev file-roller g++ gcc gedit-plugins git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-openssl-dev libexpat1-dev libgd-dev libglu1-mesa-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev make mesa-common-dev mpack perl p7zip-full p7zip-rar python-pip python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
