@@ -43,16 +43,18 @@ sudo apt-get install flpsed
 ## git
 ### Accelerate git clone
 ### 在网站  https://www.ipaddress.com/ 分别搜索
-#github.global.ssl.fastly.net
-#github.com
+#140.82.112.3 github.com
+#185.199.110.153 assets-cdn.github.com
+#199.232.69.194 github.global.ssl.fastly.net
 sudo vi /etc/hosts
 #在hosts文件末尾添加两行
 #199.232.69.194  github.global.ssl.fastly.Net
 #140.82.112.3 github.com
 #sudo /etc/init.d/networking restart
-
-
-
+#Windows: ipconfig /flushdns
+75.126.124.162 github.global.ssl.fastly.Net
+13.250.177.223 github.com
+185.199.110.153 assets-cdn.github.com
 ###JDK
 ###命令行方式安装oracle Java JDK
 sudo apt-get install python-software-properties

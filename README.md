@@ -73,6 +73,10 @@ perl -MCPAN -e 'install Storable'
 
 # Softwares
 
+## [Aspera-Connect](https://www.ibm.com/aspera/connect/)
+
+> OpenSSL (>=v1.0.2g), Mesa EGL, glib2 (>=v2.28)
+
 ## [bamaddrg](https://github.com/lufuhao/bamaddrg)
 
 > BamTools, g++
@@ -99,6 +103,10 @@ perl -MCPAN -e 'install Storable'
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
+
+## [deepTools](https://github.com/deeptools/deepTools)
+
+> python
 
 ## [Eagle](https://github.com/tony-kuo/eagle)
 
