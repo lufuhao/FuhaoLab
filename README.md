@@ -174,21 +174,33 @@ perl -MCPAN -e 'install Storable'
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
+## [MEME](http://meme-suite.org/doc/download.html)
+
+> Perl > 5.16, Python 2.7.x or 3.x, zlib, Ghostscript (for creating PNG files), Assorted common utilities
+
+>     sudo apt-get install autoconf automake libtool zlib1g-dev
+
+> Optional: MPI, libxml2, libxslt & libexslt
+
+>     sudo apt-get install libxml2-dev libxslt1-dev openmpi-bin
+
+> Web: Java Development Kit, Apache Ant, Apache Tomcat, Opal, Batch Scheduler
+
+>     sudo apt-get install ant
+
 ## MUMmer
 
 ### [MUMmer4](http://mummer4.github.io)
 
 > g++ version >= 4.7, GNU make, ar, perl >=5.6.0, sh, sed, awk, tcsh
 
->> sudo apt-get build-essential
+> > sudo apt-get build-essential
 
-> fig2dev (3.2.3)
+> fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
 
-> gnuplot (4.0)
+## [NLR-Annotator](https://github.com/steuernb/NLR-Annotator)
 
-> xfig (3.2)
-
-> yaggo
+> MEME, JRE > 1.6
 
 ## [picard](https://github.com/broadinstitute/picard)
 
@@ -206,7 +218,7 @@ perl -MCPAN -e 'install Storable'
 
 > libbz2, liblzma, Boost, Cereal, libtbb, libcurl, PkgConfig, libgff, Jemalloc, libstadenio, pufferfish, zlib1g, 
 
-> Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
+> # Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
 
 > sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
 
@@ -214,7 +226,7 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, GNU ncurses, HTSlib
 
-> inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
+> # inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
 ## [STAR](https://github.com/alexdobin/STAR)
 
