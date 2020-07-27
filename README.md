@@ -198,9 +198,16 @@ perl -MCPAN -e 'install Storable'
 
 > fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
 
+## [NLGenomeSweeper](https://github.com/ntoda03/NLGenomeSweeper)
+
+>  Python >=3.5; blast+; MUSCLE aligner; SAMtools; bedtools; HMMER; InterProScan with PANTHER database; TransDecoder
+
 ## [NLR-Annotator](https://github.com/steuernb/NLR-Annotator)
 
 > MEME, JRE > 1.6
+
+>     MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
+>     MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
 
 ## [picard](https://github.com/broadinstitute/picard)
 
