@@ -138,6 +138,10 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
+## [HMMER](https://github.com/EddyRivasLab/hmmer)
+
+> [easel](https://github.com/EddyRivasLab/easel)
+
 ## [HTSlib](https://github.com/samtools/htslib)
 
 > autoconf, make, autoheader, gcc/g++/clang, perl

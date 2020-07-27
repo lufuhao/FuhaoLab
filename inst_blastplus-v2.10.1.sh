@@ -1,6 +1,6 @@
 #!/bin/bash
 source FuhaoLab.conf
-
+### https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/
 
 PackageName="blastp"
 PackageVers="v2.10.1"
