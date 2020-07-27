@@ -10,6 +10,13 @@ NameUncompress="Trimmomatic-0.39"
 #TestCmd="java -jar trimmomatic-0.39.jar -version"
 TestCmd="java org.usadellab.trimmomatic.TrimmomaticPE"
 
+if CmdExists 'java'; then
+	echo "Info: Java detected"
+	RunCmds "java -version"
+else
+	PrintInfo "Error: JAVA are needed to run trimmomatic. please install JAVA/JAVASE first"
+	exit 100
+fi
 
 NameCompress=$PackageName-$PackageVers.zip
 CheckPath $PackageName $PackageVers
@@ -30,9 +37,9 @@ if [ $? -ne 0 ]; then
 fi
 if [ -s $PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar ]; then
 	AddBashrc "### $PackageName-$PackageVers"
-	AddBashrc "export PATH_TTRIMMOMATIC_ROOT=\${PROGPATH}/$PackageName/$PackageVers/x86_64"
-	AddBashrc "export PATH_TTRIMMOMATIC_ADAPTERS=\${PROGPATH}/$PackageName/$PackageVers/x86_64/adaptors"
-	AddBashrc "export PATH_TRIMMOMATIC_JAR=\${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar"
+	AddBashrc "export TRIMMOMATIC_ROOT=\${PROGPATH}/$PackageName/$PackageVers/x86_64"
+	AddBashrc "export TRIMMOMATIC_ADAPTERS=\${PROGPATH}/$PackageName/$PackageVers/x86_64/adaptors"
+	AddBashrc "export TRIMMOMATIC_JAR=\${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar"
 	AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar:\$CLASSPATH"
 fi
 

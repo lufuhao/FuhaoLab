@@ -148,7 +148,13 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, libbz2, liblzma, libcurl, libcrypto
 
-> $ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
+>     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
+
+## [InterProScan]()
+
+> 64-bit Linux, Perl 5, Python 3
+
+> Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
 
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
@@ -158,13 +164,13 @@ perl -MCPAN -e 'install Storable'
 
 > v4.8+, make, autoconf V2.53+, automake  V1.11+, libtool V2.4.2+, pthreads, zlib, Python V3.5+, Sphinx-doc V1.3+
 
-> sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
+>     sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
 
 ## [killisto](https://pachterlab.github.io/kallisto/download.html): [github](https://github.com/pachterlab/kallisto)
 
 > cmake, zlib, HDF5 C libraries
 
-> sudo apt install cmake zlib1g-dev libhdf5-dev
+>     sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > try to unset 
 
@@ -244,6 +250,10 @@ perl -MCPAN -e 'install Storable'
 > 
 
 ## [subread](http://subread.sourceforge.net/)
+
+> 
+
+## [TransDecoder](https://github.com/TransDecoder/TransDecoder)
 
 > 
 

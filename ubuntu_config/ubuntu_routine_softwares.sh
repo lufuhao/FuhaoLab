@@ -118,5 +118,5 @@ sudo apt install -f
 sudo apt-get install unity-tweak-tool notify-osd
 
 
-
+sudo apt-get install ubuntu-restricted-extras
 
