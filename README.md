@@ -14,13 +14,13 @@
 
 > export BIODATABASES=${HOME}/Databases
 
->    其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+> #其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
 
->    ${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
+> #${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
 
 > export FUHAOLAB_ROOT=/path/to/FuhaoLab
 
-> export PATH=${FUHAOLAB_ROOT}:${FUHAOLAB_ROOT}/ubuntu_config
+> export PATH=${FUHAOLAB_ROOT}:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
 
 
 ---
@@ -91,6 +91,7 @@ perl -MCPAN -e 'install Storable'
 
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
+>
 
 ## [BamTools](https://github.com/pezmaster31/bamtools)
 
@@ -204,7 +205,7 @@ perl -MCPAN -e 'install Storable'
 
 > g++ version >= 4.7, GNU make, ar, perl >=5.6.0, sh, sed, awk, tcsh
 
-> > sudo apt-get build-essential
+>     sudo apt-get build-essential
 
 > fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
 
@@ -216,8 +217,8 @@ perl -MCPAN -e 'install Storable'
 
 > MEME, JRE > 1.6
 
->     MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
->     MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
+>   MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
+>   MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
 
 ## [picard](https://github.com/broadinstitute/picard)
 
@@ -237,7 +238,7 @@ perl -MCPAN -e 'install Storable'
 
 > # Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
 
-> sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
+>     sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
 
 ## [samtools](https://github.com/samtools/samtools)
 
