@@ -15,20 +15,20 @@ DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
-cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
+cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+RunCmds "./configure --enable-lib --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
 RunCmds "make"
 RunCmds "make check"
-DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
 
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 exit 0
