@@ -151,6 +151,12 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 
+## [IGV]()
+
+> gradle, JavaSE >=11
+
+>     sudo apt-get install gradle
+
 ## [InterProScan]()
 
 > 64-bit Linux, Perl 5, Python 3
