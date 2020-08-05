@@ -151,7 +151,11 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 
-## [IGV]()
+## [IGV Compiled](http://software.broadinstitute.org/software/igv/download)
+
+> JavaSE >=11
+
+## [IGV GitHub source](https://github.com/igvteam/igv)
 
 > gradle, JavaSE >=11
 
@@ -248,7 +252,7 @@ perl -MCPAN -e 'install Storable'
 
 ## [samtools](https://github.com/samtools/samtools)
 
-> zlib, GNU ncurses, HTSlib
+> zlib, GNU ncurses, [HTSlib](https://github.com/samtools/htslib)
 
 > # inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
