@@ -242,6 +242,13 @@ perl -MCPAN -e 'install Storable'
 
 > 
 
+
+## [Sambamba](https://github.com/biod/sambamba)
+
+> D compiler (ldc), BioD (git submodule), gcc tool chain (for htslib and lz4), htslib (git submodule), undeaD (git submodule), libz, liblz4
+
+>    inst_lib_ldc-v1.22.0.sh
+
 ## [Salmon](https://combine-lab.github.io/salmon/)
 
 > libbz2, liblzma, Boost, Cereal, libtbb, libcurl, PkgConfig, libgff, Jemalloc, libstadenio, pufferfish, zlib1g, 
