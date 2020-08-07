@@ -283,6 +283,12 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
+## VGSC
+
+> Java >= 1.8.0
+
+>     inst_JDK-v11.x.x.sh
+
 ---
 
 ## Author:
