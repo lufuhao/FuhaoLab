@@ -27,7 +27,7 @@
 
 # 新软件的安装/编译问题
 
-请到Issue下面提出问题
+Raise a hand in this repository Issue if you have any problem, question or if you want some scripts for new softwares.
 
 ---
 
@@ -195,6 +195,12 @@ perl -MCPAN -e 'install Storable'
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
+## MCScanX: [Official](http://chibba.pgml.uga.edu/mcscan2/), [GitHub](https://github.com/wyp1125/MCScanx), [Updated GitHub](https://github.com/lufuhao/MCScanX)
+
+> For Linux: JavaSE, libpng
+
+> For Mac: Xcode
+
 ## [MEME](http://meme-suite.org/doc/download.html)
 
 > Perl > 5.16, Python 2.7.x or 3.x, zlib, Ghostscript (for creating PNG files), Assorted common utilities
@@ -283,7 +289,7 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
-## VGSC
+## VGSC 
 
 > Java >= 1.8.0
 
