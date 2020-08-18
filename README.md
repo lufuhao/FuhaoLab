@@ -143,14 +143,6 @@ perl -MCPAN -e 'install Storable'
 
 > [easel](https://github.com/EddyRivasLab/easel)
 
-## [HTSlib](https://github.com/samtools/htslib)
-
-> autoconf, make, autoheader, gcc/g++/clang, perl
-
-> zlib, libbz2, liblzma, libcurl, libcrypto
-
->     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
-
 ## [IGV Compiled](http://software.broadinstitute.org/software/igv/download)
 
 > JavaSE >=11
@@ -161,7 +153,7 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install gradle
 
-## [InterProScan]()
+## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
 
 > 64-bit Linux, Perl 5, Python 3
 
@@ -183,7 +175,7 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt install cmake zlib1g-dev libhdf5-dev
 
-> try to unset 
+> try to unset
 
 ## [LAST](http://last.cbrc.jp/)
 
@@ -248,7 +240,6 @@ perl -MCPAN -e 'install Storable'
 
 > 
 
-
 ## [Sambamba](https://github.com/biod/sambamba)
 
 > D compiler (ldc), BioD (git submodule), gcc tool chain (for htslib and lz4), htslib (git submodule), undeaD (git submodule), libz, liblz4
@@ -294,6 +285,29 @@ perl -MCPAN -e 'install Storable'
 > Java >= 1.8.0
 
 >     inst_JDK-v11.x.x.sh
+
+---
+
+# Libraries
+
+## [HDF5](https://github.com/HDFGroup/hdf5)
+
+> szip
+
+## [HTSlib](https://github.com/samtools/htslib)
+
+> autoconf, make, autoheader, gcc/g++/clang, perl
+
+> zlib, libbz2, liblzma, libcurl, libcrypto
+
+>     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
+
+## [szip](https://support.hdfgroup.org/doc_resource/SZIP/)
+
+> 
+
+
+
 
 ---
 
