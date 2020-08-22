@@ -211,6 +211,10 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install ant
 
+## [Minimap2](https://github.com/lh3/minimap2)
+
+> Require: gcc-c++, make, zlib
+
 ## MUMmer
 
 ### [MUMmer4](http://mummer4.github.io)
