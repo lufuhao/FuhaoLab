@@ -89,13 +89,17 @@ perl -MCPAN -e 'install Storable'
 
 > Following files must be found in your LIBRARY_PATH variable: libbam.a, libhts.a, libbamtools.a, libbamtools-utils.a, libz.a
 
+## [BamTools](https://github.com/pezmaster31/bamtools)
+
+> Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
+
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
 >
 
-## [BamTools](https://github.com/pezmaster31/bamtools)
+## [BLASR](https://github.com/mchaisso/blasr)
 
-> Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
+> Require: HDF5 (HDF5INCLUDEDIR, HDF5LIBDIR)
 
 ## [Bowtie](https://github.com/BenLangmead/bowtie)
 
@@ -290,9 +294,11 @@ perl -MCPAN -e 'install Storable'
 
 # Libraries
 
-## [HDF5](https://github.com/HDFGroup/hdf5)
+## [HDF5](https://support.hdfgroup.org/ftp/HDF5/releases/), [GitHub](https://github.com/HDFGroup/hdf5)
 
-> szip
+> Require: szip (\$SZIP_ROOT)
+
+> Export: HDF5_ROOT, HDF5_LIB, HDF5LIBDIR, HDF5_INC, HDF5INCLUDEDIR
 
 ## [HTSlib](https://github.com/samtools/htslib)
 
@@ -304,7 +310,7 @@ perl -MCPAN -e 'install Storable'
 
 ## [szip](https://support.hdfgroup.org/doc_resource/SZIP/)
 
-> 
+> Export: SZIP_ROOT
 
 
 
