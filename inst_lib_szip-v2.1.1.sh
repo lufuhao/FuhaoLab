@@ -33,6 +33,7 @@ fi
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "export SZIP_ROOT=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
 
 DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 exit 0
