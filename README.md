@@ -244,6 +244,14 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
+## polyCat (in bambam above)
+
+> BioPerl, [BAMtools](https://github.com/pezmaster31/bamtools)
+
+## polyDog (in bambam above)
+
+> 
+
 ## [Primer3](https://github.com/primer3-org/primer3)
 
 > build-essential g++ cmake git-all
