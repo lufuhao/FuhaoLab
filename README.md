@@ -143,6 +143,10 @@ perl -MCPAN -e 'install Storable'
 
 > JavaSE
 
+## [HISAT2](https://daehwankimlab.github.io/hisat2), [Github](https://github.com/DaehwanKimLab/hisat2)
+
+> 
+
 ## [HMMER](https://github.com/EddyRivasLab/hmmer)
 
 > [easel](https://github.com/EddyRivasLab/easel)
