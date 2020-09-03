@@ -20,7 +20,7 @@ if [ -d $PROGPATH/$PackageName/$PackageVers/x64fPic ]; then
 	rm -rf $PROGPATH/$PackageName/$PackageVers/x64fPic
 fi
 RunCmds "tar xzvf $NameCompress"
-mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/x64fPic
+mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/x64fPic
 cd $PROGPATH/$PackageName/$PackageVers/x64fPic
 RunCmds "make CFLAGS=\" -g -Wall -O2 -fPIC -m64\""
 $TestCmd
@@ -31,3 +31,5 @@ fi
 
 PrintInfo "Info: feed this path to Bio::DB::Sam when you install it"
 PrintInfo "$PWD"
+
+exit 0

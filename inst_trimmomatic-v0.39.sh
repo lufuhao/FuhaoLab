@@ -22,25 +22,34 @@ NameCompress=$PackageName-$PackageVers.zip
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 
-if [ ! -d $PROGPATH/$PackageName/$PackageVers/x86_64 ]; then
-	if [ ! -d $NameUncompress ]; then
-		RunCmds "unzip $NameCompress"
-	else
-		mv $NameUncompress x86_64
-	fi
+cd ${PROGPATH}/$PackageName/$PackageVers
+if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
+	DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 fi
-cd $PROGPATH/$PackageName/$PackageVers/x86_64
-java -classpath ${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -version
+if [ -d ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ]; then
+	DeletePath ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+fi
+RunCmds "unzip $NameCompress"
+mv ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+echo "Version: "
+java -classpath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -version
 if [ $? -ne 0 ]; then
 	PrintInfo "Warnings: failed to run classpath $PackageName-$PackageVers"
 	exit 100
 fi
-if [ -s $PROGPATH/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar ]; then
+echo "#!/bin/bash" >> ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic
+echo "java -jar ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar \$@" >> ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic
+chmod +x ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic
+
+if [ -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar ]; then
 	AddBashrc "### $PackageName-$PackageVers"
-	AddBashrc "export TRIMMOMATIC_ROOT=\${PROGPATH}/$PackageName/$PackageVers/x86_64"
-	AddBashrc "export TRIMMOMATIC_ADAPTERS=\${PROGPATH}/$PackageName/$PackageVers/x86_64/adaptors"
-	AddBashrc "export TRIMMOMATIC_JAR=\${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar"
-	AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/x86_64/trimmomatic-0.39.jar:\$CLASSPATH"
+	AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\${PATH}"
+	AddBashrc "export TRIMMOMATIC_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+	AddBashrc "export TRIMMOMATIC_ADAPTERS=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/adaptors"
+	AddBashrc "export TRIMMOMATIC_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar"
+	AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar:\$CLASSPATH"
 fi
 
 exit 0

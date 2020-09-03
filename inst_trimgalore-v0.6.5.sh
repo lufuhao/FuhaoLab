@@ -9,7 +9,6 @@
 #use Cwd;
 
 source FuhaoLab.conf
-source FuhaoBash_CmdMod
 if CmdExists fastqc; then
 	echo "Info: FastQC detected"
 else

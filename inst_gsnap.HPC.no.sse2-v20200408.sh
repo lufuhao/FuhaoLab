@@ -4,6 +4,11 @@
 source FuhaoLab.conf
 
 
+
+if [ -z "$BIODATABASES" ]; then
+	PrintError: "Error: GMAPDB would be NOT set as $BIODATABASES not defined"
+	exit 100
+fi
 PackageName="gsnap"
 PackageVers="v20200408"
 InternetLink="http://research-pub.gene.com/gmap/src/gmap-gsnap-2020-04-08.tar.gz"
@@ -34,4 +39,6 @@ fi
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
 PrintInfo "Info: GMAPDB was set to $BIODATABASES/gmapdb"
+AddBashrc "export GMAPDB=$BIODATABASES/gmapdb"
 
+exit 0

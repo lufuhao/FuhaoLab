@@ -32,18 +32,18 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "make"
 RunCmds "make test"
-DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
 
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
 
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 
