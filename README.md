@@ -8,15 +8,21 @@
 
 # 准备工作
 
+Check out your machtype and set up your MACHTYPE variable
+
+> uname -m
+
 在你的~/.bashrc里面添加如下行
 
 > export PROGPATH=${HOME}/Programs
 
 > export BIODATABASES=${HOME}/Databases
 
-> #其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+> ecport MACHTYPE=x86_64
 
-> #${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
+>     #其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+
+>     #${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
 
 > export FUHAOLAB_ROOT=/path/to/FuhaoLab
 
@@ -35,7 +41,7 @@ Raise a hand in this repository Issue if you have any problem, question or if yo
 
 ## Routine libraries
 
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libglu1-mesa-dev libhdf5-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
 
 > libcurl4-openssl-dev
 
@@ -113,6 +119,18 @@ perl -MCPAN -e 'install Storable'
 
 > python
 
+## Discovar
+
+### [DISCOVARdenovo](https://software.broadinstitute.org/software/discovar/blog/)
+
+> 64 bit x86_64 based linux, GCC >= 4.7.0, jemalloc, samtools
+
+>     apt-get install libjemalloc-dev
+
+### [DISCOVARvariantcaller](https://software.broadinstitute.org/software/discovar/blog/)
+
+> GCC >= 4.7.0
+
 ## [Eagle](https://github.com/tony-kuo/eagle)
 
 > [HTSLIB](https://github.com/samtools/htslib)
@@ -135,10 +153,6 @@ perl -MCPAN -e 'install Storable'
 
 > zlib, bzip2
 
-## [GNUplot](http://www.gnuplot.info/)
-
-> texdir, GD, libreadline-dev
-
 ## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
 
 > JavaSE
@@ -150,6 +164,10 @@ perl -MCPAN -e 'install Storable'
 ## [HMMER](https://github.com/EddyRivasLab/hmmer)
 
 > [easel](https://github.com/EddyRivasLab/easel)
+
+## [HTseq](https://htseq.readthedocs.io/en/master/), [GitHub](https://github.com/htseq/htseq)
+
+> matplotlib, Cython, pysam, HTSeq
 
 ## [IGV Compiled](http://software.broadinstitute.org/software/igv/download)
 
@@ -280,6 +298,10 @@ perl -MCPAN -e 'install Storable'
 
 > # inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
+## [seqtk](https://github.com/lh3/seqtk)
+
+> make
+
 ## [STAR](https://github.com/alexdobin/STAR)
 
 > 
@@ -296,9 +318,11 @@ perl -MCPAN -e 'install Storable'
 
 > python3-dev
 
+> Perl Modules: Getopt::Long IPC::Open3 File::Spec File::Basename Cwd
+
 ## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
-> JavaSE
+> JDK
 
 ## VGSC 
 
@@ -308,7 +332,28 @@ perl -MCPAN -e 'install Storable'
 
 ---
 
+# R packages
+
+## [RIdeogram](https://cran.r-project.org/web/packages/RIdeogram/)
+
+> librsvg2-dev
+
+## [Circlize](https://cran.r-project.org/web/packages/circlize/)
+
+> R: GlobalOptions, shape, grDevices, utils, stats, colorspace, methods, grid
+
+
+
+---
+
 # Libraries
+
+
+## [GNUplot](http://www.gnuplot.info/)
+
+> texdir, GD, libreadline-dev
+
+>     sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
 
 ## [HDF5](https://support.hdfgroup.org/ftp/HDF5/releases/), [GitHub](https://github.com/HDFGroup/hdf5)
 
