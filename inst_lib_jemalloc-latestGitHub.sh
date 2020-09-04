@@ -40,5 +40,5 @@ cd $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export JEMALLOC_ROOT=$PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE"
 
-DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
 exit 0

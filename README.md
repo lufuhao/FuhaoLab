@@ -111,6 +111,12 @@ perl -MCPAN -e 'install Storable'
 
 > libtbb-dev
 
+## [canu](https://github.com/marbl/canu)
+
+> Python 2.7 or 3.5+ with setuptools C++ compiler with C++11 support (GCC 4.8+)
+
+> GNU make, Git, Core OS development headers (zlib, ...)
+
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
@@ -119,7 +125,7 @@ perl -MCPAN -e 'install Storable'
 
 > python
 
-## Discovar
+## Discovar [NotWorking]
 
 ### [DISCOVARdenovo](https://software.broadinstitute.org/software/discovar/blog/)
 

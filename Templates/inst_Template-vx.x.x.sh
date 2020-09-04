@@ -8,6 +8,12 @@ InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
 NameUncompress="bowtie-1.2.3"
 TestCmd="./bowtie --help"
 
+libOpt=""
+if [ -z "$JEMALLOC_ROOT" ]; then
+	LibExist "libjemalloc"
+else
+	libOpt=" --with-jemalloc=$JEMALLOC_ROOT/lib"
+fi
 
 NameCompress=$PackageName-$PackageVers.tar.gz
 CheckPath $PackageName $PackageVers
