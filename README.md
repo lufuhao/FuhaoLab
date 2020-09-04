@@ -113,10 +113,7 @@ perl -MCPAN -e 'install Storable'
 
 ## [canu](https://github.com/marbl/canu)
 
-> Python 2.7 or 3.5+ with setuptools C++ compiler with C++11 support (GCC 4.8+)
-
-> GNU make, Git, Core OS development headers (zlib, ...)
-
+> 
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
@@ -144,6 +141,12 @@ perl -MCPAN -e 'install Storable'
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
 > Perl modules: FindBin, Getopt::Long
+
+## [Flye](https://github.com/fenderglass/Flye/)
+
+> Python 2.7 or 3.5+ with setuptools C++ compiler with C++11 support (GCC 4.8+)
+
+> GNU make, Git, Core OS development headers (zlib, ...)
 
 ## [FuhaoPerl5Lib](https://github.com/lufuhao/FuhaoPerl5Lib)
 
@@ -252,6 +255,12 @@ perl -MCPAN -e 'install Storable'
 >     sudo apt-get build-essential
 
 > fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
+
+## [NextDenovo](https://github.com/Nextomics/NextDenovo)
+
+> python mocules: [Psutil](https://psutil.readthedocs.io/en/latest/)
+
+>     pip3 install --user Psutil
 
 ## [NLGenomeSweeper](https://github.com/ntoda03/NLGenomeSweeper)
 
