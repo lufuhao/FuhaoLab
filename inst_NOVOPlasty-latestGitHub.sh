@@ -18,14 +18,13 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
-PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ' | sed 's/NOVOPlasty//')
+PackageVers=$(git tag -l | tail -n 1 | sed 's/NOVOPlasty/v/')"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
 
 cd ${PROGPATH}/$PackageName
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
 RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 if [ ! -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/NOVOPlasty4.2.pl ]; then
