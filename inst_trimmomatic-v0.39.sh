@@ -47,7 +47,7 @@ if [ -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar ]; 
 	AddBashrc "### $PackageName-$PackageVers"
 	AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\${PATH}"
 	AddBashrc "export TRIMMOMATIC_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-	AddBashrc "export TRIMMOMATIC_ADAPTERS=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/adaptors"
+	AddBashrc "export TRIMMOMATIC_ADAPTERS=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/adapters"
 	AddBashrc "export TRIMMOMATIC_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar"
 	AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar:\$CLASSPATH"
 fi
