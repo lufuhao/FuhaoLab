@@ -53,7 +53,7 @@ $TestSudo bash -c "echo '  <snippet id=\"slurm\">
 
 ]]></text>
     <description>slurm</description>
-    <tag>slurm/tag>
+    <tag>slurm</tag>
   </snippet>' >> $TargetFile" 
 
 if [ $TestEmptyFile -eq 0 ]; then

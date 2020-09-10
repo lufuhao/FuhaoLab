@@ -2,12 +2,11 @@
 source FuhaoLab.conf
 
 
-PackageName="mummer4"
+PackageName="canu"
 PackageVersTemp="version"
-InternetLink='git@github.com:mummer4/mummer.git'
-NameUncompress="mummer"
-TestCmd="./bowtie --help"
-#PackageVers=""
+InternetLink='https://github.com/marbl/canu.git'
+NameUncompress="canu"
+TestCmd="./canu --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
@@ -28,26 +27,16 @@ PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
 PrintInfo "Version: $PackageVers"
 PackageVers=$(git describe --always --tags --dirty)
 PrintInfo "Version: $PackageVers"
-
-
 exit 0
-cd ${PROGPATH}/$PackageName
+
+cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
 RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/src
+RunCmds "make -j 4"
 
-
-cd ${PROGPATH}/$PackageName/$NameUncompress
-RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-RunCmds "make"
-RunCmds "make test"
-DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make install"
-
-
-
-exit 0
+exit 0 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 $TestCmd
 if [ $? -ne 0 ]; then

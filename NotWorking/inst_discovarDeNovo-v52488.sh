@@ -18,13 +18,14 @@ fi
 :<<EOM
 
 NameCompress=$PackageName-$PackageVers.tar.gz
-#CheckPath $PackageName $PackageVers
-#DownloadWget $InternetLink $NameCompress
+CheckPath $PackageName $PackageVers
+DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 EOM
 cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+unset LIBRARY_PATH CPATH C_INCLUDE_PATH PKG_CONFIG_PATH CPLUS_INCLUDE_PATH INCLUDE
 RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE $libOpt"
 RunCmds "make all"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE

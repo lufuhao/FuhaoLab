@@ -41,7 +41,7 @@ Raise a hand in this repository Issue if you have any problem, question or if yo
 
 ## Routine libraries
 
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
 > libcurl4-openssl-dev
 
@@ -79,6 +79,18 @@ perl -MCPAN -e 'install Storable'
 
 # Softwares
 
+## [ABySS](https://www.bcgsc.ca/resources/software/abyss) [github](https://github.com/bcgsc/abyss)
+
+> boost, openmpi, sparsehash
+
+>     sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
+
+> [ARCS](https://github.com/bcgsc/arcs), [Tigmint](https://github.com/bcgsc/tigmint), [samtools](https://samtools.github.io/)
+
+> [pigz](https://zlib.net/pigz/), [zsh](https://sourceforge.net/projects/zsh/)
+
+>     sudo apt-get install pigz zsh zsh-common
+
 ## [Aspera-Connect](https://www.ibm.com/aspera/connect/)
 
 > OpenSSL (>=v1.0.2g), Mesa EGL, glib2 (>=v2.28)
@@ -113,7 +125,14 @@ perl -MCPAN -e 'install Storable'
 
 ## [canu](https://github.com/marbl/canu)
 
-> 
+> 16GB Mem; GCC 4.5; GCC 7+
+
+> Perl 5.12.0, or File::Path 2.08
+
+> Java SE 8
+
+> gnuplot 5.2
+
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: python-pip python3-pip python-setuptools python3-setuptools
@@ -137,6 +156,10 @@ perl -MCPAN -e 'install Storable'
 ## [Eagle](https://github.com/tony-kuo/eagle)
 
 > [HTSLIB](https://github.com/samtools/htslib)
+
+## [Falcon](https://github.com/PacificBiosciences/FALCON-integrate)
+
+> Python2-dev, nim
 
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
@@ -194,6 +217,10 @@ perl -MCPAN -e 'install Storable'
 
 > Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
 
+## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking as python2]
+
+> Python2, BioPython, BBmap, SOAPdenovo2, SeqTK, SPAdes.py, ALE, Samtools 0.1.19, Picardtools
+
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
 > autoreconf, gcc, make
@@ -222,11 +249,21 @@ perl -MCPAN -e 'install Storable'
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
+## [MaSuRCA](https://github.com/alekseyzimin/masurca)
+
+> ubuntu 12+
+
+> For Developers: [swig](http://www.swig.org/), [yaggo](https://github.com/gmarcais/yaggo)
+
 ## MCScanX: [Official](http://chibba.pgml.uga.edu/mcscan2/), [GitHub](https://github.com/wyp1125/MCScanx), [Updated GitHub](https://github.com/lufuhao/MCScanX)
 
 > For Linux: JavaSE, libpng
 
 > For Mac: Xcode
+
+## [MECAT2](https://github.com/xiaochuanle/MECAT2)
+
+> Included: HDF5, dextract
 
 ## [MEME](http://meme-suite.org/doc/download.html)
 
@@ -242,9 +279,27 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install ant
 
+## [MINIA](https://github.com/GATB/minia)
+
+> [CMake](http://www.cmake.org/cmake/resources/software.html) 3.10+
+
+> C++11 compiler; (g++ version>=4.7 (Linux), clang version>=4.3 (Mac OSX))
+
 ## [Minimap2](https://github.com/lh3/minimap2)
 
 > Require: gcc-c++, make, zlib
+
+## [MIRA](https://sourceforge.net/projects/mira-assembler) [MIRA5](https://github.com/bachev/mira)
+
+> gcc v6.1+, gcc >= 6.1, with libstdc++6, Or clang >= 3.5, BOOST library >= 1.48 (? 1.61 on OSX), zlib, GNU make, GNU flex >= 2.6.0, Expat library >= 2.0.1, xxd
+
+>    sudo apt-get install flex xxd
+
+## [MITObim](https://github.com/chrishah/MITObim)
+
+> GNU utilities, Perl
+
+> [MIRA](https://sourceforge.net/projects/mira-assembler) 4.0.2+
 
 ## MUMmer
 
@@ -255,6 +310,10 @@ perl -MCPAN -e 'install Storable'
 >     sudo apt-get build-essential
 
 > fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
+
+## [NECAT](https://github.com/xiaochuanle/NECAT)
+
+> GCC 4.8.5+, perl v5.26+
 
 ## [NextDenovo](https://github.com/Nextomics/NextDenovo)
 
@@ -270,8 +329,16 @@ perl -MCPAN -e 'install Storable'
 
 > MEME, JRE > 1.6
 
->   MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
->   MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
+>    MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
+>    MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
+
+## [NOVOPlasty](https://github.com/ndierckx/NOVOPlasty)
+
+> Perl
+
+## [Phy-Mer](https://github.com/MEEIBioinformaticsCenter/phy-mer)
+
+> Python2/3, Pysam (0.7.4 tested), BioPython (1.58 tested)
 
 ## [picard](https://github.com/broadinstitute/picard)
 
@@ -292,6 +359,10 @@ perl -MCPAN -e 'install Storable'
 ## [R](https://cloud.r-project.org/)
 
 > 
+
+## [Ray](https://github.com/sebhtml/ray)
+
+> [RayPlatform](https://github.com/sebhtml/RayPlatform)
 
 ## [Sambamba](https://github.com/biod/sambamba)
 
@@ -317,6 +388,14 @@ perl -MCPAN -e 'install Storable'
 
 > make
 
+## [Smartdenovo](https://github.com/ruanjue/smartdenovo)
+
+> Perl
+
+## [SOAPdenovo2](https://github.com/aquaskyline/SOAPdenovo2) [NotWorking]
+
+> make
+
 ## [STAR](https://github.com/alexdobin/STAR)
 
 > 
@@ -339,11 +418,33 @@ perl -MCPAN -e 'install Storable'
 
 > JDK
 
+## [Unicycler](https://github.com/rrwick/Unicycler)
+
+> Linux or macOS, Python 3.4+, C++ compiler with C++14 support: [GCC](https://gcc.gnu.org/) 4.9.1+, [Clang](http://clang.llvm.org/) 3.5+, [ICC](https://software.intel.com/en-us/c-compilers), [setuptools](https://packaging.python.org/installing/#install-pip-setuptools-and-wheel) (only required for installation of Unicycler)
+
+> For short-read or hybrid assembly: [SPAdes](http://bioinf.spbau.ru/spades) v3.6.2 - v3.13.0 (spades.py)
+
+> For long-read or hybrid assembly: [Racon](https://github.com/isovic/racon) (racon)
+
+> For polishing: [Pilon](https://github.com/broadinstitute/pilon) (pilon1.xx.jar), Java (java), [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/) (bowtie2-build and bowtie2), Samtools v1.0+ (samtools)
+
+> For rotating circular contigs: BLAST+ (makeblastdb and tblastn)
+
+> [Bandage](https://github.com/rrwick/Bandage)
+
+## [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) [github](https://www.ebi.ac.uk/~zerbino/velvet/)
+
+> make
+
 ## VGSC 
 
 > Java >= 1.8.0
 
 >     inst_JDK-v11.x.x.sh
+
+## [wtdbg2](https://github.com/ruanjue/wtdbg2)
+
+> 64-bit Linux only, Perl
 
 ---
 
