@@ -211,13 +211,13 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install gradle
 
-## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
+## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI_FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
 
 > 64-bit Linux, Perl 5, Python 3
 
 > Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
 
-## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking as python2]
+## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 
 > Python2, BioPython, BBmap, SOAPdenovo2, SeqTK, SPAdes.py, ALE, Samtools 0.1.19, Picardtools
 
@@ -231,7 +231,7 @@ perl -MCPAN -e 'install Storable'
 
 >     sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
 
-## [killisto](https://pachterlab.github.io/kallisto/download.html): [github](https://github.com/pachterlab/kallisto)
+## [killisto](https://pachterlab.github.io/kallisto/download.html) [github](https://github.com/pachterlab/kallisto)
 
 > cmake, zlib, HDF5 C libraries
 
@@ -395,6 +395,28 @@ perl -MCPAN -e 'install Storable'
 ## [SOAPdenovo2](https://github.com/aquaskyline/SOAPdenovo2) [NotWorking]
 
 > make
+
+## [SpliceSeq](https://bioinformatics.mdanderson.org/public-software/spliceseq)
+
+> JavaSE (64bit), bowtie, MySQL (v5.5.x+)
+
+```bash
+
+mysql -u root -p
+
+mysql> CREATE DATABASE SpliceGraph CHARACTER SET latin1 COLLATE latin1_general_ci;
+
+mysql> GRANT SELECT ON SpliceGraph.* TO 'sguser'@'localhost' IDENTIFIED BY 'sgpass';
+
+mysql> GRANT SELECT ON SpliceGraph.* TO 'sguser'@'%' IDENTIFIED BY 'sgpass';
+
+mysql>GRANT ALL ON SpliceGraph.* TO 'sgload'@'localhost' IDENTIFIED BY 'sg4ld!';
+
+mysql>GRANT ALL ON SpliceGraph.* TO 'sgload'@'%' IDENTIFIED BY 'sg4ld!';
+
+mysql>exit;
+
+```
 
 ## [STAR](https://github.com/alexdobin/STAR)
 
