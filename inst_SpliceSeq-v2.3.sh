@@ -40,6 +40,9 @@ AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export SPLICESEQ_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 AddBashrc "export SPLICESEQ_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeq.jar"
 AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeq.jar:${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeqAnalyze.jar:\$CLASSPATH"
+ModuleAppend "setenv    SPLICESEQ_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    SPLICESEQ_JAR    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeq.jar"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeq.jar:${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/SpliceSeqAnalyze.jar"
 
 
 exit 0

@@ -44,7 +44,8 @@ fi
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
 AddBashrc "## $PackageName-$PackageVers"
-AddBashrc "export PATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
+AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
+ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 

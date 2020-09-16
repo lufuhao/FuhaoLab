@@ -62,6 +62,7 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/downstream_analyses:\$CLASSPATH"
+AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/downstream_analyses:\$CLASSPATH"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/downstream_analyses"
 
 exit 0

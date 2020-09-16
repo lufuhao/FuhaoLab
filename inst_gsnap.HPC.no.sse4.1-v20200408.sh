@@ -21,9 +21,15 @@ DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
+
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-if [ ! -d $BIODATABASES/gmapdb ]; then
-	mkdir -p $BIODATABASES/gmapdb
+if [ -z "$GMAPDB" ]; then
+	GmapDatabase=$BIODATABASES/gmapdb
+else
+	GmapDatabase=$GMAPDB
+fi
+if [ ! -d $GmapDatabase ]; then
+	mkdir -p $GmapDatabase
 fi
 RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib --disable-sse4.1"
 RunCmds "make"
@@ -39,7 +45,12 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-PrintInfo "Info: GMAPDB was set to $BIODATABASES/gmapdb"
-AddBashrc "export GMAPDB=$BIODATABASES/gmapdb"
+if [ -z "$GMAPDB" ]; then
+	PrintInfo "Info: GMAPDB was set to $GmapDatabase"
+	AddBashrc "export GMAPDB=$GmapDatabase"
+	ModuleAppend "setenv    GMAPDB    $GmapDatabase"
+fi
 
+cd $PROGPATH/$PackageName/$PackageVers
+DeletePath $PROGPATH/$PackageName/$PackageVers/$NameUncompress
 exit 0

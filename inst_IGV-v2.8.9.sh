@@ -26,6 +26,7 @@ fi
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 ln -sf ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/igv.sh ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/igv
 AddBashrc "### $PackageName-$PackageVers"
-AddBashrc "export PATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
+AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
+ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 exit 0

@@ -10,24 +10,40 @@
 
 Check out your machtype and set up your MACHTYPE variable
 
-> uname -m
+```
 
+uname -m
+
+```
 在你的~/.bashrc里面添加如下行
 
-> export PROGPATH=${HOME}/Programs
+```
 
-> export BIODATABASES=${HOME}/Databases
+export PROGPATH=${HOME}/Programs
 
-> ecport MACHTYPE=x86_64
+export BIODATABASES=${HOME}/Databases
 
->     #其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
+export MACHTYPE=x86_64
 
->     #${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
+export MODULEPATH=${PROGPATH}/bin/modules:$MODULEPATH
 
-> export FUHAOLAB_ROOT=/path/to/FuhaoLab
+#其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
 
-> export PATH=${FUHAOLAB_ROOT}:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
+#${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
 
+export FUHAOLAB_ROOT=/path/to/FuhaoLab
+
+export PATH=${FUHAOLAB_ROOT}:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
+
+```
+
+Then create the folders required
+
+```
+
+mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
+
+```
 
 ---
 
@@ -301,6 +317,18 @@ perl -MCPAN -e 'install Storable'
 
 > [MIRA](https://sourceforge.net/projects/mira-assembler) 4.0.2+
 
+## [MultiQC](https://multiqc.info/) [GitHub](https://github.com/ewels/MultiQC)
+
+> Python v3.6+
+
+> Python Mofules: numpy <1.17, matplotlib >=2.1.1,<3.0.0, jinja2 >=2.9,<3.0 markdown<=3.2, networkx <2.3, spectra>=0.0.10, click, coloredlogs, future>0.14.0, lzstring, pyyaml>=4, requests, simplejson, humanfriendly
+
+```
+
+pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
+
+```
+
 ## MUMmer
 
 ### [MUMmer4](http://mummer4.github.io)
@@ -330,6 +358,7 @@ perl -MCPAN -e 'install Storable'
 > MEME, JRE > 1.6
 
 >    MEME 5.1: ./inst_NLRannotator-latestGitHub-nlr_parser3.sh
+
 >    MEME < 4.9.1: ./inst_NLRannotator-v0.7beta9281f70.sh
 
 ## [NOVOPlasty](https://github.com/ndierckx/NOVOPlasty)

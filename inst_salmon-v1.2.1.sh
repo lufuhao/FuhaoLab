@@ -29,5 +29,6 @@ cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 #AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export PATH=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+ModuleAppend "prepend-path    PATH    $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin"
 
 exit 0

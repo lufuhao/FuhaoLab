@@ -32,6 +32,7 @@ fi
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export PATH=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/libexec/meme-5.1.1:\$PATH"
+ModuleAppend "prepend-path    PATH    $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/libexec/meme-5.1.1"
 
 DeletePath $PROGPATH/$PackageName/$PackageVers/$NameUncompress
 

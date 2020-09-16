@@ -33,7 +33,9 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-AddBashrc "export PATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/scripts:\$PATH"
-AddBashrc "export PYTHONPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/hisat2lib/pymodule:\$PYTHONPATH"
+AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/scripts:\$PATH"
+AddBashrc "export PYTHONPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/hisat2lib/pymodule:\$PYTHONPATH"
+ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/scripts"
+ModuleAppend "prepend-path    PYTHONPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/hisat2lib/pymodule"
 
 exit 0

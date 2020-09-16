@@ -38,10 +38,9 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-
 exit 0

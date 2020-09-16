@@ -38,8 +38,10 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export TMPDIR=/var/tmp"
+ModuleAppend "setenv    TMPDIR    /var/tmp"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 

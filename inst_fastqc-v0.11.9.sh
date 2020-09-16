@@ -15,10 +15,13 @@ DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "unzip $NameCompress"
 fi
-mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
+mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 sed -i '1c #!/usr/bin/env perl' fastqc
+
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 chmod +x fastqc
 $TestCmd
 if [ $? -ne 0 ]; then

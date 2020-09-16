@@ -30,8 +30,11 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
 AddBashrc "### VGSC v1.1"
-AddBashrc "export VGSC_JAR=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar"
-AddBashrc "export VGSC_DIR=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
-AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar:\$CLASSPATH"
+AddBashrc "export VGSC_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar"
+AddBashrc "export VGSC_DIR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
+AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar:\$CLASSPATH"
+ModuleAppend "setenv    VGSC_JAR    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar"
+ModuleAppend "setenv    VGSC_DIR    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/VGSC.jar"
 
 exit 0

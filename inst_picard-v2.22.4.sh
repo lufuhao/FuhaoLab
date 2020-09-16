@@ -10,9 +10,7 @@ TestCmd="./picard"
 
 NameCompress="picard.jar"
 CheckPath $PackageName $PackageVers
-if [ -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE ]; then
-	rm -rf $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-fi
+DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
 mkdir -p $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
@@ -29,6 +27,7 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-AddBashrc "export PICARD_JAR=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/picard.jar"
+AddBashrc "export PICARD_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/picard.jar"
+ModuleAppend "setenv    PICARD_JAR    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/picard.jar"
 
 exit 0

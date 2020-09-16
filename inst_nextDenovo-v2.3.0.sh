@@ -37,5 +37,7 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export NEXTDENOVO_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 AddBashrc "export NEXTDENOVO_RUNCFG=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/doc/run.cfg"
+ModuleAppend "setenv    NEXTDENOVO_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    NEXTDENOVO_RUNCFG    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/doc/run.cfg"
 
 exit 0

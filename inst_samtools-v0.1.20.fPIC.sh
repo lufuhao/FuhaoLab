@@ -13,12 +13,8 @@ TestCmd="./samtools"
 NameCompress=$PackageName-$PackageVers.tar.gz
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
-if [ -d $PROGPATH/$PackageName/$PackageVers/$NameUncompress ]; then
-	rm -rf $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-fi
-if [ -d $PROGPATH/$PackageName/$PackageVers/x64fPic ]; then
-	rm -rf $PROGPATH/$PackageName/$PackageVers/x64fPic
-fi
+DeletePath $PROGPATH/$PackageName/$PackageVers/$NameUncompress
+DeletePath $PROGPATH/$PackageName/$PackageVers/x64fPic
 RunCmds "tar xzvf $NameCompress"
 mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/x64fPic
 cd $PROGPATH/$PackageName/$PackageVers/x64fPic

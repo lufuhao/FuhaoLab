@@ -8,7 +8,7 @@ PackageVersTemp="version"
 InternetLink='https://github.com/ewels/MultiQC.git'
 NameUncompress="MultiQC"
 TestCmd="./multiqc -h"
-#PackageVers="v1.9-9760f756"
+#PackageVers="v1.10dev-9760f756"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
@@ -18,9 +18,12 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
-PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
+
+
+#PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
+PackageVers="v"$(grep ^'version' setup.py | sed "s/^.*\s\+'//; s/'.*$//;")"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
 #PrintInfo "Version: $PackageVers"
@@ -49,6 +52,6 @@ AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PAT
 ModuleAppend "prepend-path    PYTHONPATH    $PythonLibPath"
 ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
 
-#DeletePath ${PROGPATH}/$PackageName/$NameUncompress
+DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 
 exit 0

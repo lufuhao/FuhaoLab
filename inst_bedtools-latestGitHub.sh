@@ -25,8 +25,8 @@ PrintInfo "Version: $PackageVers"
 #PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --always --tags --dirty)
 #PrintInfo "Version: $PackageVers"
-cd ${PROGPATH}/$PackageName/$NameUncompress
 
+cd ${PROGPATH}/$PackageName/$NameUncompress
 unset C_INCLUDE_PATH
 unset CPATH
 RunCmds "make"
@@ -40,10 +40,9 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-
 exit 0

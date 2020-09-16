@@ -7,6 +7,7 @@ sudo wget  http://xrl.us/cpanm  --no-check-certificate -O /sbin/cpanm
 #wget -O - https://cpanmin.us | perl - App::cpanminus
 #sudo wget https://cpanmin.us -O /sbin/cpanm
 sudo chmod +x  /sbin/cpanm
-echo "### cpanm" >> $EnvironFilePath
-echo "alias cpanm='cpanm --sudo --mirror http://mirrors.163.com/cpan --mirror-only'" >> $EnvironFilePath
+AddBashrc "### cpanm"
+AddBashrc "alias cpanm='cpanm --sudo --mirror http://mirrors.163.com/cpan --mirror-only'"
+ModuleAppend "set-alias    cpanm    \"cpanm --sudo --mirror http://mirrors.163.com/cpan --mirror-only\""
 sudo cpanm App::pmuninstall

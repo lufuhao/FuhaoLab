@@ -37,6 +37,7 @@ cd $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE
 
 AddEnvironVariable $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export HTSDIR=$PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    HTSDIR    $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE"
 
 DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
 

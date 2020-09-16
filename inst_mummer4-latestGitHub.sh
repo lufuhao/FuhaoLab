@@ -12,9 +12,7 @@ TestCmd="./bowtie --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
-if [ -d ${PROGPATH}/$PackageName/$NameUncompress ]; then
-	RunCmds "rm -rf ${PROGPATH}/$PackageName/$NameUncompress"
-fi
+DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 git clone $InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
@@ -41,8 +39,7 @@ fi
 
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
-rm -rf ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
+DeletePath ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
 exit 0

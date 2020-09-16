@@ -45,4 +45,8 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
+ModuleAppend "prereq    fastqc"
+#ModuleAppend "prereq    cutadapt"
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
+
+exit 0

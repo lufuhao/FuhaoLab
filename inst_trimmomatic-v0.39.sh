@@ -50,6 +50,11 @@ if [ -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar ]; 
 	AddBashrc "export TRIMMOMATIC_ADAPTERS=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/adapters"
 	AddBashrc "export TRIMMOMATIC_JAR=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar"
 	AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar:\$CLASSPATH"
+	ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+	ModuleAppend "setenv    TRIMMOMATIC_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+	ModuleAppend "setenv    TRIMMOMATIC_ADAPTERS    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/adapters"
+	ModuleAppend "setenv    TRIMMOMATIC_JAR    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar"
+	ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/trimmomatic-0.39.jar"
 fi
 
 exit 0

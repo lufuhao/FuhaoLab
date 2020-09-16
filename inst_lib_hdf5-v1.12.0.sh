@@ -39,11 +39,14 @@ fi
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-AddBashrc "export HDF5_LIB=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
-AddBashrc "export HDF5LIBDIR=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
-AddBashrc "export HDF5_INC=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
-AddBashrc "export HDF5INCLUDEDIR=\${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
-
+AddBashrc "export HDF5_LIB=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
+AddBashrc "export HDF5LIBDIR=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
+AddBashrc "export HDF5_INC=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
+AddBashrc "export HDF5INCLUDEDIR=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
+ModuleAppend "setenv    HDF5_LIB    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
+ModuleAppend "setenv    HDF5LIBDIR    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib"
+ModuleAppend "setenv    HDF5_INC    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
+ModuleAppend "setenv    HDF5INCLUDEDIR    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include"
 
 DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 exit 0

@@ -8,9 +8,7 @@ PackageVers="v0.7beta9281f70"
 TestCmd="java -jar NLR-Annotator.jar --help"
 
 CheckPath $PackageName $PackageVers/
-if [ -d $PROGPATH/$PackageName/$PackageVers/$MACHTYPE ]; then
-	rm -rf $PROGPATH/$PackageName/$PackageVers/$MACHTYPE > /dev/null 2>&1
-fi
+DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 mkdir -p $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 DownloadWget https://github.com/steuernb/NLR-Annotator/releases/download/v0.7-beta/ChopSequence.jar ChopSequence.jar
@@ -27,7 +25,9 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### NLR-Annotator; needs MEME <=4.9.1"
-AddBashrc "export NLR_ANNOTATOR_HOME=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$CLASSPATH"
+AddBashrc "export NLR_ANNOTATOR_HOME=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$CLASSPATH"
+ModuleAppend "setenv    NLR_ANNOTATOR_HOME    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 exit 0

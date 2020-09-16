@@ -44,7 +44,9 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "###$PackageName-$PackageVers"
-AddBashrc "export PATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
-AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/interproscan-5.jar:\$CLASSPATH"
+AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$PATH"
+AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/interproscan-5.jar:\$CLASSPATH"
+ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/interproscan-5.jar"
 
 exit 0

@@ -37,5 +37,4 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-
 exit 0

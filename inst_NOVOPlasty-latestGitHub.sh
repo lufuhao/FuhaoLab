@@ -36,5 +36,6 @@ chmod +x NOVOPlasty4.2.pl
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export NOVOPLASTY_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    NOVOPLASTY_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 exit 0

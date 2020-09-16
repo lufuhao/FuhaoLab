@@ -28,6 +28,7 @@ cd ${PROGPATH}/$PackageName
 DeletePath $PROGPATH/$PackageName/$PackageVers
 RunCmds "mkdir -p $PROGPATH/$PackageName/$PackageVers"
 mv ${PROGPATH}/$PackageName/$NameUncompress $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 $TestCmd
 if [ $? -ne 0 ]; then
@@ -37,7 +38,9 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### NLR-Annotator; needs MEME >5.1"
-AddBashrc "export NLR_ANNOTATOR_HOME=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-AddBashrc "export CLASSPATH=\${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$CLASSPATH"
+AddBashrc "export NLR_ANNOTATOR_HOME=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+AddBashrc "export CLASSPATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$CLASSPATH"
+ModuleAppend "setenv    NLR_ANNOTATOR_HOME    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "prepend-path    CLASSPATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 exit 0

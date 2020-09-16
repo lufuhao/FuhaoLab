@@ -22,23 +22,38 @@ DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
+
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-if [ ! -d $BIODATABASES/gmapdb ]; then
-	mkdir -p $BIODATABASES/gmapdb
+if [ -z "$GMAPDB" ]; then
+	GmapDatabase=$BIODATABASES/gmapdb
+else
+	GmapDatabase=$GMAPDB
 fi
-RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib --disable-sse2"
+if [ ! -d $GmapDatabase ]; then
+	mkdir -p $GmapDatabase
+fi
+RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib --disable-sse2"
 RunCmds "make"
 RunCmds "make check"
+DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
-cd $PROGPATH/$PackageName/$PackageVers/x86_64/bin
+
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin
 ./gsnap --help
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-cd $PROGPATH/$PackageName/$PackageVers/x86_64
-AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-PrintInfo "Info: GMAPDB was set to $BIODATABASES/gmapdb"
-AddBashrc "export GMAPDB=$BIODATABASES/gmapdb"
 
+cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
+AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+if [ -z "$GMAPDB" ]; then
+	PrintInfo "Info: GMAPDB was set to $GmapDatabase"
+	AddBashrc "export GMAPDB=$GmapDatabase"
+	ModuleAppend "setenv    GMAPDB    $GmapDatabase"
+fi
+
+
+cd $PROGPATH/$PackageName/$PackageVers
+DeletePath $PROGPATH/$PackageName/$PackageVers/$NameUncompress
 exit 0

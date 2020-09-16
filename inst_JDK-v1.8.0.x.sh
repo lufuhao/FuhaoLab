@@ -55,8 +55,11 @@ AddBashrc "### JDK $PackageName-$PackageVers"
 AddBashrc "export JAVA_HOME=$PROGPATH/$PackageName/$PackageVers/$PackagePlfm"
 AddBashrc "export JRE_HOME=\${JAVA_HOME}/jre"
 AddBashrc "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\$CLASSPATH"
-AddBashrc "export JAVA_PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin"
-AddBashrc "export PATH=\${JAVA_PATH}:\$PATH"
+AddBashrc "export PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin:\$PATH"
+ModuleAppend "setenv    JAVA_HOME    $PROGPATH/$PackageName/$PackageVers/$PackagePlfm"
+ModuleAppend "setenv    JRE_HOME    $PROGPATH/$PackageName/$PackageVers/$PackagePlfm/jre"
+ModuleAppend "prepend-path    CLASSPATH    .:$PROGPATH/$PackageName/$PackageVers/$PackagePlfm/lib:$PROGPATH/$PackageName/$PackageVers/$PackagePlfm/jre/lib"
+ModuleAppend "prepend-path    PATH    $PROGPATH/$PackageName/$PackageVers/$PackagePlfm/bin:$PROGPATH/$PackageName/$PackageVers/$PackagePlfm/jre/bin"
 
 mv $PROGPATH/$PackageName/$NameCompress $PROGPATH/$PackageName/$PackageVers
 exit 0
