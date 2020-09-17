@@ -48,6 +48,10 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export PYTHONPATH=$PythonLibPath:\$PYTHONPATH"
 AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+ModuleAppend "prereq    spades"
+ModuleAppend "prereq    bowtie2"
+ModuleAppend "prereq    blastp"
+ModuleAppend "prereq    bandage"
 ModuleAppend "prepend-path    PYTHONPATH    $PythonLibPath"
 ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
 
