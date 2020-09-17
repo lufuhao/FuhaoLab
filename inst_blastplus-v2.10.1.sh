@@ -9,7 +9,7 @@ NameUncompress="ncbi-blast-2.10.1+"
 TestCmd="./blastn -help"
 MACHTYPE="x64"
 
-NameCompress=$PackageName-$PackageVers.tar.gz
+NameCompress=$PackageName-$PackageVers.x64.linux.tar.gz
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
