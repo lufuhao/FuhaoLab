@@ -193,6 +193,20 @@ perl -MCPAN -e 'install Storable'
 
 > samtools,seqtk,CDBtools
 
+## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
+
+> Python 3.7.0(maintained), 3.5.1+ (compatible), 2.7.11+(compatible)
+
+> Python modules: numpy>=1.16.4, scipy >=1.3.0, sympy >=1.4, requests
+
+```
+
+pip3 install --user sympy
+
+```
+
+> [SPAdes](https://github.com/ablab/spades), [Bowtie2](https://github.com/BenLangmead/bowtie2), [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi), [Bandage](https://github.com/rrwick/Bandage)
+
 ## [gffread](https://github.com/gpertea/gffread)
 
 > [gclib](https://github.com/gpertea/gclib), make
