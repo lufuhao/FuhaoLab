@@ -2,7 +2,7 @@
 source FuhaoLab.conf
 ### https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/
 
-PackageName="blastp"
+PackageName="blastplus"
 PackageVers="v2.10.1"
 InternetLink="https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/ncbi-blast-2.10.1+-x64-linux.tar.gz"
 NameUncompress="ncbi-blast-2.10.1+"
