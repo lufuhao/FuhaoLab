@@ -57,23 +57,25 @@ Raise a hand in this repository Issue if you have any problem, question or if yo
 
 ## Routine libraries
 
+```
 sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
-
-> libcurl4-openssl-dev
-
-> python-pip 
+```
+> # libcurl4-openssl-dev python-pip 
 
 ## Python modules
 
-sudo pip3 install cython
+```
+sudo pip3 install cython biopython
+```
 
 ## Perl modules
 
+```
 perl -MCPAN -e 'force install BioPerl'
 
 perl -MCPAN -e 'install Bio::DB::Sam'
 
-> need samtools compiled using fPic
+#need samtools compiled using fPic
 
 perl -MCPAN -e 'install Cwd'
 
@@ -90,6 +92,7 @@ perl -MCPAN -e 'install Scalar::Util'
 perl -MCPAN -e 'install Statistics::Basic'
 
 perl -MCPAN -e 'install Storable'
+```
 
 ---
 
@@ -99,13 +102,17 @@ perl -MCPAN -e 'install Storable'
 
 > boost, openmpi, sparsehash
 
->     sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
+```
+sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
+```
 
 > [ARCS](https://github.com/bcgsc/arcs), [Tigmint](https://github.com/bcgsc/tigmint), [samtools](https://samtools.github.io/)
 
 > [pigz](https://zlib.net/pigz/), [zsh](https://sourceforge.net/projects/zsh/)
 
->     sudo apt-get install pigz zsh zsh-common
+```
+sudo apt-get install pigz zsh zsh-common
+```
 
 ## [Aspera-Connect](https://www.ibm.com/aspera/connect/)
 
@@ -176,7 +183,9 @@ sudo apt-get install build-essential git qtbase5-dev
 
 > 64 bit x86_64 based linux, GCC >= 4.7.0, jemalloc, samtools
 
->     apt-get install libjemalloc-dev
+```
+apt-get install libjemalloc-dev
+```
 
 ### [DISCOVARvariantcaller](https://software.broadinstitute.org/software/discovar/blog/)
 
@@ -190,7 +199,7 @@ sudo apt-get install build-essential git qtbase5-dev
 
 > Python2-dev, nim
 
-## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
+## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html)
 
 > Perl modules: FindBin, Getopt::Long
 
@@ -213,9 +222,7 @@ sudo apt-get install build-essential git qtbase5-dev
 > Python modules: numpy>=1.16.4, scipy >=1.3.0, sympy >=1.4, requests
 
 ```
-
 pip3 install --user sympy
-
 ```
 
 > [SPAdes](https://github.com/ablab/spades), [Bowtie2](https://github.com/BenLangmead/bowtie2), [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi), [Bandage](https://github.com/rrwick/Bandage)
@@ -252,7 +259,9 @@ pip3 install --user sympy
 
 > gradle, JavaSE >=11
 
->     sudo apt-get install gradle
+```
+sudo apt-get install gradle
+```
 
 ## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI_FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
 
@@ -272,15 +281,19 @@ pip3 install --user sympy
 
 > v4.8+, make, autoconf V2.53+, automake  V1.11+, libtool V2.4.2+, pthreads, zlib, Python V3.5+, Sphinx-doc V1.3+
 
->     sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
+```
+sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
+```
 
 ## [killisto](https://pachterlab.github.io/kallisto/download.html) [github](https://github.com/pachterlab/kallisto)
 
 > cmake, zlib, HDF5 C libraries
 
->     sudo apt install cmake zlib1g-dev libhdf5-dev
+```
+sudo apt install cmake zlib1g-dev libhdf5-dev
+```
 
-> try to unset
+> try to unset C_INCLUDE_PATH CPLUS_INCLUDE_PATH
 
 ## [LAST](http://last.cbrc.jp/)
 
@@ -312,15 +325,20 @@ pip3 install --user sympy
 
 > Perl > 5.16, Python 2.7.x or 3.x, zlib, Ghostscript (for creating PNG files), Assorted common utilities
 
->     sudo apt-get install autoconf automake libtool zlib1g-dev
+```
+sudo apt-get install autoconf automake libtool zlib1g-dev
+```
 
 > Optional: MPI, libxml2, libxslt & libexslt
 
->     sudo apt-get install libxml2-dev libxslt1-dev openmpi-bin
-
+```
+sudo apt-get install libxml2-dev libxslt1-dev openmpi-bin
+```
 > Web: Java Development Kit, Apache Ant, Apache Tomcat, Opal, Batch Scheduler
 
->     sudo apt-get install ant
+```
+sudo apt-get install ant
+```
 
 ## [MINIA](https://github.com/GATB/minia)
 
@@ -336,7 +354,9 @@ pip3 install --user sympy
 
 > gcc v6.1+, gcc >= 6.1, with libstdc++6, Or clang >= 3.5, BOOST library >= 1.48 (? 1.61 on OSX), zlib, GNU make, GNU flex >= 2.6.0, Expat library >= 2.0.1, xxd
 
->    sudo apt-get install flex xxd
+```
+sudo apt-get install flex xxd
+```
 
 ## [MITObim](https://github.com/chrishah/MITObim)
 
@@ -351,9 +371,7 @@ pip3 install --user sympy
 > Python Mofules: numpy <1.17, matplotlib >=2.1.1,<3.0.0, jinja2 >=2.9,<3.0 markdown<=3.2, networkx <2.3, spectra>=0.0.10, click, coloredlogs, future>0.14.0, lzstring, pyyaml>=4, requests, simplejson, humanfriendly
 
 ```
-
 pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
-
 ```
 
 ## MUMmer
@@ -362,7 +380,9 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 
 > g++ version >= 4.7, GNU make, ar, perl >=5.6.0, sh, sed, awk, tcsh
 
->     sudo apt-get build-essential
+```
+sudo apt-get build-essential
+```
 
 > fig2dev (3.2.3), gnuplot (4.0), xfig (3.2), yaggo
 
@@ -374,7 +394,9 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 
 > python mocules: [Psutil](https://psutil.readthedocs.io/en/latest/)
 
->     pip3 install --user Psutil
+```
+pip3 install --user Psutil
+```
 
 ## [NLGenomeSweeper](https://github.com/ntoda03/NLGenomeSweeper)
 
@@ -400,11 +422,11 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 
 > JavaSE
 
-## polyCat (in bambam above)
+## polyCat (see bambam above)
 
 > BioPerl, [BAMtools](https://github.com/pezmaster31/bamtools)
 
-## polyDog (in bambam above)
+## polyDog (see bambam above)
 
 > 
 
@@ -432,7 +454,9 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 
 > # Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
 
->     sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
+```
+sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
+```
 
 ## [samtools](https://github.com/samtools/samtools)
 
@@ -458,13 +482,11 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 
 > 64bit Linux, Python 2.7+
 
-
 ## [SpliceSeq](https://bioinformatics.mdanderson.org/public-software/spliceseq)
 
 > JavaSE (64bit), bowtie, MySQL (v5.5.x+)
 
 ```bash
-
 mysql -u root -p
 
 mysql> CREATE DATABASE SpliceGraph CHARACTER SET latin1 COLLATE latin1_general_ci;
@@ -478,7 +500,6 @@ mysql>GRANT ALL ON SpliceGraph.* TO 'sgload'@'localhost' IDENTIFIED BY 'sg4ld!';
 mysql>GRANT ALL ON SpliceGraph.* TO 'sgload'@'%' IDENTIFIED BY 'sg4ld!';
 
 mysql>exit;
-
 ```
 
 ## [STAR](https://github.com/alexdobin/STAR)
@@ -554,7 +575,9 @@ mysql>exit;
 
 > texdir, GD, libreadline-dev
 
->     sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
+```
+sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
+```
 
 ## [HDF5](https://support.hdfgroup.org/ftp/HDF5/releases/), [GitHub](https://github.com/HDFGroup/hdf5)
 
@@ -568,7 +591,9 @@ mysql>exit;
 
 > zlib, libbz2, liblzma, libcurl, libcrypto
 
->     sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
+```
+sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
+```
 
 ## [szip](https://support.hdfgroup.org/doc_resource/SZIP/)
 
@@ -592,4 +617,4 @@ mysql>exit;
 
     Kaifeng 475004, P.R.China
 
-    E-mail: lufuhao@henu.edu.cn
+    E-mail: LUFUHAO@HENU.EDU.CN
