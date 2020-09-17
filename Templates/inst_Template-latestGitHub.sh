@@ -48,7 +48,14 @@ RunCmds "make install"
 
 
 exit 0
-cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
+	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
+elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
+	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+else
+	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+	exit 100s
+fi
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2

@@ -127,6 +127,15 @@ perl -MCPAN -e 'install Storable'
 
 > Cmake (version >= 3.0) JsonCpp >= 1.8.0, make
 
+## [Bandage](https://github.com/rrwick/Bandage)
+
+> Qt5
+
+```
+sudo apt-get install build-essential git qtbase5-dev
+```
+
+
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
 >
