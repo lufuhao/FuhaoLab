@@ -139,6 +139,10 @@ perl -MCPAN -e 'install Storable'
 
 > libtbb-dev
 
+## [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [GitHub]()
+
+> libtbb-dev, zlib, Java　(for SRA support)
+
 ## [canu](https://github.com/marbl/canu)
 
 > 16GB Mem; GCC 4.5; GCC 7+
@@ -438,6 +442,13 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 ## [SOAPdenovo2](https://github.com/aquaskyline/SOAPdenovo2) [NotWorking]
 
 > make
+
+## [SPAdes](https://github.com/ablab/spades)
+
+> g++ v5.3.1+, cmake v3.5+, zlib, libbz2
+
+> 64bit Linux, Python 2.7+
+
 
 ## [SpliceSeq](https://bioinformatics.mdanderson.org/public-software/spliceseq)
 
