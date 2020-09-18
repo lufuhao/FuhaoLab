@@ -45,6 +45,18 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+#curl -L https://github.com/Kinggerm/GetOrganelleDep/releases/download/v0.0.0/v0.0.0.tar.gz | tar zx
+#get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./0.0.0
+#OR
+svn co https://github.com/Kinggerm/GetOrganelleDB/trunk/0.0.0
+get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./0.0.0
+#OR
+#git clone https://github.com/Kinggerm/GetOrganelleDB
+#get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./GetOrganelleDB/0.0.0
+
+### Database in ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib/python3.8/site-packages/GetOrganelle-1.7.1a0-py3.8.egg/GetOrganelleLib/SeedDatabase
+
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export PYTHONPATH=$PythonLibPath:\$PYTHONPATH"
 AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
