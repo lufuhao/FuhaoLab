@@ -73,25 +73,11 @@ sudo pip3 install cython biopython
 ```
 perl -MCPAN -e 'force install BioPerl'
 
+#need samtools compiled using fPic
 perl -MCPAN -e 'install Bio::DB::Sam'
 
-#need samtools compiled using fPic
+perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
 
-perl -MCPAN -e 'install Cwd'
-
-perl -MCPAN -e 'install Data::Dumper'
-
-perl -MCPAN -e 'install File::Copy'
-
-perl -MCPAN -e 'install File::Which'
-
-perl -MCPAN -e 'install FindBin'
-
-perl -MCPAN -e 'install Scalar::Util'
-
-perl -MCPAN -e 'install Statistics::Basic'
-
-perl -MCPAN -e 'install Storable'
 ```
 
 ---
@@ -168,6 +154,21 @@ sudo apt-get install build-essential git qtbase5-dev
 > Java SE 8
 
 > gnuplot 5.2
+
+## [Circos](http://circos.ca)
+
+> libgd-dev
+
+> Perl modules: Carp, Clone, Config::General, Cwd, Data::Dumper, Digest::MD5, File::Basename, File::Spec::Functions, File::Temp, FindBin, Font::TTF::Font, GD, GD::Polyline, Getopt::Long, IO::File, List::MoreUtils, List::Util, Math::Bezier, Math::BigFloat, Math::Round, Math::VecStat, Memoize, POSIX, Params::Validate, Pod::Usage, Readonly, Regexp::Common, SVG, Set::IntSpan, Statistics::Basic, Storable, Sys::Hostname, Text::Balanced, Text::Format, Time::HiRes
+
+```
+circos -modules | grep "missing"
+
+sudo apt-get install libgd-dev
+
+perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Spec::Functions File::Temp FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
+```
+
 
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
