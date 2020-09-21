@@ -33,7 +33,7 @@ export MODULEPATH=${PROGPATH}/bin/modules:$MODULEPATH
 
 export FUHAOLAB_ROOT=/path/to/FuhaoLab
 
-export PATH=${FUHAOLAB_ROOT}:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
+export PATH=${FUHAOLAB_ROOT}/bin:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
 
 ```
 
