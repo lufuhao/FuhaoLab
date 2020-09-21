@@ -3,11 +3,11 @@ source FuhaoLab.conf
 #https://multiqc.info/
 #https://github.com/ewels/MultiQC
 
-PackageName="multiqc"
+PackageName="jcvi"
 PackageVersTemp="version"
-InternetLink='https://github.com/ewels/MultiQC.git'
-NameUncompress="MultiQC"
-TestCmd="./multiqc -h"
+InternetLink='https://github.com/lufuhao/jcvi.git'
+NameUncompress="jcvi"
+TestCmd="python -m jcvi.formats.fasta extract"
 #PackageVers="v1.10dev-9760f756"
 
 CheckPythonModules 'numpy' 'scipy' 'sympy' 'requests'

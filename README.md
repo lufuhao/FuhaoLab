@@ -58,7 +58,7 @@ Raise a hand in this repository Issue if you have any problem, question or if yo
 ## Routine libraries
 
 ```
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
 ```
 > # libcurl4-openssl-dev python-pip 
 
@@ -196,6 +196,14 @@ apt-get install libjemalloc-dev
 
 > [HTSLIB](https://github.com/samtools/htslib)
 
+## [EMBOSS](http://emboss.sourceforge.net/download)
+
+> JDK (JAVA_HOME), libhpdf-dev, libpng-dev
+
+```
+sudo apt-get install libhpdf-dev libpng-dev
+```
+
 ## [Falcon](https://github.com/PacificBiosciences/FALCON-integrate)
 
 > Python2-dev, nim
@@ -215,18 +223,6 @@ apt-get install libjemalloc-dev
 > Perl: BioPerl,Bio::DB::Sam,Cwd,Data::Dumper,File::Copy,File::Which,Scalar::Util,Statistics::Basic,Storable
 
 > samtools,seqtk,CDBtools
-
-## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
-
-> Python 3.7.0(maintained), 3.5.1+ (compatible), 2.7.11+(compatible)
-
-> Python modules: numpy>=1.16.4, scipy >=1.3.0, sympy >=1.4, requests
-
-```
-pip3 install --user sympy
-```
-
-> [SPAdes](https://github.com/ablab/spades), [Bowtie2](https://github.com/BenLangmead/bowtie2), [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi), [Bandage](https://github.com/rrwick/Bandage)
 
 ## [gffread](https://github.com/gpertea/gffread)
 
@@ -284,6 +280,14 @@ sudo apt-get install gradle
 
 ```
 sudo apt-get install autoconf automake libtool python3-matplotlib python3-scipy python3-tabulate
+```
+
+## [Kent](http://hgdownload.cse.ucsc.edu/admin/)
+
+> MySQL uuid-dev
+
+```
+sudo apt install uuid-dev mysql-server
 ```
 
 ## [killisto](https://pachterlab.github.io/kallisto/download.html) [github](https://github.com/pachterlab/kallisto)
@@ -364,16 +368,6 @@ sudo apt-get install flex xxd
 > GNU utilities, Perl
 
 > [MIRA](https://sourceforge.net/projects/mira-assembler) 4.0.2+
-
-## [MultiQC](https://multiqc.info/) [GitHub](https://github.com/ewels/MultiQC)
-
-> Python v3.6+
-
-> Python Mofules: numpy <1.17, matplotlib >=2.1.1,<3.0.0, jinja2 >=2.9,<3.0 markdown<=3.2, networkx <2.3, spectra>=0.0.10, click, coloredlogs, future>0.14.0, lzstring, pyyaml>=4, requests, simplejson, humanfriendly
-
-```
-pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
-```
 
 ## MUMmer
 
@@ -552,6 +546,41 @@ mysql>exit;
 ## [wtdbg2](https://github.com/ruanjue/wtdbg2)
 
 > 64-bit Linux only, Perl
+
+---
+
+# Python modules
+
+## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
+
+> [SPAdes](https://github.com/ablab/spades), [Bowtie2](https://github.com/BenLangmead/bowtie2), [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi), [Bandage](https://github.com/rrwick/Bandage)
+
+> Python 3.7.0(maintained), 3.5.1+ (compatible), 2.7.11+(compatible)
+
+> Python modules: numpy>=1.16.4, scipy >=1.3.0, sympy >=1.4, requests
+
+```
+pip3 install --user sympy
+```
+
+## JCVI
+
+> EMBOSS, BEDTOOLS, Kent tools
+
+> biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
+
+```
+pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
+```
+## [MultiQC](https://multiqc.info/) [GitHub](https://github.com/ewels/MultiQC)
+
+> Python v3.6+
+
+> Python Mofules: numpy <1.17, matplotlib >=2.1.1,<3.0.0, jinja2 >=2.9,<3.0 markdown<=3.2, networkx <2.3, spectra>=0.0.10, click, coloredlogs, future>0.14.0, lzstring, pyyaml>=4, requests, simplejson, humanfriendly
+
+```
+pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
+```
 
 ---
 
