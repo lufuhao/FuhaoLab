@@ -501,6 +501,10 @@ mysql>exit;
 
 > 
 
+## [StringTie](http://ccb.jhu.edu/software/stringtie) [GitHub]()
+
+> Samtools (included), Gclib (included)
+
 ## [subread](http://subread.sourceforge.net/)
 
 > 
@@ -563,7 +567,7 @@ mysql>exit;
 pip3 install --user sympy
 ```
 
-## JCVI
+## [JCVI](https://github.com/tanghaibao/jcvi), [my version](https://github.com/lufuhao/jcvi)
 
 > EMBOSS, BEDTOOLS, Kent tools
 
