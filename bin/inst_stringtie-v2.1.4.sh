@@ -24,6 +24,7 @@ fi
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "cp ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/stringtie ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+RunCmds "cp ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/prepDE.py ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
