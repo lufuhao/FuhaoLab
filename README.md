@@ -459,6 +459,14 @@ sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev li
 
 > # inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
+## [seqkit](https://github.com/shenwei356/seqkit) doi: [10.1371/journal.pone.0163962](https://dx.doi.org/10.1371/journal.pone.0163962)
+
+> Go language
+
+```
+sudo apt-get install golang gox
+```
+
 ## [seqtk](https://github.com/lh3/seqtk)
 
 > make
