@@ -232,10 +232,6 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 > zlib, bzip2
 
-## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
-
-> JavaSE
-
 ## [HISAT2](https://daehwankimlab.github.io/hisat2), [Github](https://github.com/DaehwanKimLab/hisat2)
 
 > 
@@ -247,24 +243,6 @@ sudo apt-get install libhpdf-dev libpng-dev
 ## [HTseq](https://htseq.readthedocs.io/en/master/), [GitHub](https://github.com/htseq/htseq)
 
 > matplotlib, Cython, pysam, HTSeq
-
-## [IGV Compiled](http://software.broadinstitute.org/software/igv/download)
-
-> JavaSE >=11
-
-## [IGV GitHub source](https://github.com/igvteam/igv)
-
-> gradle, JavaSE >=11
-
-```
-sudo apt-get install gradle
-```
-
-## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI_FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
-
-> 64-bit Linux, Perl 5, Python 3
-
-> Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
 
 ## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 
@@ -413,10 +391,6 @@ pip3 install --user Psutil
 
 > Python2/3, Pysam (0.7.4 tested), BioPython (1.58 tested)
 
-## [picard](https://github.com/broadinstitute/picard)
-
-> JavaSE
-
 ## polyCat (see bambam above)
 
 > BioPerl, [BAMtools](https://github.com/pezmaster31/bamtools)
@@ -527,10 +501,6 @@ mysql>exit;
 
 > Perl Modules: Getopt::Long IPC::Open3 File::Spec File::Basename Cwd
 
-## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
-
-> JDK
-
 ## [Unicycler](https://github.com/rrwick/Unicycler)
 
 > Linux or macOS, Python 3.4+, C++ compiler with C++14 support: [GCC](https://gcc.gnu.org/) 4.9.1+, [Clang](http://clang.llvm.org/) 3.5+, [ICC](https://software.intel.com/en-us/c-compilers), [setuptools](https://packaging.python.org/installing/#install-pip-setuptools-and-wheel) (only required for installation of Unicycler)
@@ -548,12 +518,6 @@ mysql>exit;
 ## [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) [github](https://www.ebi.ac.uk/~zerbino/velvet/)
 
 > make
-
-## VGSC 
-
-> Java >= 1.8.0
-
->     inst_JDK-v11.x.x.sh
 
 ## [wtdbg2](https://github.com/ruanjue/wtdbg2)
 
@@ -616,6 +580,53 @@ pip3 install --user cython pysam bx-python numpy pyBigWig
 
 > R: GlobalOptions, shape, grDevices, utils, stats, colorspace, methods, grid
 
+---
+
+# JAVA package
+
+> To build a JAVA package, you probably need to install gradle
+
+## [GATK](https://gatk.broadinstitute.org/hc/en-us) [GitHub](https://github.com/broadinstitute/gatk)
+
+> JavaSE
+
+> From source: gradle 5.6 (Autodownload), JDK8, Git 2.5+, git-lfs 1.1.0+, R 3.2.5
+
+## [HANDS2](https://genomics.lums.edu.pk/software/hands2/)
+
+> JavaSE
+
+## [IGV Compiled](http://software.broadinstitute.org/software/igv/download)
+
+> JavaSE >=11
+
+## [IGV GitHub source](https://github.com/igvteam/igv)
+
+> gradle, JavaSE >=11
+
+```
+sudo apt-get install gradle
+```
+
+## [InterProScan](https://www.ebi.ac.uk/interpro/download/), [EBI_FTP](ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/), [github](https://github.com/ebi-pf-team/interproscan)
+
+> 64-bit Linux, Perl 5, Python 3
+
+> Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
+
+## [picard](https://github.com/broadinstitute/picard)
+
+> JavaSE
+
+## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+
+> JDK
+
+## VGSC 
+
+> Java >= 1.8.0
+
+>     inst_JDK-v11.x.x.sh
 
 
 ---
