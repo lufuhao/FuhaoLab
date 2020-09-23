@@ -586,6 +586,16 @@ pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 m
 pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
 ```
 
+## [RSeQC](https://sourceforge.net/projects/rseqc/)
+
+> python2.7/3, gcc, R
+
+> cython>=0.17, pysam, bx-python, numpy, pyBigWig
+
+```
+pip3 install --user cython pysam bx-python numpy pyBigWig
+```
+
 ---
 
 # R packages
