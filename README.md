@@ -79,7 +79,7 @@ perl -MCPAN -e 'force install BioPerl'
 #need samtools compiled using fPic
 perl -MCPAN -e 'install Bio::DB::Sam'
 
-perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
+perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Log::Log4perl Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
 
 ```
 
@@ -413,6 +413,12 @@ pip3 install --user Psutil
 ## [Primer3](https://github.com/primer3-org/primer3)
 
 > build-essential g++ cmake git-all
+
+## [proovread](https://github.com/BioInf-Wuerzburg/proovread) doi: [10.1093/bioinformatics/btu392](https://dx.doi.org/10.1093/bioinformatics/btu392)
+
+> Perl 5.10.1+: Log::Log4perl, File::Which
+
+> Blast-2.2.24+, samtools-1.1+
 
 ## [R](https://cloud.r-project.org/)
 
