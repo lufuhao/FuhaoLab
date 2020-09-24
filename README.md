@@ -284,6 +284,10 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > if errors are reported in 'make', try to comment line20 and uncomment line21 or line22
 
+## [LoRDEC](http://www.atgc-montpellier.fr/lordec/) doi: [10.1093/bioinformatics/btu538](https://dx.doi.org/10.1093/bioinformatics/btu538)
+
+> gcc/g++ 4.8+, [GATB](https://github.com/GATB/gatb-core) (auto-download), libboost (auto-download), make, cmake, zlib1g-dev, wget
+
 ## [MACS2](https://github.com/taoliu/MACS)
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
