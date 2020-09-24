@@ -10,7 +10,7 @@ TestCmd="./proovread -V"
 #-h return 1
 #PackageVers="v2.14.1-6f5a6b4"
 
-perlModExist "Log::Log4perl" "File::Which"
+perlModExist "Cwd" "Data::Dumper" "File::Basename" "File::Copy" "File::Path" "File::Spec" "File::Temp" "File::Which" "FindBin" "Getopt::Long" "List::Util" "Log::Log4perl" "Storable" "Thread::Queue" "threads" "Time::HiRes"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/

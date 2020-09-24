@@ -416,7 +416,7 @@ pip3 install --user Psutil
 
 ## [proovread](https://github.com/BioInf-Wuerzburg/proovread) doi: [10.1093/bioinformatics/btu392](https://dx.doi.org/10.1093/bioinformatics/btu392)
 
-> Perl 5.10.1+: Log::Log4perl, File::Which
+> Perl 5.10.1+: Cwd Data::Dumper File::Basename File::Copy File::Path File::Spec File::Temp File::Which FindBin Getopt::Long List::Util Log::Log4perl Storable Thread::Queue threads Time::HiRes
 
 > Blast-2.2.24+, samtools-1.1+
 
