@@ -103,6 +103,13 @@ sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
 sudo apt-get install pigz zsh zsh-common
 ```
 
+## [ALLPATHS-LG]() doi: [10.1101/gr.141515.112](https://dx.doi.org/10.1101/gr.141515.112)
+
+> [GCC](http://gcc.gnu.org/) v4.7.0+, [GMP](http://gmplib.org/) library compiled with the C++ interface, [Picard](http://picard.sourceforge.net/) set, command dot from the [graphviz](http://www.graphviz.org/) package.
+
+```
+sudo apt-get install libgmp-dev graphviz
+```
 ## [Aspera-Connect](https://www.ibm.com/aspera/connect/)
 
 > OpenSSL (>=v1.0.2g), Mesa EGL, glib2 (>=v2.28)
@@ -461,6 +468,18 @@ sudo apt-get install golang gox
 ## [seqtk](https://github.com/lh3/seqtk)
 
 > make
+
+## [SGA]()
+
+> Requirements: google [sparsehash](https://github.com/sparsehash/sparsehash) library, [zlib](http://www.zlib.net/),  the [jemalloc](http://www.canonware.com/jemalloc/download.html) memory allocator
+
+> Requirements: Python modules: pysam, [ruffus](http://www.ruffus.org.uk/)
+
+```
+apt-get install libsparsehash-dev libjemalloc-dev zlib1g-dev
+
+pip3 install --user pysam ruffus
+```
 
 ## [Smartdenovo](https://github.com/ruanjue/smartdenovo)
 
