@@ -6,8 +6,9 @@ PackageName="jemalloc"
 PackageVersTemp="version"
 InternetLink='https://github.com/jemalloc/jemalloc.git'
 NameUncompress="jemalloc"
-:<<EOM
+#PackageVers="v5.2.1-259c5e3e"
 CheckLibPath $PackageName
+
 cd ${PROGPATH}/libraries/$PackageName/
 DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
 git clone $InternetLink
@@ -15,7 +16,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
 PackageVers="v"$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"

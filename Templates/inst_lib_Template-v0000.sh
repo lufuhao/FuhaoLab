@@ -10,11 +10,15 @@ NameUncompress="htslib-1.10.2"
 
 NameCompress=$PackageName-$PackageVers.tar.gz
 CheckLibPath $PackageName $PackageVers
+
+#:<<EOM
+
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 
+#EOM
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 RunCmds "autoheader"
@@ -27,6 +31,7 @@ if [ -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE ]; then
 fi
 RunCmds "make install"
 
+#EOM
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 if [ ! -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/include ]; then
@@ -34,10 +39,11 @@ if [ ! -d ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ !
 	exit 100
 fi
 
+#EOM
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 
-DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+#DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 exit 0
