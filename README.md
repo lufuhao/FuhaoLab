@@ -206,6 +206,10 @@ apt-get install libjemalloc-dev
 
 > GCC >= 4.7.0
 
+## [DSK](https://github.com/GATB/dsk)
+
+> Requirements: CMake 3.1+, gcc 4.7+
+
 ## [Eagle](https://github.com/tony-kuo/eagle)
 
 > [HTSLIB](https://github.com/samtools/htslib)
