@@ -11,45 +11,33 @@
 Check out your machtype and set up your MACHTYPE variable
 
 ```
-
 uname -m
-
 ```
+
 在你的~/.bashrc里面添加如下行
 
 ```
-
 export PROGPATH=${HOME}/Programs
-
 export BIODATABASES=${HOME}/Databases
-
 export MACHTYPE=x86_64
-
 export MODULEPATH=${PROGPATH}/bin/modules:$MODULEPATH
-
 #其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
-
 #${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
-
 export FUHAOLAB_ROOT=/path/to/FuhaoLab
-
 export PATH=${FUHAOLAB_ROOT}/bin:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
-
 ```
 
 Then create the folders required
 
 ```
-
 mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
-
 ```
 
 ---
 
 # 新软件的安装/编译问题
 
-Raise a hand in this repository Issue if you have any problem, question or if you want some scripts for new softwares.
+> Raise a hand in this repository Issue if you have any problem, question or if you want some scripts for new softwares.
 
 ---
 
@@ -241,6 +229,12 @@ sudo apt-get install libhpdf-dev libpng-dev
 > Perl: BioPerl,Bio::DB::Sam,Cwd,Data::Dumper,File::Copy,File::Which,Scalar::Util,Statistics::Basic,Storable
 
 > samtools,seqtk,CDBtools
+
+## [Gerbil](https://github.com/uni-halle/gerbil)
+
+```
+sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
+```
 
 ## [gffread](https://github.com/gpertea/gffread)
 
