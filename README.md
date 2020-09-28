@@ -292,6 +292,10 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > try to unset C_INCLUDE_PATH CPLUS_INCLUDE_PATH
 
+## [KMC](https://sun.aei.polsl.pl/kmc/) [GitHub](https://github.com/refresh-bio/KMC)
+
+> gcc 4.9+
+
 ## [LAST](http://last.cbrc.jp/)
 
 > g++; >2G memory
@@ -469,7 +473,7 @@ sudo apt-get install golang gox
 
 > make
 
-## [SGA]()
+## [SGA](https://github.com/jts/sga.git)
 
 > Requirements: google [sparsehash](https://github.com/sparsehash/sparsehash) library (set SPARSEHASH_ROOT), [zlib](http://www.zlib.net/) (set JEMALLOC_ROOT),  the [jemalloc](http://www.canonware.com/jemalloc/download.html) memory allocator (set BAMTOOLS_ROOT)
 
