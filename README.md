@@ -264,7 +264,7 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
-> autoreconf, gcc, make
+> Requirements: autoconf automake, autoreconf gcc gettext libtool make pkg-config yaggo
 
 ## [KAT](https://github.com/TGAC/KAT)
 
