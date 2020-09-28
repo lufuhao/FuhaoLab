@@ -447,7 +447,7 @@ pip3 install --user Psutil
 
 > libbz2, liblzma, Boost, Cereal, libtbb, libcurl, PkgConfig, libgff, Jemalloc, libstadenio, pufferfish, zlib1g, 
 
-> # Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish
+>     _Will automatically download libgff, Jemalloc, Cereal,libstadenio, pufferfish_
 
 ```
 sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev liblzma-dev libtbb-dev zlib1g-dev 
@@ -457,7 +457,7 @@ sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev li
 
 > zlib, GNU ncurses, [HTSlib](https://github.com/samtools/htslib)
 
-> # inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
+>     _inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation_
 
 ## [seqkit](https://github.com/shenwei356/seqkit) doi: [10.1371/journal.pone.0163962](https://dx.doi.org/10.1371/journal.pone.0163962)
 

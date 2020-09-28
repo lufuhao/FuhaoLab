@@ -35,16 +35,15 @@ PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "git submodule init"
 RunCmds "git submodule update"
-RunCmds "rm -rf ${PROGPATH}/$PackageName/$NameUncompress/build"
-RunCmds "mkdir -p ${PROGPATH}/$PackageName/$NameUncompress/build"
-cd ${PROGPATH}/$PackageName/$NameUncompress/build
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE .."
-RunCmds "make -j4"
-cd ${PROGPATH}/$PackageName/$NameUncompress/scripts
-RunCmds "./simple_test.sh"
-cd ${PROGPATH}/$PackageName/$NameUncompress/build
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make install"
+RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+RunCmds "cmake ${PROGPATH}/$PackageName/$NameUncompress"
+RunCmds "make -j4"
+#cd ${PROGPATH}/$PackageName/$NameUncompress/scripts
+#RunCmds "./simple_test.sh"
+#cd ${PROGPATH}/$PackageName/$NameUncompress/build
+#RunCmds "make install"
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
