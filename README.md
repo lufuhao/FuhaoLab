@@ -471,7 +471,7 @@ sudo apt-get install golang gox
 
 ## [SGA]()
 
-> Requirements: google [sparsehash](https://github.com/sparsehash/sparsehash) library, [zlib](http://www.zlib.net/),  the [jemalloc](http://www.canonware.com/jemalloc/download.html) memory allocator
+> Requirements: google [sparsehash](https://github.com/sparsehash/sparsehash) library (set SPARSEHASH_ROOT), [zlib](http://www.zlib.net/) (set JEMALLOC_ROOT),  the [jemalloc](http://www.canonware.com/jemalloc/download.html) memory allocator (set BAMTOOLS_ROOT)
 
 > Requirements: Python modules: pysam, [ruffus](http://www.ruffus.org.uk/)
 
