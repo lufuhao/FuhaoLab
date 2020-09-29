@@ -5,7 +5,8 @@ source FuhaoLab.conf
 
 PackageName="sga"
 PackageVersTemp="version"
-InternetLink='https://github.com/jts/sga.git'
+#InternetLink='https://github.com/jts/sga.git'
+InternetLink='https://github.com/lufuhao/sga.git'
 NameUncompress="sga"
 TestCmd="./sga --help"
 #PackageVers=""
@@ -32,25 +33,34 @@ fi
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #AC_INIT(sga, 0.10.15, js18@sanger.ac.uk)
-PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/src/configure.ac | sed 's/^AC_INIT.*sga, //;s/, .*$//g')"-"$(git branch -vv | cut -f 3 -d' ')
-PrintInfo "Version: $PackageVers"
-#PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
+#PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/src/configure.ac | sed 's/^AC_INIT.*sga, //;s/, .*$//g')"-"$(git branch -vv | cut -f 3 -d' ')
 #PrintInfo "Version: $PackageVers"
+PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
+PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
 #PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --always --tags --dirty)
 #PrintInfo "Version: $PackageVers"
 
+#cd ${PROGPATH}/$PackageName
+#DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+#RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
+#RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+
+#cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/src
 cd ${PROGPATH}/$PackageName/$NameUncompress/src
-sed -i '95s/c++98/c++11/' ${PROGPATH}/$PackageName/$NameUncompress/src/configure.ac
-sed -i '70s/getline/static_cast<bool>(getline/; 70s/;$/);/;' ${PROGPATH}/$PackageName/$NameUncompress/src/Util/ClusterReader.cpp
-sed -i '235s/getline/static_cast<bool>(getline/; 235s/;$/);/;' ${PROGPATH}/$PackageName/$NameUncompress/src/SGA/rmdup.cpp
-sed -i '122s/parser/static_cast<bool>(parser/; 122s/;$/);/;' ${PROGPATH}/$PackageName/$NameUncompress/src/Util/StdAlnTools.cpp
+#sed -i '95s/c++98/c++11/' configure.ac
+#sed -i '70s/getline/static_cast<bool>(getline/; 70s/;$/);/;' Util/ClusterReader.cpp
+#sed -i '235s/getline/static_cast<bool>(getline/; 235s/;$/);/;' SGA/rmdup.cpp
+#sed -i '122s/parser/static_cast<bool>(parser/; 122s/;$/);/;' Util/StdAlnTools.cpp
 RunCmds "./autogen.sh"
 RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE $ConfigureOptions"
 RunCmds "make"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
+for indExc in `find ${PROGPATH}/$PackageName/$NameUncompress/src/bin -perm /+x -type f`; do
+	RunCmds "cp $indExc ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/"
+done
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
@@ -69,5 +79,5 @@ fi
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
-DeletePath ${PROGPATH}/$PackageName/$NameUncompress
+#DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 exit 0
