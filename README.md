@@ -258,10 +258,6 @@ sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 
 > matplotlib, Cython, pysam, HTSeq
 
-## [HyLiTE](http://hylite.sourceforge.net)
-
-> 
-
 ## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 
 > Python2, BioPython, BBmap, SOAPdenovo2, SeqTK, SPAdes.py, ALE, Samtools 0.1.19, Picardtools
@@ -581,6 +577,16 @@ mysql>exit;
 
 ```
 pip3 install --user sympy
+```
+
+## [HyLiTE](http://hylite.sourceforge.net)
+
+> Requirements: python 3 (3.6.1+), scipy (1.0.0+), bowtie2 (2.1.0+), samtools (0.1.19+ or 1.2+)
+
+>     * bowtie2 and samtools are not necessary once a .pileup file has been obtained. *
+
+```
+pip3 install --user scipy
 ```
 
 ## [JCVI](https://github.com/tanghaibao/jcvi), [my version](https://github.com/lufuhao/jcvi)
