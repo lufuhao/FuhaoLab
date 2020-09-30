@@ -46,7 +46,7 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 ## Routine libraries
 
 ```
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
+sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 doxygen fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
 # libcurl4-openssl-dev python-pip
 
@@ -198,6 +198,8 @@ apt-get install libjemalloc-dev
 
 > Requirements: CMake 3.1+, gcc 4.7+
 
+> doxygen
+
 ## [Eagle](https://github.com/tony-kuo/eagle)
 
 > [HTSLIB](https://github.com/samtools/htslib)
@@ -255,6 +257,10 @@ sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 ## [HTseq](https://htseq.readthedocs.io/en/master/), [GitHub](https://github.com/htseq/htseq)
 
 > matplotlib, Cython, pysam, HTSeq
+
+## [HyLiTE](http://hylite.sourceforge.net)
+
+> 
 
 ## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 

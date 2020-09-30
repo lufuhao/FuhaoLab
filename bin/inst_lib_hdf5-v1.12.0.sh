@@ -19,7 +19,7 @@ if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 
-
+exit 0
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE --enable-cxx --with-szlib=$SZIP_ROOT"
 RunCmds "make"
