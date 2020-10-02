@@ -212,6 +212,10 @@ apt-get install libjemalloc-dev
 sudo apt-get install libhpdf-dev libpng-dev
 ```
 
+## [Estimate_Genome_Sizze](https://github.com/josephryan/estimate_genome_size.pl)
+
+> Requirements: Perl
+
 ## [Falcon](https://github.com/PacificBiosciences/FALCON-integrate)
 
 > Python2-dev, nim
