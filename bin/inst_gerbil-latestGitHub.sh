@@ -41,6 +41,9 @@ RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MAC
 RunCmds "make"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
+if [ ! -x ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/toFasta ]; then
+	RunCmds "cp toFasta ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin/"
+fi
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
