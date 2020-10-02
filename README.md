@@ -489,6 +489,10 @@ apt-get install libsparsehash-dev libjemalloc-dev zlib1g-dev
 pip3 install --user pysam ruffus
 ```
 
+## [Sickle](https://github.com/najoshi/sickle)
+
+> Requirements: GCC, kseq.h (included), zlib
+
 ## [Smartdenovo](https://github.com/ruanjue/smartdenovo)
 
 > Perl
