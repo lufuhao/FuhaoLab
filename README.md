@@ -238,6 +238,10 @@ sudo apt-get install libhpdf-dev libpng-dev
 sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 ```
 
+## [gffcompare](https://github.com/gpertea/gffcompare)
+
+> Requiremments: g++
+
 ## [gffread](https://github.com/gpertea/gffread)
 
 > [gclib](https://github.com/gpertea/gclib), make
