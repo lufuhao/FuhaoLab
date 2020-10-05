@@ -21,6 +21,7 @@ fi
 #EOM
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX==${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE .."
 RunCmds "autoheader"
 RunCmds "autoconf"
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"

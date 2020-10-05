@@ -32,6 +32,7 @@ PrintInfo "Version: $PackageVers"
 exit 0
 
 cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX==${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE .."
 RunCmds "autoheader"
 RunCmds "autoconf"
 RunCmds "./configure --prefix=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
