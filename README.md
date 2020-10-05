@@ -719,6 +719,9 @@ sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
 ```
 sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 ```
+## [seqan3](http://www.seqan.de/) [GitHub](https://github.com/seqan/seqan3)
+
+> Requirements: GCC v7+, cmake v3.4+, [SDSL](https://github.com/xxsds/sdsl-lite) v3+ (Included), [Range-V3](https://github.com/ericniebler/range-v3) v0.11.0+ (Included), [cereal](https://github.com/USCiLab/cereal) v1.2.3+ (Included), [zlib](https://github.com/madler/zlib), v1.2+, [bzip2](http://www.bzip.org/) v1.0+
 
 ## [szip](https://support.hdfgroup.org/doc_resource/SZIP/)
 
