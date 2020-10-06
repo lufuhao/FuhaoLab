@@ -318,6 +318,16 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
 
+## Mason
+
+### [Mason](http://packages.seqan.de/mason/)
+
+> 
+
+### [Mason2](http://packages.seqan.de/mason2)
+
+>
+
 ## [MaSuRCA](https://github.com/alekseyzimin/masurca)
 
 > ubuntu 12+
@@ -578,6 +588,10 @@ mysql>exit;
 ---
 
 # Python modules
+
+## [Badread](https://github.com/rrwick/Badread)
+
+> 
 
 ## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
 
