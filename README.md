@@ -587,6 +587,10 @@ mysql>exit;
 
 ---
 
+---
+
+---
+
 # Python modules
 
 ## [Badread](https://github.com/rrwick/Badread)
@@ -646,6 +650,10 @@ pip3 install --user cython pysam bx-python numpy pyBigWig
 
 ---
 
+---
+
+---
+
 # R packages
 
 ## [RIdeogram](https://cran.r-project.org/web/packages/RIdeogram/)
@@ -655,6 +663,10 @@ pip3 install --user cython pysam bx-python numpy pyBigWig
 ## [Circlize](https://cran.r-project.org/web/packages/circlize/)
 
 > R: GlobalOptions, shape, grDevices, utils, stats, colorspace, methods, grid
+
+---
+
+---
 
 ---
 
@@ -704,11 +716,13 @@ sudo apt-get install gradle
 
 >     inst_JDK-v11.x.x.sh
 
+---
+
+---
 
 ---
 
 # Libraries
-
 
 ## [GNUplot](http://www.gnuplot.info/)
 
@@ -741,12 +755,14 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 
 > Export: SZIP_ROOT
 
+---
 
-
+---
 
 ---
 
 ## Author:
+
     Fu-Hao Lu
 
     Professor, PhD
