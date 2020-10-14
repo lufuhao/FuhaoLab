@@ -20,6 +20,9 @@ if [ ! -z "$JEMALLOC_ROOT" ]; then
 fi
 if [ ! -z "$BAMTOOLS_ROOT" ]; then
 	ConfigureOptions=" $ConfigureOptions --with-bamtools=$BAMTOOLS_ROOT "
+else
+	PrintError "Error: please set BAMTOOLS_ROOT or module load bamtools"
+	exit 100
 fi
 
 CheckPath $PackageName
