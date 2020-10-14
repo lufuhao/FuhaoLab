@@ -1,14 +1,19 @@
 # 河南大学卢福浩课题组软件安装脚本
 
-为进一步简化Linux软件编译及安装方法，特设立此GitHub仓库
+This repository is setup to further simplify the compilation and installation of BioSoft in Linux.
 
-一般只需要直接运行程序，即可成功编译安装所需要的生物信息学软件
+Just run the required scripts under bin/.
+
+Any problem should you report to the issue part, please.
+
 
 ---
 
 # 准备工作
 
-Check out your machtype and set up your MACHTYPE variable
+**Ubuntu 20.04**
+
+Check out your machtype and set up your **MACHTYPE** variable
 
 ```
 uname -m
