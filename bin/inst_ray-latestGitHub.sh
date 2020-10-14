@@ -7,7 +7,7 @@ PackageVersTemp="version"
 InternetLink='https://github.com/sebhtml/ray.git'
 NameUncompress="ray"
 TestCmd="./Ray --help"
-:<<EOM
+
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -22,7 +22,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download RayPlatform" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
