@@ -209,6 +209,10 @@ apt-get install libjemalloc-dev
 
 > [HTSLIB](https://github.com/samtools/htslib)
 
+## [Edena](http://www.genomic.ch/edena)
+
+> g++
+
 ## [EMBOSS](http://emboss.sourceforge.net/download)
 
 > JDK (JAVA_HOME), libhpdf-dev, libpng-dev
