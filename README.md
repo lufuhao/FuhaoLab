@@ -233,6 +233,10 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 > Perl modules: FindBin, Getopt::Long
 
+## [Fastq-Tools](https://homes.cs.washington.edu/~dcjones/fastq-tools/) [GitHub](https://github.com/dcjones/fastq-tools)
+
+> 
+
 ## [Flye](https://github.com/fenderglass/Flye/)
 
 > Python 2.7 or 3.5+ with setuptools C++ compiler with C++11 support (GCC 4.8+)
