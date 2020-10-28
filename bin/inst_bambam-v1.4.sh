@@ -28,7 +28,8 @@ fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### $PackageName-$PackageVers"
-AddBashrc "export PATH=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+AddBashrc "export PATH=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin:$PROGPATH/$PackageName/$PackageVers/$MACHTYPE/scripts:\$PATH"
 ModuleAppend "prepend-path    PATH    $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/bin"
+ModuleAppend "prepend-path    PATH    $PROGPATH/$PackageName/$PackageVers/$MACHTYPE/scripts"
 
 exit 0
