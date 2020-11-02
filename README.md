@@ -651,6 +651,12 @@ pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 m
 pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
 ```
 
+## [NanoFilt](https://github.com/wdecoster/nanofilt)
+
+```
+pip3 install --user pandas biopython pytz python-dateutil numpy
+```
+
 ## [RSeQC](https://sourceforge.net/projects/rseqc/)
 
 > python2.7/3, gcc, R
