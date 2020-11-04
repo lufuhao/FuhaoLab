@@ -229,6 +229,10 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 > Python2-dev, nim
 
+## [Fastp](https://github.com/OpenGene/fastp)
+
+>
+
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html)
 
 > Perl modules: FindBin, Getopt::Long
@@ -657,6 +661,12 @@ pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markd
 pip3 install --user pandas biopython pytz python-dateutil numpy
 ```
 
+## [NanoPack](https://github.com/wdecoster/nanopack)
+
+```
+pip3 install --user nanopack
+```
+
 ## [RSeQC](https://sourceforge.net/projects/rseqc/)
 
 > python2.7/3, gcc, R
@@ -666,6 +676,9 @@ pip3 install --user pandas biopython pytz python-dateutil numpy
 ```
 pip3 install --user cython pysam bx-python numpy pyBigWig
 ```
+
+
+
 
 ---
 
