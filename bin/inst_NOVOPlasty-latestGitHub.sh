@@ -27,11 +27,12 @@ RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
 RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-if [ ! -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/NOVOPlasty4.2.pl ]; then
+FileArr=$(ls ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/NOVOPlasty*.pl)
+if [ ${FileArr[@]} -ne 1 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-chmod +x NOVOPlasty4.2.pl
+chmod +x ${FileArr[0]}
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"

@@ -436,6 +436,10 @@ pip3 install --user Psutil
 
 > Python2/3, Pysam (0.7.4 tested), BioPython (1.58 tested)
 
+```
+pip3 install --user pysam biopython
+```
+
 ## polyCat (see bambam above)
 
 > BioPerl, [BAMtools](https://github.com/pezmaster31/bamtools)

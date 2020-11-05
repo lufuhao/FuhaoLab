@@ -48,5 +48,6 @@ cd $PROGPATH/$PackageName/$PackageVers/x86_64
 ModuleAppend "prereq    fastqc"
 #ModuleAppend "prereq    cutadapt"
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
+ModuleInfo "Requirement: module load fastqc cutadapt trimgalore"
 
 exit 0
