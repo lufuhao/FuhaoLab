@@ -177,14 +177,6 @@ perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Diges
 ```
 
 
-## [CutAdapt](https://github.com/marcelm/cutadapt)
-
-> Python modules: dnaio xopen
-
-## [deepTools](https://github.com/deeptools/deepTools)
-
-> pip3 install --user matplotlib numpy numpydoc plotly py2bit pyBigWig pysam scipy cycler pillow certifi kiwisolver python-dateutil pyparsing sphinx Jinja2 six alabaster sphinxcontrib-htmlhelp sphinxcontrib-applehelp sphinxcontrib-jsmath snowballstemmer Pygments sphinxcontrib-serializinghtml sphinxcontrib-qthelp docutils babel requests packaging sphinxcontrib-devhelp imagesize setuptools MarkupSafe pytz
-
 ## Discovar [NotWorking]
 
 ### [DISCOVARdenovo](https://software.broadinstitute.org/software/discovar/blog/)
@@ -278,10 +270,6 @@ sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 ## [HMMER](https://github.com/EddyRivasLab/hmmer)
 
 > [easel](https://github.com/EddyRivasLab/easel)
-
-## [HTseq](https://htseq.readthedocs.io/en/master/), [GitHub](https://github.com/htseq/htseq)
-
-> matplotlib, Cython, pysam, HTSeq
 
 ## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 
@@ -614,6 +602,14 @@ mysql>exit;
 
 > 
 
+## [CutAdapt](https://github.com/marcelm/cutadapt)
+
+> Python modules: dnaio xopen
+
+## [deepTools](https://github.com/deeptools/deepTools)
+
+> pip3 install --user matplotlib numpy numpydoc plotly py2bit pyBigWig pysam scipy cycler pillow certifi kiwisolver python-dateutil pyparsing sphinx Jinja2 six alabaster sphinxcontrib-htmlhelp sphinxcontrib-applehelp sphinxcontrib-jsmath snowballstemmer Pygments sphinxcontrib-serializinghtml sphinxcontrib-qthelp docutils babel requests packaging sphinxcontrib-devhelp imagesize setuptools MarkupSafe pytz
+
 ## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
 
 > [SPAdes](https://github.com/ablab/spades), [Bowtie2](https://github.com/BenLangmead/bowtie2), [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi), [Bandage](https://github.com/rrwick/Bandage)
@@ -624,6 +620,12 @@ mysql>exit;
 
 ```
 pip3 install --user sympy
+```
+
+## [HTseq](https://htseq.readthedocs.io/en/master/), [GitHub](https://github.com/htseq/htseq)
+
+```
+pip3 install --user matplotlib Cython pysam numpy
 ```
 
 ## [HyLiTE](http://hylite.sourceforge.net)
