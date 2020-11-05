@@ -663,8 +663,10 @@ pip3 install --user pandas biopython pytz python-dateutil numpy
 
 ## [NanoPack](https://github.com/wdecoster/nanopack)
 
+> Submodules: NanoStat nanomath NanoPlot nanoget NanoLyse nanoQC NanoFilt NanoComp
+
 ```
-pip3 install --user nanopack
+pip3 install --user joypy matplotlib numpy pandas plotly pyarrow seaborn biopython mappy kaleido pauvre pysam python-dateutil scipy bokeh Python-Deprecated pillow cycler pyparsing certifi kiwisolver pytz six retrying scikit_learn Jinja2 PyYAML packaging tornado typing_extensions threadpoolctl joblib psutil MarkupSafe
 ```
 
 ## [RSeQC](https://sourceforge.net/projects/rseqc/)
