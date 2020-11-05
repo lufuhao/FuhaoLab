@@ -319,10 +319,6 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > gcc/g++ 4.8+, [GATB](https://github.com/GATB/gatb-core) (auto-download), libboost (auto-download), make, cmake, zlib1g-dev, wget
 
-## [MACS2](https://github.com/taoliu/MACS)
-
-> GCC 5.2.0; Numpy_ (>=1.6); Cython_ (>=0.18)
-
 ## Mason
 
 ### [Mason](http://packages.seqan.de/mason/)
@@ -647,6 +643,15 @@ pip3 install --user scipy
 ```
 pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
 ```
+
+## [MACS2](https://github.com/macs3-project/MACS)
+
+> GCC 5.2.0; cython (Optional)
+
+```
+pip3 install --user numpy cython pytest pytest-cov codecov setuptools
+```
+
 ## [MultiQC](https://multiqc.info/) [GitHub](https://github.com/ewels/MultiQC)
 
 > Python v3.6+
@@ -654,7 +659,7 @@ pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 m
 > Python Mofules: numpy <1.17, matplotlib >=2.1.1,<3.0.0, jinja2 >=2.9,<3.0 markdown<=3.2, networkx <2.3, spectra>=0.0.10, click, coloredlogs, future>0.14.0, lzstring, pyyaml>=4, requests, simplejson, humanfriendly
 
 ```
-pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra
+pip3 install --user click coloredlogs future humanfriendly jinja2 lzstring markdown matplotlib networkx numpy pyyaml requests simplejson spectra MarkupSafe python-dateutil certifi cycler pillow kiwisolver pyparsing decorator colormath
 ```
 
 ## [NanoFilt](https://github.com/wdecoster/nanofilt)
