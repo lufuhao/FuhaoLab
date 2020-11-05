@@ -107,6 +107,10 @@ sudo apt-get install libgmp-dev graphviz
 
 > OpenSSL (>=v1.0.2g), Mesa EGL, glib2 (>=v2.28)
 
+## [ATACseqMappingPipeline](https://github.com/lufuhao/ATACseqMappingPipeline)
+
+> bamaddrg bedtools bowtie cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools/v0.1.20 trimgalore trimmomatic
+
 ## [bamaddrg](https://github.com/lufuhao/bamaddrg)
 
 > BamTools, g++
