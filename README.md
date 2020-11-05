@@ -179,7 +179,7 @@ perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Diges
 
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
-> Python modules: python-pip python3-pip python-setuptools python3-setuptools
+> Python modules: dnaio xopen
 
 ## [deepTools](https://github.com/deeptools/deepTools)
 
