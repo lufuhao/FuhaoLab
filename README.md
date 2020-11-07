@@ -135,7 +135,6 @@ sudo apt-get install libgmp-dev graphviz
 sudo apt-get install build-essential git qtbase5-dev
 ```
 
-
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
 >
@@ -151,6 +150,10 @@ sudo apt-get install build-essential git qtbase5-dev
 ## [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [GitHub]()
 
 > libtbb-dev, zlib, Java　(for SRA support)
+
+## [BWA](http://bio-bwa.sourceforge.net/) [GitHub](https://github.com/lh3/bwa)
+
+> zlib
 
 ## [canu](https://github.com/marbl/canu)
 
@@ -179,7 +182,6 @@ sudo apt-get install libgd-dev
 
 perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Spec::Functions File::Temp FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
 ```
-
 
 ## Discovar [NotWorking]
 
