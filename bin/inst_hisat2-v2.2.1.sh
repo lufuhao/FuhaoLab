@@ -25,6 +25,12 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make hisat2-align-s hisat2-build-s hisat2-inspect-s"
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
+Python3Path=$(which python3)
+if [ -z "$Python3Path" ]; then
+	PrintError "Error: can not find pyton3"
+	exit 100
+fi
+ln -sf $Python3Path Python
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
