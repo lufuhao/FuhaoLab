@@ -464,6 +464,10 @@ pip3 install --user pysam biopython
 
 > 
 
+## [Racon](https://github.com/isovic/racon)
+
+> gcc 4.8+ or clang 3.4+, cmake 3.2+, 
+
 ## [Ray](https://github.com/sebhtml/ray)
 
 > [RayPlatform](https://github.com/sebhtml/RayPlatform)
