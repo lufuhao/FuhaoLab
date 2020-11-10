@@ -60,6 +60,6 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-ModuleInfo 'module load bamaddrg bedtools bowtie cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools/v0.1.20 trimgalore trimmomatic ATACseqMappingPipeline'
+ModuleInfo 'module load bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline'
 #DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 exit 0
