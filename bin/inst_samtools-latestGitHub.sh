@@ -25,7 +25,7 @@ fi
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #PackageVers="v"$(grep ^'VERSION=' version.sh | sed 's/^.*=//')
 #PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --match '[0-9].[0-9]*' --dirty --always)
+PackageVers="v"$(git describe --match '[0-9].[0-9]*' --dirty --always)
 PrintInfo "Version: $PackageVers"
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
