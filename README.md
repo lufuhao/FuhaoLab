@@ -552,6 +552,10 @@ mysql>GRANT ALL ON SpliceGraph.* TO 'sgload'@'%' IDENTIFIED BY 'sg4ld!';
 mysql>exit;
 ```
 
+## [SRA-toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software) [GitHub](https://github.com/ncbi/sra-tools)
+
+> 
+
 ## [STAR](https://github.com/alexdobin/STAR)
 
 > 
@@ -754,6 +758,10 @@ sudo apt-get install gradle
 > Java JDK/JRE version 11 (Environment variables set: $JAVA_HOME should point to the location of the JVM, $JAVA_HOME/bin should be added to the $PATH
 
 ## [picard](https://github.com/broadinstitute/picard)
+
+> JavaSE
+
+## [pilon](https://github.com/broadinstitute/pilon)
 
 > JavaSE
 
