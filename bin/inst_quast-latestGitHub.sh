@@ -7,7 +7,7 @@ PackageVersTemp="version"
 InternetLink='https://github.com/ablab/quast.git'
 NameUncompress="quast"
 TestCmd="./quast.py -help"
-#PackageVers="v1.10dev-9760f756"
+#PackageVers="v5.1.0rc1-e010ca4"
 
 #CheckPythonModules 'numpy' 'scipy' 'sympy' 'requests'
 
@@ -25,6 +25,7 @@ if [ ! -d ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3 ] &&
 	CreatePath ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
 	cd ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
 	RunCmds "wget http://bioinf.uni-greifswald.de/augustus/binaries/old/augustus-3.2.3.tar.gz"
+	RunCmds "wget https://sourceforge.net/projects/old-software-collection/files/augustus-3.2.3.tar.gz"
 fi
 cd ${PROGPATH}/$PackageName/$NameUncompress
 
@@ -68,6 +69,6 @@ AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PAT
 ModuleAppend "prepend-path    PYTHONPATH    $PythonLibPath"
 ModuleAppend "prepend-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
 
-#DeletePath ${PROGPATH}/$PackageName/$NameUncompress
+DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 
 exit 0

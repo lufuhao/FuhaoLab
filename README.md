@@ -229,7 +229,7 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 ## [Fastp](https://github.com/OpenGene/fastp)
 
->
+> zlib
 
 ## [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/download.html)
 
@@ -375,6 +375,44 @@ sudo apt-get install ant
 > [CMake](http://www.cmake.org/cmake/resources/software.html) 3.10+
 
 > C++11 compiler; (g++ version>=4.7 (Linux), clang version>=4.3 (Mac OSX))
+
+## [MiniConda3](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)
+
+> bzip2
+
+> After installation, export PATH and execuate following
+```
+#https://mirrors.bfsu.edu.cn/help/anaconda/ 
+#https://mirrors.nju.edu.cn/anaconda/
+#https://mirrors.sjtug.sjtu.edu.cn/anaconda/
+
+conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/r/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels conda-forge
+conda config --add channels defaults
+conda config --add channels r
+conda config --add channels bioconda
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+### display installed channel
+conda config --set show_channel_urls yes
+### display added channel
+conda config --get channels
+
+### set conda envs and package cache
+conda config --add envs_dirs $PROGPATH/libraries/miniconda3/envs
+conda config --add pkgs_dirs $PROGPATH/libraries/miniconda3/pkgs
+
+###
+cat $HOME/.condarc
+```
 
 ## [Minimap2](https://github.com/lh3/minimap2)
 
@@ -694,6 +732,20 @@ pip3 install --user pandas biopython pytz python-dateutil numpy
 pip3 install --user joypy matplotlib numpy pandas plotly pyarrow seaborn biopython mappy kaleido pauvre pysam python-dateutil scipy bokeh Python-Deprecated pillow cycler pyparsing certifi kiwisolver pytz six retrying scikit_learn Jinja2 PyYAML packaging tornado typing_extensions threadpoolctl joblib psutil MarkupSafe
 ```
 
+## [QUAST](http://bioinf.spbau.ru/quast) [GitHub](https://github.com/ablab/quast)
+
+> python3.3+/2.5+, perl 5.6.0+, GCC 4.7+, make, ar, zlib
+
+> perl module: Time::HiRes, Java 1.8+, R: Matplotlib 1.1+
+
+> install_full needs: BLAST+, Augusus, BUSCO databases (bacteria, eukaryota, fungi)
+
+```
+cpan Time::HiRes
+pip3 install matplotlib
+sudo apt-get install -y pkg-config libfreetype6-dev libpng-dev zlib1g-dev
+```
+
 ## [RSeQC](https://sourceforge.net/projects/rseqc/)
 
 > python2.7/3, gcc, R
@@ -823,6 +875,12 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 ---
 
 ---
+
+# MiniConda3
+
+## [pb-assembly](https://github.com/PacificBiosciences/pb-assembly)
+
+
 
 ## Author:
 
