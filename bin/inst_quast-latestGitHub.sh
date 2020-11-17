@@ -21,9 +21,11 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 
-CreatePath ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
-cd ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
-RunCmds "wget http://bioinf.uni-greifswald.de/augustus/binaries/old/augustus-3.2.3.tar.gz"
+if [ ! -d ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3 ] && [ ! -s ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/augustus-3.2.3.tar.gz ]; then
+	CreatePath ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
+	cd ${PROGPATH}/$PackageName/$NameUncompress/quast_libs/augustus3.2.3/
+	RunCmds "wget http://bioinf.uni-greifswald.de/augustus/binaries/old/augustus-3.2.3.tar.gz"
+fi
 cd ${PROGPATH}/$PackageName/$NameUncompress
 
 #PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
