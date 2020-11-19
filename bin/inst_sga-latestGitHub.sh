@@ -71,7 +71,7 @@ elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 else
 	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-	exit 100s
+	exit 100
 fi
 $TestCmd
 if [ $? -ne 0 ]; then
@@ -80,7 +80,12 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "### $PackageName-$PackageVers"
+AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+ModuleInfo "### requirements: bwa"
+ModuleInfo "### module load bwa sga"
+ModuleAppend "prereq    bwa"
+ModuleAppend "prepenf-path    PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 exit 0

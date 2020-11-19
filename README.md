@@ -407,8 +407,7 @@ conda config --set show_channel_urls yes
 conda config --get channels
 
 ### set conda envs and package cache
-conda config --add envs_dirs $PROGPATH/libraries/miniconda3/envs
-conda config --add pkgs_dirs $PROGPATH/libraries/miniconda3/pkgs
+if [ ! -z $PROGPATH ]; then (mkdir /home/hpcsoft/TestSoft/libraries/miniconda3/envs;mkdir /home/hpcsoft/TestSoft/libraries/miniconda3/pkgs;conda config --add envs_dirs /home/hpcsoft/TestSoft/libraries/miniconda3/envs;conda config --add pkgs_dirs /home/hpcsoft/TestSoft/libraries/miniconda3/pkgs;) else (echo "Error: You may need to set PROGPATH first" >&2;) fi
 
 ###
 cat $HOME/.condarc
@@ -547,6 +546,8 @@ sudo apt-get install golang gox
 ## [SGA](https://github.com/jts/sga.git)
 
 > Requirements: google [sparsehash](https://github.com/sparsehash/sparsehash) library (set SPARSEHASH_ROOT), [zlib](http://www.zlib.net/) (set JEMALLOC_ROOT),  the [jemalloc](http://www.canonware.com/jemalloc/download.html) memory allocator (set BAMTOOLS_ROOT)
+
+> BWA
 
 > Requirements: Python modules: pysam, [ruffus](http://www.ruffus.org.uk/)
 
