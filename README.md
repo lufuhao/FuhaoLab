@@ -225,7 +225,11 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 ## [Exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) [GitHub](https://github.com/nathanweeks/exonerate)
 
-> autoreconf
+> autoreconf, glib
+
+```
+apt -get install libglib2.0-dev
+```
 
 ## [Falcon](https://github.com/PacificBiosciences/FALCON-integrate)
 
