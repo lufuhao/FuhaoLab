@@ -223,6 +223,10 @@ sudo apt-get install libhpdf-dev libpng-dev
 
 > Requirements: Perl
 
+## [Exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) [GitHub](https://github.com/nathanweeks/exonerate)
+
+> autoreconf
+
 ## [Falcon](https://github.com/PacificBiosciences/FALCON-integrate)
 
 > Python2-dev, nim
