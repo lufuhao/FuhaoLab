@@ -22,15 +22,16 @@ cd ${PROGPATH}/$PackageName/$PackageVers
 DeletePath "${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "mv ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make hisat2-align-s hisat2-build-s hisat2-inspect-s"
+#RunCmds "make hisat2-align-s hisat2-build-s hisat2-inspect-s"
+RunCmds "make"
 
-cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
-Python3Path=$(which python3)
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+Python3Path=$(readlink -f $(which python3))
 if [ -z "$Python3Path" ]; then
 	PrintError "Error: can not find pyton3"
 	exit 100
 fi
-ln -sf $Python3Path Python
+ln -sf $Python3Path python
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
