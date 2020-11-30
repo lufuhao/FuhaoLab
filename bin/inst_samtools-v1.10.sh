@@ -40,6 +40,8 @@ fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "export SAMTOOLS_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    SAMTOOLS_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
 exit 0
