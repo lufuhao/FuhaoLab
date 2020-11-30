@@ -25,12 +25,16 @@ PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
 mkdir ${PROGPATH}/$PackageName/$NameUncompress/build
 cd ${PROGPATH}/$PackageName/$NameUncompress/build
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE .."
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE -DBUILD_SHARED_LIBS=OFF .."
 RunCmds "make all"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install"
 if [ -s ${PROGPATH}/$PackageName/$NameUncompress/build/src/utils/libbamtools-utils.a ]; then
 	cp ${PROGPATH}/$PackageName/$NameUncompress/build/src/utils/libbamtools-utils.a ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib
+fi
+if [ -d ${PROGPATH}/$PackageName/$NameUncompress/src/utils/ ]; then
+	mkdir -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/include/bamtools/utils
+	RunCmds "cp ${PROGPATH}/$PackageName/$NameUncompress/src/utils/*.h ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/include/bamtools/utils"
 fi
 
 
@@ -46,6 +50,6 @@ ModuleAppend "setenv    BAMTOOLS_ROOT    $PROGPATH/$PackageName/$PackageVers/$MA
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 AddBashrc "export BAMTOOLS_ROOT=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE"
 
-DeletePath ${PROGPATH}/$PackageName/$NameUncompress
+#DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 
 exit 0
