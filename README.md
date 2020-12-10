@@ -259,6 +259,10 @@ apt -get install libglib2.0-dev
 
 > samtools,seqtk,CDBtools
 
+## [GeneTribe](https://github.com/chenym1/genetribe) doi:[10.1016/j.molp.2020.09.019](https://doi.org/10.1016/j.molp.2020.09.019) [Site](http://wheat.cau.edu.cn/TGT/)
+
+> blastplus, bedtools, jcvi
+
 ## [GenmeThreader](https://genomethreader.org)
 
 > 

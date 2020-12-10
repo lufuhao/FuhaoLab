@@ -1,16 +1,15 @@
 #!/bin/bash
 source FuhaoLab.conf
-#https://multiqc.info/
-#https://github.com/ewels/MultiQC
 
 PackageName="jcvi"
 PackageVersTemp="version"
 InternetLink='https://github.com/lufuhao/jcvi.git'
+InternetLink='https://github.com/tanghaibao/jcvi.git'
 NameUncompress="jcvi"
 TestCmd="python3 -m jcvi.formats.fasta extract"
 #PackageVers="v20200321-7b6f7c80"
 
-CheckPythonModules 'biopython' 'biopython' 'boto3' 'coveralls' 'cython' 'deap' 'ete3' 'gffutils' 'jinja2' 'matplotlib' 'networkx' 'numpy' 'graphviz' 'PyPDF2' 'pytest' 'pytest-cov' 'pytest-benchmark' 'PyYAML' 'scipy' 'seaborn' 
+CheckPythonModules 'biopython' 'boto3' 'coveralls' 'cython' 'deap' 'ete3' 'gffutils' 'jinja2' 'matplotlib' 'networkx' 'numpy' 'graphviz' 'PyPDF2' 'pytest' 'pytest-cov' 'pytest-benchmark' 'PyYAML' 'scipy' 'seaborn'
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName
@@ -50,6 +49,7 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export PYTHONPATH=$PythonLibPath:\$PYTHONPATH"
 AddBashrc "export PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+ModuleInfo "module load emboss kent bedtools"
 ModuleAppend "prereq emboss"
 ModuleAppend "prereq kent"
 ModuleAppend "prereq bedtools"
