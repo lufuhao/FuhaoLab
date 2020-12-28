@@ -584,6 +584,10 @@ pip3 install --user pysam ruffus
 
 > Perl
 
+## [SNPsplit](http://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/) [GitHub](https://github.com/FelixKrueger/SNPsplit)
+
+> Perl, Samtools
+
 ## [SOAPdenovo2](https://github.com/aquaskyline/SOAPdenovo2) [NotWorking]
 
 > make
@@ -684,7 +688,9 @@ mysql>exit;
 
 ## [eggNOG-mapper](http://eggnog-mapper.embl.de) [GitHub](https://github.com/eggnogdb/eggnog-mapper)
 
-> biopython, python2
+> py2: biopython, python2
+
+> py3: biopython, python3.7+
 
 ## [GetOrganelle](https://github.com/Kinggerm/GetOrganelle)
 
