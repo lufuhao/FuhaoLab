@@ -12,7 +12,6 @@ PackageVers="v0.4.0-36fd82a"
 
 CmdExit 'perl'
 
-:<<EOM
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -33,13 +32,10 @@ PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --always --tags --dirty)
 #PrintInfo "Version: $PackageVers"
 
-
-
 cd ${PROGPATH}/$PackageName
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
 RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 #cd ${PROGPATH}/$PackageName/$NameUncompress
@@ -57,7 +53,7 @@ mkdir ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/docs
 for indDoc in `find $PWD/ -maxdepth 1 -name "*.pdf" -type f`; do
 	mv $indDoc ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/docs
 done
-EOM
+
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
 elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
