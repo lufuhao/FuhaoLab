@@ -634,6 +634,10 @@ mysql>exit;
 
 > 
 
+## [TaxonKit](https://bioinf.shenwei.me/taxonkit) [GitHub](https://github.com/shenwei356/taxonkit) [doi](https://doi.org/10.1101/513523 )
+
+> Go
+
 ## [TransDecoder](https://github.com/TransDecoder/TransDecoder)
 
 > 
