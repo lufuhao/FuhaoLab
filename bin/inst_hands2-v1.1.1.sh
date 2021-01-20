@@ -13,10 +13,10 @@ CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 DownloadWget 'https://genomics.lums.edu.pk/software/hands2/filter_sam_vcf.tar.gz' 'filter_sam_vcf.tar.gz'
 if [ ! -d $NameUncompress ]; then
-	RunCmds "tar xzvf $NameCompress"
+	RunCmds "tar xvf $NameCompress"
 fi
 if [ ! -d filter_sam_vcf ]; then
-	tar xzvf filter_sam_vcf.tar.gz
+	tar xvf filter_sam_vcf.tar.gz
 fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
