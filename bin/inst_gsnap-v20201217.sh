@@ -10,11 +10,20 @@ InternetLink="http://research-pub.gene.com/gmap/src/gmap-gsnap-2020-12-17.tar.gz
 NameUncompress="gmap-2020-12-17"
 
 
-
-if [ -z "$BIODATABASES" ]; then
-	PrintError: "Error: GMAPDB would be NOT set as $BIODATABASES not defined"
-	exit 100
+if [ -z "$GMAPDB" ]; then
+	if [ -z "$BIODATABASES" ]; then
+		PrintError: "Error: GMAPDB would be NOT set as $BIODATABASES not defined"
+		exit 100
+	fi
+	GmapDatabase=$BIODATABASES/gmapdb
+else
+	GmapDatabase=$GMAPDB
 fi
+if [ ! -d $GmapDatabase ]; then
+	mkdir -p $GmapDatabase
+fi
+
+
 
 NameCompress=$PackageName-$PackageVers.tar.gz
 CheckPath $PackageName $PackageVers
@@ -25,14 +34,6 @@ if [ ! -d $NameUncompress ]; then
 fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$NameUncompress
-if [ -z "$GMAPDB" ]; then
-	GmapDatabase=$BIODATABASES/gmapdb
-else
-	GmapDatabase=$GMAPDB
-fi
-if [ ! -d $GmapDatabase ]; then
-	mkdir -p $GmapDatabase
-fi
 RunCmds "./configure --enable-lib --prefix=$PROGPATH/$PackageName/$PackageVers/x86_64 --with-gmapdb=$BIODATABASES/gmapdb --enable-zlib --enable-bzlib"
 RunCmds "make"
 RunCmds "make check"
@@ -45,10 +46,10 @@ if [ $? -ne 0 ]; then
 fi
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
-if [ -z "$GMAPDB" ]; then
+if [ ! -z "$GmapDatabase" ]; then
+	ModuleAppend "setenv    GMAPDB    $GmapDatabase"
 	PrintInfo "Info: GMAPDB was set to $GmapDatabase"
 	AddBashrc "export GMAPDB=$GmapDatabase"
-	ModuleAppend "setenv    GMAPDB    $GmapDatabase"
 fi
 
 DeletePath $PROGPATH/$PackageName/$PackageVers/$NameUncompress

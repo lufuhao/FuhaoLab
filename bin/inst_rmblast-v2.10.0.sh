@@ -9,7 +9,7 @@ NameUncompress="rmblast-2.10.0"
 TestCmd="./rmblastn -h"
 MACHTYPE="x64"
 
-NameCompress=$PackageName-$PackageVers.tar.gz
+NameCompress=$PackageName-$PackageVers.x64.linux.tar.gz
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then

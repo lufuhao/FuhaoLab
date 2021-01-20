@@ -16,11 +16,18 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-git clone https://github.com/samtools/htslib.git
-if [ $? -ne 0 ]; then
-	echo "Error: failed to download HTSlib" >&2
-	exit 100
+configureOptions=""
+if [ ! -z "$HTSDIR" ]; then
+	configureOptions=" ${configureOptions} --with-htslib $HTSDIR "
+else
+	git clone https://github.com/samtools/htslib.git
+	if [ $? -ne 0 ]; then
+		echo "Error: failed to download HTSlib" >&2
+		exit 100
+	fi
 fi
+
+
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #PackageVers="v"$(grep ^'VERSION=' version.sh | sed 's/^.*=//')
@@ -31,11 +38,13 @@ PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "autoheader"
 RunCmds "autoconf -Wno-syntax"
-RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-RunCmds "make all all-htslib"
+RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE $configureOptions "
+#RunCmds "make all all-htslib"
+RunCmds "make all"
 RunCmds "make test"
 DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE install install-htslib"
+#RunCmds "make prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE install install-htslib"
+RunCmds "make prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE install"
 mkdir -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/include
 RunCmds "cp *.h ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/include"
 if [ -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/include/version.h ]; then
@@ -54,7 +63,13 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+
+AddBashrc "export SAMTOOLS_ROOT=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+ModuleInfo " module load htslib samtools"
+ModuleAppend "prereq    htslib"
+ModuleAppend "setenv    SAMTOOLS_ROOT    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 DeletePath ${PROGPATH}/$PackageName/htslib

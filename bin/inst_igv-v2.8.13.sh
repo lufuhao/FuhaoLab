@@ -4,13 +4,13 @@ source FuhaoLab.conf
 
 PackageName="igv"
 PackageVers="v2.8.13"
-InternetLink="https://data.broadinstitute.org/igv/projects/downloads/2.8/IGV_2.8.13.zip"
+InternetLink="https://data.broadinstitute.org/igv/projects/downloads/2.8/IGV_Linux_2.8.13_WithJava.zip"
 NameUncompress="IGV_Linux_2.8.13"
 #TestCmd="./bowtie --help"
 
 CmdExit 'java'
 
-NameCompress=$PackageName-$PackageVers.zip
+NameCompress=$PackageName-$PackageVers.Linux.WithJava.zip
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then

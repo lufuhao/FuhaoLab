@@ -23,7 +23,7 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 
 
 #PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
-PackageVers="v"$(grep ^'version' setup.py | sed "s/^.*\s\+'//; s/'.*$//;")"-"$(git branch -vv | cut -f 3 -d' ')
+PackageVers="v"$(grep ^'version' setup.py | sed 's/^.*\s\+\"//; s/\".*$//;')"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
 #PrintInfo "Version: $PackageVers"

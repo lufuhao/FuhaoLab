@@ -18,7 +18,7 @@ DeletePath $PROGPATH/$PackageName/$PackageVers/x64fPic
 RunCmds "tar xzvf $NameCompress"
 mv $PROGPATH/$PackageName/$PackageVers/$NameUncompress $PROGPATH/$PackageName/$PackageVers/x64fPic
 cd $PROGPATH/$PackageName/$PackageVers/x64fPic
-RunCmds "make CFLAGS=\" -g -Wall -O2 -fPIC -m64\""
+make CFLAGS=" -g -Wall -O2 -fPIC -m64"
 $TestCmd
 if [ $? -ne 1 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2

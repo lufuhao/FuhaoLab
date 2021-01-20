@@ -51,17 +51,28 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 ## Routine libraries
 
 ```
-sudo apt-get install alacarte arj autoconf automake build-essential cabextract chromium-browser cmake convmv curl cython3 doxygen fig2dev file-roller filezilla flashplugin-installer g++ gcc gedit-plugins gimp git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libopenmpi-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mesa-common-dev mpack openmpi-bin perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-matplotlib python3-scipy python3-setuptools python3-tabulate qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-latex-extra unace unrar unzip uudeview xfig yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
-# libcurl4-openssl-dev python-pip
+sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mpack perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
-sudo apt-get install openmpi-bin openmpi-common openssh-client openssh-server libopenmpi3 libopenmpi-dev
+### Invalid libcurl4-openssl-dev python-pip
+
+### openMPI
+sudo apt-get install libopenmpi-dev libopenmpi3 openmpi-bin openmpi-common
+
+### openSSH
+sudo apt-get install openssh-client openssh-server 
+
+### Interface
+sudo apt-get install alacarte cabextract chromium-browser file-roller filezilla flashplugin-installer gedit-plugins gimp mesa-common-dev
+
 ```
 
 ## Python modules
 
 ```
-sudo pip3 install cython biopython
+pip3 install --user biopython cython matplotlib pandas plotly pysam scipy tabulate 
+
+pip3 install --user bokeh boto3 coveralls deap ete3 gffutils graphviz jinja2 joypy kaleido mappy networkx pyarrow psutil PyPDF2 pytest pytest-benchmark pytest-cov scikit-learn spectra 
 ```
 
 ## Perl modules
@@ -72,7 +83,7 @@ perl -MCPAN -e 'force install BioPerl'
 #need samtools compiled using fPic
 perl -MCPAN -e 'install Bio::DB::Sam'
 
-perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Log::Log4perl Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
+perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long List::MoreUtils List::Util Log::Log4perl Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Text::Balanced Text::Format Time::HiRes )'
 
 ```
 
@@ -80,7 +91,7 @@ perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Diges
 
 # Softwares
 
-## [ABySS](https://www.bcgsc.ca/resources/software/abyss) [github](https://github.com/bcgsc/abyss)
+## [ABySS](https://www.bcgsc.ca/resources/software/abyss) [GitHub](https://github.com/bcgsc/abyss)
 
 > boost, openmpi, sparsehash
 
@@ -96,7 +107,7 @@ sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
 sudo apt-get install pigz zsh zsh-common
 ```
 
-## [ALLPATHS-LG]() doi: [10.1101/gr.141515.112](https://dx.doi.org/10.1101/gr.141515.112)
+## [ALLPATHS-LG](http://software.broadinstitute.org/allpaths-lg/blog/?page_id=12) doi: [10.1101/gr.141515.112](https://dx.doi.org/10.1101/gr.141515.112)
 
 > [GCC](http://gcc.gnu.org/) v4.7.0+, [GMP](http://gmplib.org/) library compiled with the C++ interface, [Picard](http://picard.sourceforge.net/) set, command dot from the [graphviz](http://www.graphviz.org/) package.
 
@@ -135,6 +146,16 @@ sudo apt-get install libgmp-dev graphviz
 sudo apt-get install build-essential git qtbase5-dev
 ```
 
+## [bcftools](https://github.com/samtools/bcftools)
+
+> make, gcc, autoheader, autoconf, bash, perl
+
+> [GNU Scientific library](https://www.gnu.org/software/gsl/), HTSlib, zlib
+
+```
+sudo apt-get install libgsl0-dev libperl-dev
+```
+
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
 >
@@ -142,6 +163,10 @@ sudo apt-get install build-essential git qtbase5-dev
 ## [BLASR](https://github.com/mchaisso/blasr)
 
 > Require: HDF5 (HDF5INCLUDEDIR, HDF5LIBDIR)
+
+## [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi) [FTP](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+
+>
 
 ## [Bowtie](https://github.com/BenLangmead/bowtie)
 
@@ -896,7 +921,7 @@ sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
 
 > autoconf, make, autoheader, gcc/g++/clang, perl
 
-> zlib, libbz2, liblzma, libcurl, libcrypto
+> [zlib](http://zlib.net), [libbz2](http://bzip.org/), [liblzma](http://tukaani.org/xz/), [libcurl](https://curl.haxx.se/), [libcrypto](https://www.openssl.org/)
 
 ```
 sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev

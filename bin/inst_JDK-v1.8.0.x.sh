@@ -51,7 +51,7 @@ if [ $? -ne 0 ]; then
 fi
 
 cd $PROGPATH/$PackageName/$PackageVers/$PackagePlfm
-AddBashrc "### JDK $PackageName-$PackageVers"
+AddBashrc "### $PackageName-$PackageVers"
 AddBashrc "export JAVA_HOME=$PROGPATH/$PackageName/$PackageVers/$PackagePlfm"
 AddBashrc "export JRE_HOME=\${JAVA_HOME}/jre"
 AddBashrc "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\$CLASSPATH"

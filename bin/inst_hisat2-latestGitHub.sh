@@ -7,7 +7,7 @@ PackageVersTemp="version"
 InternetLink='https://github.com/DaehwanKimLab/hisat2.git'
 NameUncompress="hisat2"
 TestCmd="./hisat2 --help"
-
+#PackageVers="v2.2.1-4a411a9"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
@@ -27,10 +27,10 @@ PrintInfo "Version: $PackageVers"
 #PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --always --tags --dirty)
 #PrintInfo "Version: $PackageVers"
-PackageVers="v2.2.1-4a411a9"
+
 cd ${PROGPATH}/$PackageName/
-#DeleteCreatePath $PROGPATH/$PackageName/$PackageVers
-#RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+DeleteCreatePath $PROGPATH/$PackageName/$PackageVers
+RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 #RunCmds "make hisat2-align-s hisat2-build-s hisat2-inspect-s"
