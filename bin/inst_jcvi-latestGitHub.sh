@@ -3,13 +3,13 @@ source FuhaoLab.conf
 
 PackageName="jcvi"
 PackageVersTemp="version"
-InternetLink='https://github.com/lufuhao/jcvi.git'
+#InternetLink='https://github.com/lufuhao/jcvi.git'
 InternetLink='https://github.com/tanghaibao/jcvi.git'
 NameUncompress="jcvi"
 TestCmd="python3 -m jcvi.formats.fasta extract"
 #PackageVers="v20200321-7b6f7c80"
 
-CheckPythonModules 'biopython' 'boto3' 'coveralls' 'cython' 'deap' 'ete3' 'gffutils' 'jinja2' 'matplotlib' 'networkx' 'numpy' 'graphviz' 'PyPDF2' 'pytest' 'pytest-cov' 'pytest-benchmark' 'PyYAML' 'scipy' 'seaborn'
+CheckPythonModules 'biopython' 'brewer2mpl' 'boto3' 'coveralls' 'cython' 'deap' 'ete3' 'ftpretty' 'gffutils' 'goatools' 'graphviz' 'jinja2' 'matplotlib' 'more-itertools' 'natsort' 'networkx' 'numpy' 'ortools' 'PyPDF2' 'pytest' 'pytest-cov' 'pytest-benchmark' 'PyYAML' 'rich' 'scikit-image' 'scipy' 'seaborn' 'webcolors'
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName

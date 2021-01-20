@@ -78,12 +78,20 @@ pip3 install --user bokeh boto3 coveralls deap ete3 gffutils graphviz jinja2 joy
 ## Perl modules
 
 ```
+cpan -i Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long List::MoreUtils List::Util Log::Log4perl Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Text::Balanced Text::Format Time::HiRes
+
+
+
 perl -MCPAN -e 'force install BioPerl'
 
 #need samtools compiled using fPic
 perl -MCPAN -e 'install Bio::DB::Sam'
 
-perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Copy File::Spec::Functions File::Temp File::Which FindBin Font::TTF::Font GD GD::Polyline Getopt::Long List::MoreUtils List::Util Log::Log4perl Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Text::Balanced Text::Format Time::HiRes )'
+```
+
+## R modules
+
+```
 
 ```
 
@@ -758,10 +766,14 @@ pip3 install --user scipy
 
 > EMBOSS, BEDTOOLS, Kent tools
 
-> biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
+> biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn 
+
+> brewer2mpl ftpretty goatools more-itertools natsort ortools rich scikit_image webcolors
 
 ```
 pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
+
+pip3 install --user brewer2mpl ftpretty goatools more-itertools natsort ortools rich scikit_image webcolors
 ```
 
 ## [MACS2](https://github.com/macs3-project/MACS)

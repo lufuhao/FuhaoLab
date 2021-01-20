@@ -17,7 +17,7 @@ if [ $? -ne 1 ]; then
     exit 127
 fi
 
-:<<EOM
+
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -26,7 +26,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #def PrintVersion() :
 #	print ("Version: 1.0.0")
