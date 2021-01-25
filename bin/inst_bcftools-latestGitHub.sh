@@ -84,7 +84,7 @@ AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName
 AddBashrc "export BCFTOOLS_PLUGINS=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/plugins"
 ModuleAppend "setenv    BCFTOOLS_PLUGINS    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/plugins"
 
-#DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-#DeletePath ${PROGPATH}/$PackageName/HTSlib
+DeletePath ${PROGPATH}/$PackageName/$NameUncompress
+DeletePath ${PROGPATH}/$PackageName/htslib
 
 exit 0
