@@ -22,7 +22,7 @@ configureOptions=""
 #if [ ! -z "$HTSDIR" ]; then
 #	configureOptions=" ${configureOptions} --with-htslib $HTSDIR "
 #else
-	git clone --recursive git://github.com/samtools/htslib.git
+	git clone --recursive https://github.com/samtools/htslib.git
 	if [ $? -ne 0 ]; then
 		echo "Error: failed to download HTSlib" >&2
 		exit 100
