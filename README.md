@@ -1,4 +1,4 @@
-# 河南大学卢福浩课题组软件安装脚本
+# Program installation scripts of Fu-Hao's Lab in Henan University, China
 
 This repository is setup to further simplify the compilation and installation of BioSoft in Linux.
 
@@ -9,7 +9,7 @@ Any problem should you report to the issue part, please.
 
 ---
 
-# 准备工作
+# Preparation
 
 **Ubuntu 20.04**
 
@@ -19,15 +19,15 @@ Check out your machtype and set up your **MACHTYPE** variable
 uname -m
 ```
 
-在你的~/.bashrc里面添加如下行
+Add folloing lines into "~/.bashrc"
 
 ```
 export PROGPATH=${HOME}/Programs
 export BIODATABASES=${HOME}/Databases
 export MACHTYPE=x86_64
 export MODULEPATH=${PROGPATH}/bin/modules:$MODULEPATH
-#其中，${HOME}/Programs为软件安装位置，可自行更改，此仓库的脚本都会默认安装到此目录下
-#${HOME}/Databases为数据库位置，可自行更改，数据库会安装到此位置
+### $PROGPATH is the program installation root, all the programs will be installed in the folder
+### $BIODATABASES id the database root, all the DB related files ill be installed in the folder
 export FUHAOLAB_ROOT=/path/to/FuhaoLab
 export PATH=${FUHAOLAB_ROOT}/bin:${FUHAOLAB_ROOT}/ubuntu_config:$PROGPATH/bin:$PATH
 ```
@@ -40,7 +40,7 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 
 ---
 
-# 新软件的安装/编译问题
+# Raise an issue if you get any problem
 
 > Raise a hand in this repository Issue if you have any problem, question or if you want some scripts for new softwares.
 

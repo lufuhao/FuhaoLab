@@ -19,15 +19,15 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 configureOptions=""
-if [ ! -z "$HTSDIR" ]; then
-	configureOptions=" ${configureOptions} --with-htslib $HTSDIR "
-else
-	git clone git://github.com/samtools/htslib.git
+#if [ ! -z "$HTSDIR" ]; then
+#	configureOptions=" ${configureOptions} --with-htslib $HTSDIR "
+#else
+	git clone --recursive git://github.com/samtools/htslib.git
 	if [ $? -ne 0 ]; then
 		echo "Error: failed to download HTSlib" >&2
 		exit 100
 	fi
-fi
+#fi
 
 
 
@@ -51,7 +51,6 @@ PrintInfo "Version: $PackageVers"
 
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
-cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
 RunCmds "autoheader"
 RunCmds "autoconf -Wno-syntax"
 #RunCmds "autoreconf"
