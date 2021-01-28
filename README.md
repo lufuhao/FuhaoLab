@@ -52,7 +52,7 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 
 ```
 
-sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl make mpack perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
+sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl libxml2-dev make mpack perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
 ### Invalid libcurl4-openssl-dev python-pip
 
@@ -92,6 +92,15 @@ perl -MCPAN -e 'install Bio::DB::Sam'
 ## R modules
 
 ```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.12")
+
+### Bioconductor
+clusterProfiler, AnnotationForge, RSQLite, DBI, DESeq2, GO.db
+
+### R-project
+optparse, dplyr, stringr, jsonlite, purrr, RCurl
 
 ```
 
@@ -960,15 +969,21 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 
 ## Author:
 
-    Fu-Hao Lu
+    卢福浩(Fu-Hao Lu)
 
     Professor, PhD
+
+    作物逆境适应与改良国家重点实验室，生命科学学院
 
     State Key Labortory of Crop Stress Adaptation and Improvement
 
     College of Life Science
 
+    河南大学金明校区
+
     Jinming Campus, Henan University
+
+    开封 475004， 中国
 
     Kaifeng 475004, P.R.China
 
