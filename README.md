@@ -70,7 +70,7 @@ sudo apt-get install alacarte cabextract chromium-browser file-roller filezilla 
 ## Python modules
 
 ```
-pip3 install --user biopython cython matplotlib pandas plotly pysam scipy tabulate 
+pip3 install --user biopython cython matplotlib numpy pandas plotly pysam scipy tabulate 
 
 pip3 install --user bokeh boto3 coveralls deap ete3 gffutils graphviz jinja2 joypy kaleido mappy networkx pyarrow psutil PyPDF2 pytest pytest-benchmark pytest-cov scikit-learn spectra 
 ```
@@ -841,6 +841,9 @@ sudo apt-get install -y pkg-config libfreetype6-dev libpng-dev zlib1g-dev
 pip3 install --user cython pysam bx-python numpy pyBigWig
 ```
 
+## [WGDI](https://github.com/SunPengChuan/wgdi)
+
+> Python3: pandas>=1.1.0, numpy, biopython, matplotlib, scipy
 
 
 
