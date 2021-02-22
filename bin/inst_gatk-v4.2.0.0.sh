@@ -3,9 +3,9 @@ source FuhaoLab.conf
 
 
 PackageName="gatk"
-PackageVers="v4.1.9.0"
-InternetLink="https://github.com/broadinstitute/gatk/releases/download/4.1.9.0/gatk-4.1.9.0.zip"
-NameUncompress="gatk-4.1.9.0"
+PackageVers="v4.2.0.0"
+InternetLink="https://github.com/broadinstitute/gatk/releases/download/4.2.0.0/gatk-4.2.0.0.zip"
+NameUncompress="gatk-4.2.0.0"
 TestCmd="./gatk --list"
 
 CmdExists "java"
@@ -30,7 +30,7 @@ elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 else
 	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-	exit 100s
+	exit 100
 fi
 $TestCmd
 if [ $? -ne 0 ]; then

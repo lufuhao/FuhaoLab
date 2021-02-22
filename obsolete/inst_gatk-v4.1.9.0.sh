@@ -3,9 +3,9 @@ source FuhaoLab.conf
 
 
 PackageName="gatk"
-PackageVers="v4.1.8.1"
-InternetLink="https://github.com/broadinstitute/gatk/releases/download/4.1.8.1/gatk-4.1.8.1.zip"
-NameUncompress="gatk-4.1.8.1"
+PackageVers="v4.1.9.0"
+InternetLink="https://github.com/broadinstitute/gatk/releases/download/4.1.9.0/gatk-4.1.9.0.zip"
+NameUncompress="gatk-4.1.9.0"
 TestCmd="./gatk --list"
 
 CmdExists "java"
