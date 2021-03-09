@@ -70,9 +70,9 @@ sudo apt-get install alacarte cabextract chromium-browser file-roller filezilla 
 ## Python modules
 
 ```
-pip3 install --user biopython cython matplotlib numpy pandas plotly pysam scipy tabulate 
+pip3 install --user biopython cython matplotlib numpy pandas plotly psutil pysam scipy tabulate
 
-pip3 install --user bokeh boto3 coveralls deap ete3 gffutils graphviz jinja2 joypy kaleido mappy networkx pyarrow psutil PyPDF2 pytest pytest-benchmark pytest-cov scikit-learn spectra 
+pip3 install --user bokeh boto3 coveralls deap ete3 gffutils graphviz jinja2 joypy kaleido mappy networkx pyarrow PyPDF2 pytest pytest-benchmark pytest-cov scikit-learn spectra
 ```
 
 ## Perl modules
@@ -968,6 +968,17 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 
 ## [pb-assembly](https://github.com/PacificBiosciences/pb-assembly)
 
+---
+
+---
+
+---
+
+# System
+
+## [Bpytop](https://github.com/aristocratos/bpytop) Resource monitor
+
+> Python3.6+, psutil v5.7.0+
 
 
 ## Author:
