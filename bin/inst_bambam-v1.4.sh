@@ -21,6 +21,8 @@ if [ -z "$HTSDIR" ] || [ ! -d "$HTSDIR/include" ] || [ ! -d "$HTSDIR/lib" ]; the
 	exit 100
 fi
 export LIBRARY_PATH=$BAMTOOLS_ROOT/lib:$SAMTOOLS_ROOT/lib:$HTSDIR/lib:$LIBRARY_PATH
+### need libbam.a, libhts.a, libbamtools.a, libbamtools-utils.a, libz.a
+
 
 NameCompress=$PackageName-$PackageVers.tgz
 CheckPath $PackageName $PackageVers
