@@ -381,7 +381,7 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > gcc 4.9+
 
-## [LAST](http://last.cbrc.jp/)
+## [LAST](https://gitlab.com/mcfrith/last)
 
 > g++; >2G memory
 
