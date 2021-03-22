@@ -8,7 +8,7 @@ InternetLink='https://gitlab.com/mcfrith/last.git'
 NameUncompress="last"
 TestCmd="./lastal --help"
 #PackageVers=""
-:<<EOM
+
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -17,7 +17,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #AC_INIT([MUMmer], [4.0.0beta2], [gmarcais@umd.edu])
 #PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | sed 's/^AC_INIT.*jellyfish\], \[//;s/\].*$//g')
@@ -42,8 +42,6 @@ RunCmds "make"
 #RunCmds "make CXXFLAGS='-O3 -std=c++11 -pthread -DHAS_CXX_THREADS'"
 DeletePath $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "make install prefix=$PROGPATH/$PackageName/$PackageVers/$MACHTYPE"
-
-
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
