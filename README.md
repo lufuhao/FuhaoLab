@@ -52,7 +52,7 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 
 ```
 
-sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl libxml2-dev make mpack perl p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
+sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl libxml2-dev make mpack perl perl-doc p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
 
 ### Invalid libcurl4-openssl-dev python-pip
 
@@ -64,7 +64,11 @@ sudo apt-get install openssh-client openssh-server
 
 ### Interface
 sudo apt-get install alacarte cabextract chromium-browser file-roller filezilla flashplugin-installer gedit-plugins gimp mesa-common-dev
-
+#### Markdown editor [Typora](https://typora.io)
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+sudo apt-get install typora
 ```
 
 ## Python modules
@@ -574,6 +578,12 @@ pip3 install --user pysam biopython
 ## [Ray](https://github.com/sebhtml/ray)
 
 > [RayPlatform](https://github.com/sebhtml/RayPlatform)
+
+## [RSEM](https://github.com/deweylab/RSEM)
+
+> C++, Perl and R, Python, perl-doc
+
+> Bowtie/Bowtie2/STAR/HISAT2
 
 ## [Sambamba](https://github.com/biod/sambamba)
 
