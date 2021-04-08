@@ -549,6 +549,12 @@ pip3 install --user Psutil
 pip3 install --user pysam biopython
 ```
 
+## [Plink](https://github.com/chrchang/plink-ng)
+
+```
+sudo apt-get install zstd libatlas-base-dev liblapack-dev
+```
+
 ## polyCat (see bambam above)
 
 > BioPerl, [BAMtools](https://github.com/pezmaster31/bamtools)
