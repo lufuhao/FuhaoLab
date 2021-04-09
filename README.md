@@ -313,6 +313,14 @@ apt -get install libglib2.0-dev
 
 > samtools,seqtk,CDBtools
 
+## [Gemma](https://github.com/genetics-statistics/GEMMA/) [DOI](https://dx.doi.org/10.1086/519795)
+
+> C++ tool chain >= 5.5.0, GNU Science library (GSL) 2.x, blas/openblas, lapack, zlib
+
+```
+sudo apt-get install libopenblas-dev libgsl-dev liblapack-dev zlib1g-dev
+```
+
 ## [GeneTribe](https://github.com/chenym1/genetribe) doi:[10.1016/j.molp.2020.09.019](https://doi.org/10.1016/j.molp.2020.09.019) [Site](http://wheat.cau.edu.cn/TGT/)
 
 > blastplus, bedtools, jcvi
@@ -549,7 +557,7 @@ pip3 install --user Psutil
 pip3 install --user pysam biopython
 ```
 
-## [Plink](https://github.com/chrchang/plink-ng)
+## [Plink](http://zzz.bwh.harvard.edu/plink/index.shtml) [GitHub](https://github.com/chrchang/plink-ng) [DOI](https://dx.doi.org/10.1086/519795)
 
 ```
 sudo apt-get install zstd libatlas-base-dev liblapack-dev
