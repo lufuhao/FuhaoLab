@@ -24,8 +24,8 @@ fi
 
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
-sed -i "s/^PREFIX.*/PREFIX = ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE" ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/core/Makefile
-sed -i "s/^PREFIX.*/PREFIX = ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE" ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/extensions/Makefile
+sed -i "s#^PREFIX.*#PREFIX = ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE#" ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/core/Makefile
+sed -i "s#^PREFIX.*#PREFIX = ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE#" ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/extensions/Makefile
 cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress/core
 #RunCmds "./configure --enable-lib --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
 RunCmds "make clean"
