@@ -64,6 +64,7 @@ sudo apt-get install openssh-client openssh-server
 
 ### Interface
 sudo apt-get install alacarte cabextract chromium-browser file-roller filezilla flashplugin-installer gedit-plugins gimp mesa-common-dev
+
 #### Markdown editor [Typora](https://typora.io)
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://typora.io/linux ./'
@@ -358,6 +359,12 @@ sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 ## [IOGA](https://github.com/holmrenser/IOGA) [NotWorking due to python2]
 
 > Python2, BioPython, BBmap, SOAPdenovo2, SeqTK, SPAdes.py, ALE, Samtools 0.1.19, Picardtools
+
+## [IQ-tree](http://www.iqtree.org/) [GitHub] [v1](https://github.com/Cibiv/IQ-TREE) [v2](https://github.com/iqtree/iqtree2)
+
+> GCC>=v4.8; cmake; Boost lib; Eigen3 lib; openMP lib
+
+> sudo apt-get install libeigen3-dev libopenmpi-dev libboost-dev
 
 ## [Jellyfish](https://github.com/gmarcais/Jellyfish)
 
@@ -1005,24 +1012,65 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 > Python3.6+, psutil v5.7.0+
 
 
-## Author:
+
+## [croc](https://github.com/schollz/croc): 安全性极强的点对点传输工具、FTP替代
+
+
+
+> curl https://getcroc.schollz.com | bash
+
+or
+
+> snap install croc
+
+MAC:
+
+> brew install croc
+
+
+
+
+
+
+
+
+
+# To-do List
+
+[ ] [dev_sidebar](https://github.com/docmirror/dev-sidecar): GitHub加速，DNS优选 【Win】【Mac】
+
+[ ] [Circoletto](https://github.com/infspiredBAT/Circoletto) [online server](http://tools.bat.infspire.org/circoletto/): Circos可视化blast结果
+
+> circos &amp; circos-tools http://circos.ca/software/download/tools
+>
+> BLAST
+>
+> BioPerl
+
+[ ] [LIII](https://github.com/aliakseis/LIII): BT download
+
+
+
+
+
+# Author:
 
     卢福浩(Fu-Hao Lu)
-
+    
     Professor, PhD
-
+    
     作物逆境适应与改良国家重点实验室，生命科学学院
-
+    
     State Key Labortory of Crop Stress Adaptation and Improvement
-
+    
     College of Life Science
-
+    
     河南大学金明校区
-
+    
     Jinming Campus, Henan University
-
+    
     开封 475004， 中国
-
+    
     Kaifeng 475004, P.R.China
-
+    
     E-mail: LUFUHAO@HENU.EDU.CN
