@@ -564,6 +564,10 @@ pip3 install --user Psutil
 
 > Perl
 
+## [Phylip](https://evolution.genetics.washington.edu/phylip.html)
+
+> 
+
 ## [Phy-Mer](https://github.com/MEEIBioinformaticsCenter/phy-mer)
 
 > Python2/3, Pysam (0.7.4 tested), BioPython (1.58 tested)
@@ -669,6 +673,10 @@ pip3 install --user pysam ruffus
 ## [Smartdenovo](https://github.com/ruanjue/smartdenovo)
 
 > Perl
+
+## [SNPyho](https://github.com/thlee/SNPhylo)
+
+> Rscript; Python; MUSCLE; dnaml
 
 ## [SNPsplit](http://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/) [GitHub](https://github.com/FelixKrueger/SNPsplit)
 
