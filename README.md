@@ -760,6 +760,10 @@ mysql>exit;
 
 > make
 
+## [VCFtools](https://github.com/vcftools/vcftools) [GitHubPages](https://vcftools.github.io)
+
+>
+
 ## [wtdbg2](https://github.com/ruanjue/wtdbg2)
 
 > 64-bit Linux only, Perl
