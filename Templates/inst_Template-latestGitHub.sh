@@ -39,7 +39,7 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE .."
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE .."
 RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 RunCmds "make"
 RunCmds "make test"
