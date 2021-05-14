@@ -230,6 +230,10 @@ sudo apt-get install libgd-dev
 perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Digest::MD5 File::Basename File::Spec::Functions File::Temp FindBin Font::TTF::Font GD GD::Polyline Getopt::Long IO::File List::MoreUtils List::Util Math::Bezier Math::BigFloat Math::Round Math::VecStat Memoize POSIX Params::Validate Pod::Usage Readonly Regexp::Common SVG Set::IntSpan Statistics::Basic Storable Sys::Hostname Text::Balanced Text::Format Time::HiRes )'
 ```
 
+## [CNVnator](https://github.com/abyzovlab/CNVnator)
+
+> [ROOT](https://root.cern/), samtools
+
 ## [csvtk](https://github.com/shenwei356/csvtk)
 
 > Go
@@ -674,6 +678,10 @@ pip3 install --user pysam ruffus
 
 > Perl
 
+## [Sniffles](https://github.com/fritzsedlazeck/Sniffles)
+
+> cmake, make
+
 ## [SNPyho](https://github.com/thlee/SNPhylo)
 
 > Rscript; Python; MUSCLE; dnaml
@@ -1001,6 +1009,19 @@ sudo apt-get install texlive-latex-extra libgd3 libgd-dev libreadline-dev
 ```
 sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev
 ```
+
+## [ROOT](https://root.cern/) [GitHub](https://github.com/root-project/root)
+
+```
+sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev python openssl-dev libssl-dev
+sudo apt-get install gfortran libpcre3-dev \
+xlibmesa-glu-dev libglew1.5-dev libftgl-dev \
+libmysqlclient-dev libfftw3-dev libcfitsio-dev \
+graphviz-dev libavahi-compat-libdnssd-dev \
+libldap2-dev python-dev libxml2-dev libkrb5-dev \
+libgsl0-dev libqt4-dev
+```
+
 ## [seqan3](http://www.seqan.de/) [GitHub](https://github.com/seqan/seqan3)
 
 > Requirements: GCC v7+, cmake v3.4+, [SDSL](https://github.com/xxsds/sdsl-lite) v3+ (Included), [Range-V3](https://github.com/ericniebler/range-v3) v0.11.0+ (Included), [cereal](https://github.com/USCiLab/cereal) v1.2.3+ (Included), [zlib](https://github.com/madler/zlib), v1.2+, [bzip2](http://www.bzip.org/) v1.0+
