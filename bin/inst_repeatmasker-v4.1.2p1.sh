@@ -89,7 +89,7 @@ fi
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
-PrintInfo "Info: Now please configure Repeatmasker: 
+PrintInfo "Info: Now please configure Repeatmasker:"
 PrintInfo "      cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/"
 PrintInfo "      ./configure"
 
