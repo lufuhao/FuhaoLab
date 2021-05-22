@@ -24,7 +24,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
 fi
-ls -x -1 | grep -v 'rmblast' |xargs -i chmod -x {}
+#ls -x -1 | grep -v 'rmblast' |xargs -i chmod -x {}
 
 cd $PROGPATH/$PackageName/$PackageVers/$MACHTYPE
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
