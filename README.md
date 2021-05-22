@@ -616,6 +616,26 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 
 > [RayPlatform](https://github.com/sebhtml/RayPlatform)
 
+## [RepeatMasker](http://repeatmasker.org/RepeatMasker/)
+
+> Perl v5.8.0+: FindBin, Carp, Getopt::Long, Storable, Pod::Text, File::Copy, File::Spec, File::Path, Data::Dumper, Cwd
+
+> python3 [h5py](https://docs.h5py.org/en/latest/build.html), [RMBlast](http://www.repeatmasker.org/RMBlast.html), [TRF](http://tandem.bu.edu/trf/trf.html), Repeat Database: [Dfam](http://www.dfam.org)
+
+> Go to [Dfam](https://www.dfam.org/) https://www.dfam.org/releases/Dfam_3.3/families/Dfam.h5.gz ~15Gb and download to $PROGPATH/repeatmasker/
+
+> Download RepBaseRepeatMaskerEdition-20181026.tar.gz to $PROGPATH/repeatmasker/
+
+```
+pip3 install --user h5py
+cd $PROGPATH/repeatmasker/vX.X.X/x86_64
+./configure
+```
+
+## [RMBlast](http://www.repeatmasker.org/RMBlast.html)
+
+> 
+
 ## [RSEM](https://github.com/deweylab/RSEM)
 
 > C++, Perl and R, Python, perl-doc
@@ -624,7 +644,7 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 
 ## [Sambamba](https://github.com/biod/sambamba)
 
-> D compiler (ldc), BioD (git submodule), gcc tool chain (for htslib and lz4), htslib (git submodule), undeaD (git submodule), libz, liblz4
+> D compiler (ldc), BioD (git submodule), GCC tool chain (for htslib and lz4), htslib (git submodule), undeaD (git submodule), libz, liblz4
 
 >    inst_lib_ldc-v1.22.0.sh
 
