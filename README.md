@@ -129,8 +129,10 @@ sudo apt-get install libboost-dev libboost-all-dev openmpi-bin libsparsehash-dev
 sudo apt-get install pigz zsh zsh-common
 ```
 
-## [ALLPATHS-LG](http://software.broadinstitute.org/allpaths-lg/blog/?page_id=12) doi: [10.1101/gr.141515.112](https://dx.doi.org/10.1101/gr.141515.112)
+## [ALLPATHS-LG](http://software.broadinstitute.org/allpaths-lg/blog/?page_id=12)
 
+> doi: [10.1101/gr.141515.112](https://dx.doi.org/10.1101/gr.141515.112)
+>
 > [GCC](http://gcc.gnu.org/) v4.7.0+, [GMP](http://gmplib.org/) library compiled with the C++ interface, [Picard](http://picard.sourceforge.net/) set, command dot from the [graphviz](http://www.graphviz.org/) package.
 
 ```
@@ -206,7 +208,7 @@ sudo apt-get install libgsl0-dev libperl-dev
 
 > 16GB Mem; GCC 4.5; GCC 7+
 
-> Perl 5.12.0, or File::Path 2.08
+> Perl 5.12.0+: File::Path 2.08
 
 > Java SE 8
 
@@ -330,8 +332,10 @@ apt -get install libglib2.0-dev
 sudo apt-get install libopenblas-dev libgsl-dev liblapack-dev zlib1g-dev
 ```
 
-## [GeneTribe](https://github.com/chenym1/genetribe) doi:[10.1016/j.molp.2020.09.019](https://doi.org/10.1016/j.molp.2020.09.019) [Site](http://wheat.cau.edu.cn/TGT/)
+## [GeneTribe](https://github.com/chenym1/genetribe)
 
+> doi:[10.1016/j.molp.2020.09.019](https://doi.org/10.1016/j.molp.2020.09.019) [Site](http://wheat.cau.edu.cn/TGT/)
+>
 > blastplus, bedtools, jcvi
 
 ## [GenmeThreader](https://genomethreader.org)
@@ -414,8 +418,10 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 
 > if errors are reported in 'make', try to comment line20 and uncomment line21 or line22
 
-## [LoRDEC](http://www.atgc-montpellier.fr/lordec/) doi: [10.1093/bioinformatics/btu538](https://dx.doi.org/10.1093/bioinformatics/btu538)
+## [LoRDEC](http://www.atgc-montpellier.fr/lordec/)
 
+> doi: [10.1093/bioinformatics/btu538](https://dx.doi.org/10.1093/bioinformatics/btu538)
+>
 > gcc/g++ 4.8+, [GATB](https://github.com/GATB/gatb-core) (auto-download), libboost (auto-download), make, cmake, zlib1g-dev, wget
 
 ## [MAFFT](https://mafft.cbrc.jp/alignment/software/)
@@ -598,7 +604,9 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 
 > build-essential g++ cmake git-all
 
-## [proovread](https://github.com/BioInf-Wuerzburg/proovread) doi: [10.1093/bioinformatics/btu392](https://dx.doi.org/10.1093/bioinformatics/btu392)
+## [proovread](https://github.com/BioInf-Wuerzburg/proovread)
+
+>  doi: [10.1093/bioinformatics/btu392](https://dx.doi.org/10.1093/bioinformatics/btu392)
 
 > Perl 5.10.1+: Cwd Data::Dumper File::Basename File::Copy File::Path File::Spec File::Temp File::Which FindBin Getopt::Long List::Util Log::Log4perl Storable Thread::Queue threads Time::HiRes
 
@@ -664,8 +672,10 @@ sudo apt install libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev li
 
 > #inst_samtools-v0.1.20.fPIC.sh is only for Bio::DB::Sam installation
 
-## [seqkit](https://github.com/shenwei356/seqkit) doi: [10.1371/journal.pone.0163962](https://dx.doi.org/10.1371/journal.pone.0163962)
+## [seqkit](https://github.com/shenwei356/seqkit)
 
+> doi: [10.1371/journal.pone.0163962](https://dx.doi.org/10.1371/journal.pone.0163962)
+>
 > Go language
 
 ```
@@ -1111,6 +1121,44 @@ MAC:
 [ ] [LIII](https://github.com/aliakseis/LIII): BT download
 
 
+
+[CPAT](http://rna-cpat.sourceforge.net) [paper](http://nar.oxfordjournals.org/content/41/6/e74.long)
+
+[CPC2](https://github.com/biocoder/CPC2) [online](http://cpc2.gao-lab.org/)
+
+为CPC 的升级版，发布于2017 年，是目前最新的lncRNA 鉴定工具，也代表着lncRNA  鉴定的最新研究进展。在经过大量的特征选择后，CPC2 最终的特征主要包括四条：最长ORF 长度，ORF 的完整性，Fickett 分数以及等电点 (isoelectric point, pI)[39,40]。其中等电点特征主要是通过将最长ORF  翻译为氨基酸序列，而后根据氨基酸等电点这一理化性质计算而得。与大多lncRNA 鉴定工具相同，CPC2 也使用了支持向量机来构建分类器。
+
+[PLEK](https://sourceforge.net/projects/plek)
+
+PLEK软件通过序列的kmer构成来区分编码和非编码转录本，不需要通过比对来完成，所以运行速度较快，同时其性能受到测序错误的影响的概率较低，比较稳定。
+
+[lncFinder](http://bmbl.sdstate.edu/lncfinder/)
+
+LncFinder是一种新的lncRNA识别工具。基于六聚体的对数距离，多尺度结构信息和从快速离散傅立叶变换获得的理化特征。为了确定最佳分类器，使用10倍交叉验证对五种广泛使用的机器学习算法进行了验证：逻辑回归，支持向量机（SVM），随机森林，极限学习机器和深度学习。最终选择SVM作为LncFinder的分类器。经过全面的功能选择和模型验证方案的评估，LncFinder在多个物种上的表现优于几种最先进的工具。用户可以轻松，高效地使用新的数据集或不同的机器学习算法对LncFinder进行重新训练。
+
+[]()
+
+[BETA](http://cistrome.org/BETA/) doi: 10.1038/nprot.2013.150
+
+Target analysis by integration of transcriptome and ChIP-seq data with BETA
+
+[SeqAcademy](http://www.seqacademy.org/) [GitHub](https://github.com/NCBI-Hackathons/seqacademy)
+
+
+
+[HALC](https://github.com/lanl001/halc)
+
+>  A high throughput algorithm for long read error correction. HALC aligns  the long reads to short read contigs from the same species with a  relatively low identity requirement so that a long read region can be  aligned to at least one contig region, including its true genome  region’s repeats in the contigs sufficiently similar to it (similar  repeat based alignment approach). It then constructs a contig graph and, for each long read, references the other long reads’ alignments to find the most accurate alignment and correct it with the aligned contig  regions (long read support based validation approach). 
+
+> BLASR, LoRDEC (only for -ordinary mode)
+
+
+
+
+
+[ECtools](https://github.com/jgurtowski/ectools)
+
+[LoRDEC](http://www.atgc-montpellier.fr/lordec/)
 
 
 
