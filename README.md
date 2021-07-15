@@ -338,6 +338,16 @@ sudo apt-get install libopenblas-dev libgsl-dev liblapack-dev zlib1g-dev
 >
 > blastplus, bedtools, jcvi
 
+## [genometools](http://genometools.org/pub/)
+
+> Include: LTRharvest
+
+> Requirements: GNU make v3.8+, libcairo2-dev [cairo.h], libpango1.0-dev [pangocairo.h]
+
+```
+sudo apt-get install libcairo2-dev libpango1.0-dev
+```
+
 ## [GenmeThreader](https://genomethreader.org)
 
 > 
@@ -656,7 +666,7 @@ cd $PROGPATH/repeatmasker/vX.X.X/x86_64
 
 > Optional: [ABBlast](http://blast.advbiocomp.com/licensing/)
 
-> Optional: [LTRHarvest ](http://genometools.org/pub/), [Ltr_retriever](https://github.com/oushujun/LTR_retriever/releases), [MAFFT](https://mafft.cbrc.jp/alignment/software/), [CD-HIT](http://weizhongli-lab.org/cd-hit/), [Ninja v0.95](https://github.com/TravisWheelerLab/NINJA/releases/tag/0.95-cluster_only)
+> Optional: [genometools](http://genometools.org/pub/), [Ltr_retriever](https://github.com/oushujun/LTR_retriever/releases), [MAFFT](https://mafft.cbrc.jp/alignment/software/), [CD-HIT](http://weizhongli-lab.org/cd-hit/), [Ninja v0.95](https://github.com/TravisWheelerLab/NINJA/releases/tag/0.95-cluster_only)
 
 ## [RepeatScout](https://bix.ucsd.edu/repeatscout/)
 
