@@ -360,6 +360,12 @@ sudo apt-get install git cmake g++ libboost-all-dev libz3-dev libbz2-dev
 
 > zlib, bzip2
 
+## [HALC](https://github.com/lanl001/halc)
+
+>  A high throughput algorithm for long read error correction. HALC aligns  the long reads to short read contigs from the same species with a  relatively low identity requirement so that a long read region can be  aligned to at least one contig region, including its true genome  region’s repeats in the contigs sufficiently similar to it (similar  repeat based alignment approach). It then constructs a contig graph and, for each long read, references the other long reads’ alignments to find the most accurate alignment and correct it with the aligned contig  regions (long read support based validation approach). 
+
+> BLASR, LoRDEC (only for -ordinary mode), g++, Python2
+
 ## [HISAT2](https://daehwankimlab.github.io/hisat2), [Github](https://github.com/DaehwanKimLab/hisat2)
 
 > 
@@ -608,7 +614,7 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 
 >  doi: [10.1093/bioinformatics/btu392](https://dx.doi.org/10.1093/bioinformatics/btu392)
 
-> Perl 5.10.1+: Cwd Data::Dumper File::Basename File::Copy File::Path File::Spec File::Temp File::Which FindBin Getopt::Long List::Util Log::Log4perl Storable Thread::Queue threads Time::HiRes
+> Perl 5.10.1+: Cwd Data::Dumper File::Basename File::Copy(v5.34core) File::Path File::Spec File::Temp File::Which FindBin Getopt::Long List::Util Log::Log4perl Storable Thread::Queue threads Time::HiRes
 
 > Blast-2.2.24+, samtools-1.1+
 
@@ -618,11 +624,15 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 
 ## [Racon](https://github.com/isovic/racon)
 
-> gcc 4.8+ or clang 3.4+, cmake 3.2+, 
+> gcc 4.8+ or clang 3.4+, cmake 3.2+
 
 ## [Ray](https://github.com/sebhtml/ray)
 
 > [RayPlatform](https://github.com/sebhtml/RayPlatform)
+
+## [RECON](http://eddylab.org/software/recon/)
+
+> [v1.08 for RepeatModeler](http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz)
 
 ## [RepeatMasker](http://repeatmasker.org/RepeatMasker/)
 
@@ -639,6 +649,20 @@ pip3 install --user h5py
 cd $PROGPATH/repeatmasker/vX.X.X/x86_64
 ./configure
 ```
+
+## [RepeatModeler](http://www.repeatmasker.org/RepeatModeler/)
+
+> Requires: [Perl](http://www.perl.org/get.html), [RepeatMasker & Libraries](http://www.repeatmasker.org/RepeatMasker), [RECON v1.0.8](http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz), [RepeatScout v1.0.6](http://www.repeatmasker.org/RepeatScout-1.0.6.tar.gz), [TRF](http://tandem.bu.edu/trf/trf.html), [RMBlast](http://www.repeatmasker.org/RMBlast.html)
+
+> Optional: [ABBlast](http://blast.advbiocomp.com/licensing/)
+
+> Optional: [LTRHarvest ](http://genometools.org/pub/), [Ltr_retriever](https://github.com/oushujun/LTR_retriever/releases), [MAFFT](https://mafft.cbrc.jp/alignment/software/), [CD-HIT](http://weizhongli-lab.org/cd-hit/), [Ninja v0.95](https://github.com/TravisWheelerLab/NINJA/releases/tag/0.95-cluster_only)
+
+## [RepeatScout](https://bix.ucsd.edu/repeatscout/)
+
+> [v1.0.6 for RepeatScout](http://www.repeatmasker.org/RepeatScout-1.0.6.tar.gz)
+
+> Requirements: perl 5.5+, RepeatMasker-open3.0+, [nseg](ftp://ftp.ncbi.nih.gov/pub/seg/nseg), [trf](http://tandem.bu.edu/trf/trf.html)
 
 ## [RMBlast](http://www.repeatmasker.org/RMBlast.html)
 
@@ -1146,11 +1170,7 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 
 
-[HALC](https://github.com/lanl001/halc)
 
->  A high throughput algorithm for long read error correction. HALC aligns  the long reads to short read contigs from the same species with a  relatively low identity requirement so that a long read region can be  aligned to at least one contig region, including its true genome  region’s repeats in the contigs sufficiently similar to it (similar  repeat based alignment approach). It then constructs a contig graph and, for each long read, references the other long reads’ alignments to find the most accurate alignment and correct it with the aligned contig  regions (long read support based validation approach). 
-
-> BLASR, LoRDEC (only for -ordinary mode)
 
 
 
@@ -1158,7 +1178,11 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 [ECtools](https://github.com/jgurtowski/ectools)
 
-[LoRDEC](http://www.atgc-montpellier.fr/lordec/)
+
+
+[CLARI-TE](https://github.com/jdaron/CLARI-TE)
+
+
 
 
 
