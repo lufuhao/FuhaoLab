@@ -42,7 +42,7 @@ elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
 	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 else
 	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-	exit 100s
+	exit 100
 fi
 $TestCmd
 if [ $? -ne 0 ]; then
