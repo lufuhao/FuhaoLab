@@ -666,11 +666,15 @@ cd $PROGPATH/repeatmasker/vX.X.X/x86_64
 
 ## [RepeatModeler](http://www.repeatmasker.org/RepeatModeler/)
 
-> Requires: [Perl](http://www.perl.org/get.html), [RepeatMasker & Libraries](http://www.repeatmasker.org/RepeatMasker), [RECON v1.0.8](http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz), [RepeatScout v1.0.6](http://www.repeatmasker.org/RepeatScout-1.0.6.tar.gz), [TRF](http://tandem.bu.edu/trf/trf.html), [RMBlast](http://www.repeatmasker.org/RMBlast.html)
+> Requires: [Perl](http://www.perl.org/get.html), [RepeatMasker & Libraries](http://www.repeatmasker.org/RepeatMasker), [RECON v1.0.8](http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz), [RepeatScout v1.0.6](http://www.repeatmasker.org/RepeatScout-1.0.6.tar.gz), [TRF](http://tandem.bu.edu/trf/trf.html), [RMBlast](http://www.repeatmasker.org/RMBlast.html), UCSC [kent](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) TwoBit Tools (twoBitToFa, faToTwoBit, twoBitInfo etc)
 
 > Optional: [ABBlast](http://blast.advbiocomp.com/licensing/)
 
 > Optional: [genometools](http://genometools.org/pub/), [Ltr_retriever](https://github.com/oushujun/LTR_retriever/releases), [MAFFT](https://mafft.cbrc.jp/alignment/software/), [CD-HIT](http://weizhongli-lab.org/cd-hit/), [Ninja v0.95](https://github.com/TravisWheelerLab/NINJA/releases/tag/0.95-cluster_only)
+
+```
+perl ./configure
+```
 
 ## [RepeatScout](https://bix.ucsd.edu/repeatscout/)
 
