@@ -45,6 +45,25 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 #DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 #RunCmds "make install"
 
+if [ -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths ]; then
+	if [ ! -s ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths.bak ]; then
+		mv ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths_bak
+	fi
+fi
+PrintInfo "Info: configure path for blast+, repeatmasker, hmmer, cdhit"
+mypath=$(CmdPath "makeblastdb")
+PrintInfo "BLAST+=$mypath"
+echo "BLAST+=$mypath" > ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths
+mypath=$(CmdPath "RepeatMasker")
+PrintInfo "RepeatMasker=$mypath"
+echo "RepeatMasker=$mypath" >> ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths
+mypath=$(CmdPath "hmmsearch")
+PrintInfo "HMMER=$mypath"
+echo "HMMER=$mypath" >> ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths
+mypath=$(CmdPath "cd-hit-est")
+PrintInfo "CDHIT=$mypath"
+echo "CDHIT=$mypath" >> ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/paths
+
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 $TestCmd
 if [ $? -ne 255 ]; then
