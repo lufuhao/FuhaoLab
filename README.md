@@ -440,9 +440,13 @@ sudo apt install cmake zlib1g-dev libhdf5-dev
 >
 > gcc/g++ 4.8+, [GATB](https://github.com/GATB/gatb-core) (auto-download), libboost (auto-download), make, cmake, zlib1g-dev, wget
 
+## [LTR_retriever](https://github.com/oushujun/LTR_retriever)
+
+> BLAST+ (makeblastdb, blastn, blastx), CDHIT (cd-hit-est), HMMER (hmmsearch), RepeatMasker
+
 ## [MAFFT](https://mafft.cbrc.jp/alignment/software/)
 
-
+> 
 
 ## Mason
 
