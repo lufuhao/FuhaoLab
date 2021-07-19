@@ -578,6 +578,12 @@ sudo apt-get build-essential
 pip3 install --user Psutil
 ```
 
+## [Ninja v0.95](https://github.com/TravisWheelerLab/NINJA/releases/tag/0.95-cluster_only)
+
+```
+sudo apt-get install doxygen
+```
+
 ## [NLGenomeSweeper](https://github.com/ntoda03/NLGenomeSweeper)
 
 >  Python >=3.5; blast+; MUSCLE aligner; SAMtools; bedtools; HMMER; InterProScan with PANTHER database; TransDecoder
@@ -659,6 +665,7 @@ sudo apt-get install zstd libatlas-base-dev liblapack-dev
 > Download RepBaseRepeatMaskerEdition-20181026.tar.gz to $PROGPATH/repeatmasker/
 
 ```
+sudo apt-get install libtext-soundex-perl
 pip3 install --user h5py
 cd $PROGPATH/repeatmasker/vX.X.X/x86_64
 ./configure

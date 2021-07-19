@@ -63,23 +63,8 @@ if [ ! -z "$RepBaseFile" ]; then
 	rmdir Libraries >/dev/null 2>&1
 fi
 
-
-
-if [ ! -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
-	mkdir -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
-	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
-	ln -sf ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/RepeatMasker RepeatMasker
-	ln -sf ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/RepeatMasker repeatmasker
-fi
-
-if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
-	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
-elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
-	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-else
-	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-	exit 100
-fi
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+ln -sf ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/RepeatMasker repeatmasker
 $TestCmd
 if [ $? -ne 1 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
