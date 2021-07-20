@@ -9,7 +9,7 @@ NameUncompress="root"
 
 CheckLibPath $PackageName
 
-:<<EOM
+
 cd ${PROGPATH}/libraries/$PackageName/
 DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
 git clone $InternetLink
@@ -18,7 +18,7 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 
-EOM
+
 
 cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
@@ -30,7 +30,7 @@ PrintInfo "Version: $PackageVers"
 
 #EOM
 
-
+exit 0
 cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
 DeletePath ${PROGPATH}/libraries/$PackageName/build
 CreatePath ${PROGPATH}/libraries/$PackageName/build
@@ -38,8 +38,9 @@ cd ${PROGPATH}/libraries/$PackageName/$NameUncompress/build
 RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE ../root"
 DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "cmake --build . -- install j4"
+#RunCmds "make install"
 
-RunCmds "make install"
+cd $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE
 if [ ! -d $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE/lib ] || [ ! -d $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE/include ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
 	exit 100
@@ -48,10 +49,10 @@ fi
 #EOM
 
 cd $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable $PROGPATH/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "### $PackageName-$PackageVers"
+AddBashrc "source ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/bin/thisroot.sh"
+ModuleAppend "source-sh    bash    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/bin/thisroot.sh"
 
-
-
-#DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$NameUncompress
-DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress/build
+#DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress/build
+DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
 exit 0
