@@ -234,7 +234,7 @@ perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Diges
 
 ## [CNVnator](https://github.com/abyzovlab/CNVnator)
 
-> [ROOT](https://root.cern/), samtools
+> [ROOT](https://root.cern/) [github](https://github.com/root-project/root.git), samtools, [YEPPP](http://www.yeppp.info/)
 
 ## [csvtk](https://github.com/shenwei356/csvtk)
 
