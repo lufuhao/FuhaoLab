@@ -192,7 +192,7 @@ sudo apt-get install libgsl0-dev libperl-dev
 
 >
 
-## [Bowtie](https://github.com/BenLangmead/bowtie)
+## [Bowtie](http://bowtie-bio.sourceforge.net/) [GitHub](https://github.com/BenLangmead/bowtie)
 
 > libtbb-dev
 
