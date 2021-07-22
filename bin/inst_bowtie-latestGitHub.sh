@@ -7,7 +7,7 @@ PackageVersTemp="version"
 InternetLink='https://github.com/BenLangmead/bowtie.git'
 NameUncompress="bowtie"
 TestCmd="./bowtie --help"
-PackageVers="v1.3.0-da7b440"
+#PackageVers="v1.3.0-da7b440"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
