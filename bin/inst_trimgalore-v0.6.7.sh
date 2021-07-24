@@ -23,9 +23,9 @@ else
 fi
 
 PackageName="trimgalore"
-PackageVers="v0.6.5"
-InternetLink="https://github.com/FelixKrueger/TrimGalore/archive/0.6.5.tar.gz"
-NameUncompress="TrimGalore-0.6.5"
+PackageVers="v0.6.7"
+InternetLink="https://github.com/FelixKrueger/TrimGalore/archive/refs/tags/0.6.7.tar.gz"
+NameUncompress="TrimGalore-0.6.7"
 TestCmd="./trim_galore --help"
 
 
@@ -45,8 +45,10 @@ if [ $? -ne 0 ]; then
 	exit 100
 fi
 cd $PROGPATH/$PackageName/$PackageVers/x86_64
+
 ModuleAppend "prereq    fastqc"
-#ModuleAppend "prereq    cutadapt"
+ModuleAppend "prereq    cutadapt"
+ModuleAppend "###module load fastqc cutadapt"
 AddEnvironVariable $PROGPATH/$PackageName/$PackageVers/x86_64 "$PackageName-$PackageVers"
 ModuleInfo "Requirement: module load fastqc cutadapt trimgalore"
 
