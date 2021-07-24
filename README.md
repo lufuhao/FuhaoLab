@@ -869,10 +869,10 @@ mysql>exit;
 
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
-> Python modules: dnaio xopen
+> Python modules: dnaio xopen isal
 
 ```
-pip3 install --user dnaio xopen
+pip3 install --user dnaio xopen isal
 ```
 
 ## [deepTools](https://github.com/deeptools/deepTools)
