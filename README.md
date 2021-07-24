@@ -871,6 +871,10 @@ mysql>exit;
 
 > Python modules: dnaio xopen
 
+```
+pip3 install --user dnaio xopen
+```
+
 ## [deepTools](https://github.com/deeptools/deepTools)
 
 > pip3 install --user matplotlib numpy numpydoc plotly py2bit pyBigWig pysam scipy cycler pillow certifi kiwisolver python-dateutil pyparsing sphinx Jinja2 six alabaster sphinxcontrib-htmlhelp sphinxcontrib-applehelp sphinxcontrib-jsmath snowballstemmer Pygments sphinxcontrib-serializinghtml sphinxcontrib-qthelp docutils babel requests packaging sphinxcontrib-devhelp imagesize setuptools MarkupSafe pytz
@@ -1047,7 +1051,7 @@ sudo apt-get install gradle
 
 > JavaSE
 
-## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) [GitHub](https://github.com/usadellab/Trimmomatic)
 
 > JDK
 
