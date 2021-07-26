@@ -847,6 +847,10 @@ mysql>exit;
 
 > make
 
+## [VCF2Dis](https://github.com/BGI-shenzhen/VCF2Dis)
+
+> Requirements: zlib
+
 ## [VCFtools](https://github.com/vcftools/vcftools) [GitHubPages](https://vcftools.github.io)
 
 >
