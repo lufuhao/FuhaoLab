@@ -987,6 +987,14 @@ sudo apt-get install -y pkg-config libfreetype6-dev libpng-dev zlib1g-dev
 pip3 install --user cython pysam bx-python numpy pyBigWig
 ```
 
+## [TOBIAS](https://github.com/loosolab/TOBIAS)
+
+> Requirements: numpy, scipy, pysam, pybedtools, matplotlib>=2, scikit-learn, pandas, pypdf2, xlsxwriter, adjustText, pyBigWig>=0.3, MOODS-python, svist4get>=1.2.24, gimmemotifs, logomaker, seaborn>=0.9.1, boto3, pyyaml>5.1, kneed
+
+```
+pip3 install --user numpy scipy pysam pybedtools matplotlib scikit-learn pandas pypdf2 xlsxwriter adjustText pyBigWig MOODS-python svist4get gimmemotifs logomaker seaborn boto3 pyyaml kneed
+```
+
 ## [WGDI](https://github.com/SunPengChuan/wgdi)
 
 > Python3: pandas>=1.1.0, numpy, biopython, matplotlib, scipy
