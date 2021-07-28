@@ -28,13 +28,13 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 #PrintInfo "Version: $PackageVers"
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
-PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --always --tags --dirty)
-PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
+#PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --always --tags --dirty)
+#PrintInfo "Version: $PackageVers"
 
 
-exit 0
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "python3 setup.py build"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
@@ -42,7 +42,6 @@ RunCmds "python3 setup.py install --prefix=${PROGPATH}/$PackageName/$PackageVers
 
 
 
-exit 0
 FindPythonLib ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib
 PrintInfo "export PYTHONPATH=$PythonLibPath:\$PYTHONPATH"
 export PYTHONPATH=$PythonLibPath:$PYTHONPATH
