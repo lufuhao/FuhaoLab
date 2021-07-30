@@ -12,7 +12,7 @@ TestCmd="./bedops --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $githubLinks/$InternetLink
+git clone $githubSite/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
