@@ -59,8 +59,9 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-ModuleInfo 'module load bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline'
-ModuleAppend "prereq    bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline"
+ModuleInfo 'module load bedops bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline'
+ModuleAppend "prereq bedops bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline"
+ModuleAppend "#module load bedops bamaddrg bedtools bowtie bowtie2 cutadapt fastqc FuhaoPerl5Lib FuhaoBin htslib picard samtools trimgalore trimmomatic ATACseqMappingPipeline"
 AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
 
 #DeletePath ${PROGPATH}/$PackageName/$NameUncompress
