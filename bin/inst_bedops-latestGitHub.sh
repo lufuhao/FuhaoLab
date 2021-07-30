@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="bedops"
 PackageVersTemp="version"
-InternetLink='/bedops/bedops.git'
+InternetLink='bedops/bedops.git'
 NameUncompress="bedops"
 TestCmd="./bedops --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./bedops --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $githubSite/$InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
