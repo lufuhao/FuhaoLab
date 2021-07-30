@@ -180,6 +180,12 @@ sudo apt-get install build-essential git qtbase5-dev
 sudo apt-get install libgsl0-dev libperl-dev
 ```
 
+## bedops [GitHub](https://github.com/bedops/bedops) [Docs](https://bedops.readthedocs.io/)
+
+> doi: [10.1093/bioinformatics/bts277](http://bioinformatics.oxfordjournals.org/content/28/14/1919.abstract)
+
+> Requirements: GCC 4.8.2+ (gcc, g++, C++11)
+
 ## [BEDtools](https://github.com/arq5x/bedtools2)
 
 >
