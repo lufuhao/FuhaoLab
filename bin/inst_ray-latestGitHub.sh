@@ -4,20 +4,20 @@ source FuhaoLab.conf
 
 PackageName="ray"
 PackageVersTemp="version"
-InternetLink='https://github.com/sebhtml/ray.git'
+InternetLink='sebhtml/ray.git'
 NameUncompress="ray"
 TestCmd="./Ray --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
 
-git clone https://github.com/sebhtml/RayPlatform.git
+git clone ${GITHUB_CUSTOM_SITE}/sebhtml/RayPlatform.git
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download RayPlatform" >&2
 	exit 100

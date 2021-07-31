@@ -5,7 +5,7 @@ source FuhaoLab.conf
 
 PackageName="kallisto"
 PackageVers="v0.46.1"
-InternetLink="https://github.com/pachterlab/kallisto/archive/v0.46.1.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/pachterlab/kallisto/archive/v0.46.1.tar.gz"
 NameUncompress="kallisto-0.46.1"
 TestCmd="./kallisto index"
 

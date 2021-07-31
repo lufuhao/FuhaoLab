@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="abyss"
 PackageVersTemp="version"
-InternetLink='https://github.com/bcgsc/abyss'
+InternetLink='bcgsc/abyss.git'
 NameUncompress="abyss"
 TestCmd="./ABYSS --help"
 #PackageVers="v2.2.4-5ae4e481"
@@ -12,7 +12,7 @@ TestCmd="./ABYSS --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone $GITHUB_CUSTOM_SITE/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

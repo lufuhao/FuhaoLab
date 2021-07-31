@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="fastp"
 PackageVersTemp="version"
-InternetLink='https://github.com/OpenGene/fastp.git'
+InternetLink='OpenGene/fastp.git'
 NameUncompress="fastp"
 TestCmd="./fastp --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./fastp --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

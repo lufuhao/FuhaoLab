@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="racon"
 PackageVersTemp="version"
-InternetLink='https://github.com/isovic/racon.git'
+InternetLink='isovic/racon.git'
 NameUncompress="racon"
 TestCmd="./racon --help"
 #PackageVers="v1.4.3-9119181"
@@ -12,7 +12,7 @@ TestCmd="./racon --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone --recursive $InternetLink racon
+git clone --recursive ${GITHUB_CUSTOM_SITE}/$InternetLink racon
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

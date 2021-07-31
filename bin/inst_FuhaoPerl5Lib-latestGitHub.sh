@@ -10,7 +10,7 @@ cd $PROGPATH/perl5lib
 DeletePath $PROGPATH/perl5lib/FuhaoPerl5Lib
 
 cd $PROGPATH/perl5lib
-git clone https://github.com/lufuhao/FuhaoPerl5Lib.git
+git clone ${GITHUB_CUSTOM_SITE}/lufuhao/FuhaoPerl5Lib.git
 if [ $? -eq 0 ] && [ -d $PROGPATH/perl5lib/FuhaoPerl5Lib ]; then
 	cd $PROGPATH/perl5lib
 	AddBashrc "export PERL5LIB=${PROGPATH}/perl5lib:\$PERL5LIB"

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="bcftools"
 PackageVersTemp="version"
-InternetLink='https://github.com/samtools/bcftools.git'
+InternetLink='samtools/bcftools.git'
 NameUncompress="bcftools"
 TestCmd="./bcftools --help"
 #PackageVers=""
@@ -13,7 +13,7 @@ TestCmd="./bcftools --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -22,7 +22,7 @@ configureOptions=""
 #if [ ! -z "$HTSDIR" ]; then
 #	configureOptions=" ${configureOptions} --with-htslib $HTSDIR "
 #else
-	git clone --recursive https://github.com/samtools/htslib.git
+	git clone --recursive ${GITHUB_CUSTOM_SITE}/samtools/htslib.git
 	if [ $? -ne 0 ]; then
 		echo "Error: failed to download HTSlib" >&2
 		exit 100

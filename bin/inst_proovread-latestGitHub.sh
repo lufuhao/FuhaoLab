@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="proovread"
 PackageVersTemp="version"
-InternetLink='https://github.com/BioInf-Wuerzburg/proovread.git'
+InternetLink='BioInf-Wuerzburg/proovread.git'
 NameUncompress="proovread"
 TestCmd="./proovread -V"
 #-h return 1
@@ -15,7 +15,7 @@ perlModExist "Cwd" "Data::Dumper" "File::Basename" "File::Copy" "File::Path" "Fi
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone --recursive $InternetLink
+git clone --recursive ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="seqan3"
 PackageVers="v3.0.1"
-InternetLink="https://github.com/seqan/seqan3/releases/download/3.0.1/seqan-3.0.1-with-submodules.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/seqan/seqan3/releases/download/3.0.1/seqan-3.0.1-with-submodules.tar.gz"
 #http://packages.seqan.de/seqan3-library/seqan3-library-20181217.tar.xz
 NameUncompress="seqan3"
 

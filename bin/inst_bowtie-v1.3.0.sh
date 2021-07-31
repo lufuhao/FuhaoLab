@@ -5,7 +5,7 @@ source FuhaoLab.conf
 
 PackageName="bowtie"
 PackageVers="v1.3.0"
-InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.3.0.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/BenLangmead/bowtie/archive/v1.3.0.tar.gz"
 NameUncompress="bowtie-1.3.0"
 TestCmd="./bowtie --help"
 

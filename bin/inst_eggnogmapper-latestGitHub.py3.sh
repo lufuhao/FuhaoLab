@@ -1,11 +1,9 @@
 #!/bin/bash
 source FuhaoLab.conf
-#https://multiqc.info/
-#https://github.com/ewels/MultiQC
 
 PackageName="eggnogmapper"
 PackageVersTemp="version"
-InternetLink='https://github.com/eggnogdb/eggnog-mapper.git'
+InternetLink='eggnogdb/eggnog-mapper.git'
 NameUncompress="eggnog-mapper"
 TestCmd="./emapper.py --help"
 PackageVers="v1.0-bf97058"
@@ -15,7 +13,7 @@ CheckPythonModules 'biopython'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone -b refactor $InternetLink
+git clone -b refactor ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

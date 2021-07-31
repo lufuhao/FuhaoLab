@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="snphylo"
 PackageVersTemp="version"
-InternetLink='https://github.com/thlee/SNPhylo.git'
+InternetLink='thlee/SNPhylo.git'
 NameUncompress="SNPhylo"
 TestCmd="./snphylo.sh -h"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./snphylo.sh -h"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,15 +4,15 @@ source FuhaoLab.conf
 
 PackageName="bamaddrg"
 PackageVers="version"
-InternetLink='https://github.com/lufuhao/bamaddrg.git'
+InternetLink='lufuhao/bamaddrg.git'
 NameUncompress="bamaddrg"
 TestCmd="./bamaddrg --help"
 
 CheckPath $PackageName $PackageVers
 cd ${PROGPATH}/$PackageName/$PackageVers
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
-#git clone --recursive $InternetLink
-git clone $InternetLink
+#git clone --recursive $GITHUB_CUSTOM_SITE/$InternetLink
+git clone $GITHUB_CUSTOM_SITE/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -28,7 +28,7 @@ DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 mv ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bamtools
-git clone https://github.com/pezmaster31/bamtools.git
+git clone $GITHUB_CUSTOM_SITE/pezmaster31/bamtools.git
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download BamTools" >&2
 	exit 100

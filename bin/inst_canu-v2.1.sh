@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="canu"
 PackageVers="v2.1"
-InternetLink="https://github.com/marbl/canu/releases/download/v2.1/canu-2.1.Linux-amd64.tar.xz"
+InternetLink="${GITHUB_CUSTOM_SITE}/marbl/canu/releases/download/v2.1/canu-2.1.Linux-amd64.tar.xz"
 NameUncompress="canu-2.1"
 TestCmd="./canu --help"
 

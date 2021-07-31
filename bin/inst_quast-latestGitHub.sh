@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="quast"
 PackageVersTemp="version"
-InternetLink='https://github.com/ablab/quast.git'
+InternetLink='ablab/quast.git'
 NameUncompress="quast"
 TestCmd="./quast.py -help"
 #PackageVers="v5.1.0rc1-e010ca4"
@@ -15,7 +15,7 @@ TestCmd="./quast.py -help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

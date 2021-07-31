@@ -5,7 +5,7 @@ source FuhaoLab.conf
 
 PackageName="eggnogmapper"
 PackageVersTemp="version"
-InternetLink='https://github.com/eggnogdb/eggnog-mapper.git'
+InternetLink='eggnogdb/eggnog-mapper.git'
 NameUncompress="eggnog-mapper"
 TestCmd="./emapper.py --help"
 #PackageVers="v1.0-4c2b55e"
@@ -16,7 +16,7 @@ CheckPython2Modules 'biopython'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

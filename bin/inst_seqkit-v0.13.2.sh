@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="seqkit"
 PackageVers="v0.13.2"
-InternetLink="https://github.com/shenwei356/seqkit/releases/download/v0.13.2/seqkit_linux_amd64.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/shenwei356/seqkit/releases/download/v0.13.2/seqkit_linux_amd64.tar.gz"
 #NameUncompress="bowtie-1.2.3"
 TestCmd="./seqkit --help"
 

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="nextDenovo"
 PackageVers="v2.3.1"
-InternetLink="https://github.com/Nextomics/NextDenovo/releases/download/v2.3.1/NextDenovo.tgz"
+InternetLink="${GITHUB_CUSTOM_SITE}/Nextomics/NextDenovo/releases/download/v2.3.1/NextDenovo.tgz"
 NameUncompress="NextDenovo"
 TestCmd="./nextDenovo --help"
 

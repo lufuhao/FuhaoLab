@@ -5,7 +5,7 @@ source FuhaoLab.conf
 
 PackageName="multiqc"
 PackageVersTemp="version"
-InternetLink='https://github.com/ewels/MultiQC.git'
+InternetLink='ewels/MultiQC.git'
 NameUncompress="MultiQC"
 TestCmd="./multiqc -h"
 #PackageVers="v1.10dev-9760f756"
@@ -13,7 +13,7 @@ TestCmd="./multiqc -h"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

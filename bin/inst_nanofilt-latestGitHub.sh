@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="nanofilt"
 PackageVersTemp="version"
-InternetLink='https://github.com/wdecoster/nanofilt.git'
+InternetLink='wdecoster/nanofilt.git'
 NameUncompress="nanofilt"
 TestCmd="./NanoFilt --help"
 #PackageVers="v2.6.0-0e6b86f"
@@ -15,7 +15,7 @@ CheckPythonModules 'pandas' 'biopython' 'pytz' 'python-dateutil' 'numpy'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

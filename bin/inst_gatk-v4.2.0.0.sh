@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="gatk"
 PackageVers="v4.2.0.0"
-InternetLink="https://github.com/broadinstitute/gatk/releases/download/4.2.0.0/gatk-4.2.0.0.zip"
+InternetLink="${GITHUB_CUSTOM_SITE}/broadinstitute/gatk/releases/download/4.2.0.0/gatk-4.2.0.0.zip"
 NameUncompress="gatk-4.2.0.0"
 TestCmd="./gatk --list"
 

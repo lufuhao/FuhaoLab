@@ -6,7 +6,7 @@ source FuhaoLab.conf
 
 PackageName="hisat2"
 PackageVers="v2.2.1"
-InternetLink="https://github.com/DaehwanKimLab/hisat2/archive/v2.2.1.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/DaehwanKimLab/hisat2/archive/v2.2.1.tar.gz"
 NameUncompress="hisat2-2.2.1"
 TestCmd="./hisat2 --help"
 

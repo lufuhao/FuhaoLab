@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="canu"
 PackageVersTemp="version"
-InternetLink='https://github.com/marbl/canu.git'
+InternetLink='marbl/canu.git'
 NameUncompress="canu"
 TestCmd="./canu --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./canu --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

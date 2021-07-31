@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="exonerate"
 PackageVersTemp="version"
-InternetLink='https://github.com/nathanweeks/exonerate.git'
+InternetLink='nathanweeks/exonerate.git'
 NameUncompress="exonerate"
 TestCmd="./exonerate --help"
 #PackageVers="v2.4.0-9c09e4f"
@@ -12,7 +12,7 @@ TestCmd="./exonerate --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

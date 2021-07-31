@@ -6,14 +6,14 @@ source FuhaoLab.conf
 
 PackageName="mummer4"
 PackageVersTemp="version"
-InternetLink='https://github.com/mummer4/mummer.git'
+InternetLink='mummer4/mummer.git'
 NameUncompress="mummer"
 TestCmd="./bowtie --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

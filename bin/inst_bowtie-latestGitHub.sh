@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="bowtie"
 PackageVersTemp="version"
-InternetLink='https://github.com/BenLangmead/bowtie.git'
+InternetLink='BenLangmead/bowtie.git'
 NameUncompress="bowtie"
 TestCmd="./bowtie --help"
 #PackageVers="v1.3.0-da7b440"
@@ -12,7 +12,7 @@ TestCmd="./bowtie --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

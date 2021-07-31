@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="genetribe"
 PackageVersTemp="version"
-InternetLink='https://github.com/chenym1/genetribe.git'
+InternetLink='chenym1/genetribe.git'
 NameUncompress="genetribe"
 TestCmd="./genetribe --help"
 #PackageVers=""
@@ -21,7 +21,7 @@ fi
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

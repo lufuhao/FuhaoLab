@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="cdhit"
 PackageVersTemp="version"
-InternetLink='https://github.com/weizhongli/cdhit.git'
+InternetLink='weizhongli/cdhit.git'
 NameUncompress="cdhit"
 TestCmd="./cd-hit-est -h"
 #PackageVers="v4.8.1-4d4d169"
@@ -12,7 +12,7 @@ TestCmd="./cd-hit-est -h"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

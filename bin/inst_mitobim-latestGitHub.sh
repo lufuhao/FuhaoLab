@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="MITObim"
 PackageVersTemp="version"
-InternetLink='https://github.com/chrishah/MITObim'
+InternetLink='chrishah/MITObim'
 NameUncompress="MITObim"
 TestCmd="./MITObim.pl --help"
 #PackageVers="v1.9.1-1a15c5a"
@@ -12,7 +12,7 @@ TestCmd="./MITObim.pl --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="halc"
 PackageVersTemp="version"
-InternetLink='https://github.com/lanl001/halc.git'
+InternetLink='lanl001/halc.git'
 NameUncompress="halc"
 TestCmd="./runHALC.py -h"
 PackageVers="v1.1-a106f78"
@@ -13,7 +13,7 @@ CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="pilon"
 PackageVers="v1.23"
-InternetLink="https://github.com/broadinstitute/pilon/releases/download/v1.23/pilon-1.23.jar"
+InternetLink="${GITHUB_CUSTOM_SITE}/broadinstitute/pilon/releases/download/v1.23/pilon-1.23.jar"
 #NameUncompress="bowtie-1.2.3"
 TestCmd="java -jar pilon-v1.23.jar --help"
 

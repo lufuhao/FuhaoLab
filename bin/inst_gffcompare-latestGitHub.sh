@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="gffcompare"
 PackageVersTemp="version"
-InternetLink='https://github.com/gpertea/gffcompare.git'
+InternetLink='gpertea/gffcompare.git'
 NameUncompress="gffcompare"
 TestCmd="./gffcompare --help"
 #PackageVers="v0.12.1-54c4ee4"
@@ -12,7 +12,7 @@ TestCmd="./gffcompare --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="star"
 PackageVers="v2.7.5c"
-InternetLink="https://github.com/alexdobin/STAR/archive/2.7.5c.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/alexdobin/STAR/archive/2.7.5c.tar.gz"
 NameUncompress="STAR-2.7.5c"
 TestCmd="./STAR --help"
 

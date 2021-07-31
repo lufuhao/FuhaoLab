@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="ATACseqMappingPipeline"
 PackageVersTemp="version"
-InternetLink='https://github.com/lufuhao/ATACseqMappingPipeline.git'
+InternetLink='lufuhao/ATACseqMappingPipeline.git'
 NameUncompress="ATACseqMappingPipeline"
 TestCmd="./atac.1.fastq.clean.sh --help"
 PackageVers="v20201105-fd499aa"
@@ -12,7 +12,7 @@ PackageVers="v20201105-fd499aa"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone $GITHUB_CUSTOM_SITE/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="iqtree"
 PackageVersTemp="version"
-InternetLink='https://github.com/iqtree/iqtree2.git'
+InternetLink='iqtree/iqtree2.git'
 NameUncompress="iqtree2"
 TestCmd="./iqtree2 --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./iqtree2 --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="bandage"
 PackageVers="v0.8.1"
-InternetLink="https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_static_v0_8_1.zip"
+InternetLink="${GITHUB_CUSTOM_SITE}/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_static_v0_8_1.zip"
 #NameUncompress="bowtie-1.2.3"
 TestCmd="./Bandage --help"
 

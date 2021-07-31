@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="smartdenovo"
 PackageVersTemp="version"
-InternetLink='https://github.com/ruanjue/smartdenovo.git'
+InternetLink='ruanjue/smartdenovo.git'
 NameUncompress="smartdenovo"
 TestCmd="./smartdenovo.pl"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

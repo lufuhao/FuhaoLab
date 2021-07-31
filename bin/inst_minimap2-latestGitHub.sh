@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="minimap2"
 PackageVersTemp="version"
-InternetLink='https://github.com/lh3/minimap2.git'
+InternetLink='lh3/minimap2.git'
 NameUncompress="minimap2"
 TestCmd="./minimap2 --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

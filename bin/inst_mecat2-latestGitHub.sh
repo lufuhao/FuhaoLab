@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="MECAT2"
 PackageVersTemp="version"
-InternetLink='https://github.com/xiaochuanle/MECAT2.git'
+InternetLink='xiaochuanle/MECAT2.git'
 NameUncompress="MECAT2"
 TestCmd="./mecat.pl --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

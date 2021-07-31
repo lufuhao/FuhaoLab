@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="csvtk"
 PackageVers="v0.21.0"
-InternetLink="https://github.com/shenwei356/csvtk/releases/download/v0.21.0/csvtk_linux_amd64.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/shenwei356/csvtk/releases/download/v0.21.0/csvtk_linux_amd64.tar.gz"
 NameUncompress="csvtk_linux_amd64"
 TestCmd="./csvtk --help"
 

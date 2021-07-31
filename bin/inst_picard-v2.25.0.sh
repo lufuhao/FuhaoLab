@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="picard"
 PackageVers="v2.25.0"
-InternetLink="https://github.com/broadinstitute/picard/releases/download/2.25.0/picard.jar"
+InternetLink="${GITHUB_CUSTOM_SITE}/broadinstitute/picard/releases/download/2.25.0/picard.jar"
 TestCmd="./picard"
 
 

@@ -5,8 +5,8 @@ source FuhaoLab.conf
 
 PackageName="sga"
 PackageVersTemp="version"
-#InternetLink='https://github.com/jts/sga.git'
-InternetLink='https://github.com/lufuhao/sga.git'
+#InternetLink='jts/sga.git'
+InternetLink='lufuhao/sga.git'
 NameUncompress="sga"
 TestCmd="./sga --help"
 #PackageVers=""
@@ -28,7 +28,7 @@ fi
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

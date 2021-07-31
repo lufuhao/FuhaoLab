@@ -5,7 +5,7 @@ echo "Info: Compile samtools for Bio::DB::Sam"
 
 PackageName="samtools"
 PackageVers="v0.1.20"
-InternetLink="https://github.com/samtools/samtools/archive/0.1.20.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/samtools/samtools/archive/0.1.20.tar.gz"
 NameUncompress="samtools-0.1.20"
 TestCmd="./samtools"
 

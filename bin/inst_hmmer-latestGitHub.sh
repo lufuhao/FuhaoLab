@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="hmmer"
 PackageVersTemp="version"
-InternetLink='https://github.com/EddyRivasLab/hmmer.git'
+InternetLink='EddyRivasLab/hmmer.git'
 NameUncompress="hmmer"
 TestCmd="./hmmscan -h"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -23,7 +23,7 @@ PackageVers="v"$(grep ^'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/config
 PrintInfo "Version: $PackageVers"
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
-git clone https://github.com/EddyRivasLab/easel.git
+git clone ${GITHUB_CUSTOM_SITE}/EddyRivasLab/easel.git
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download easel" >&2
 	exit 100

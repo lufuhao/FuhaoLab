@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="transdecoder"
 PackageVers="v5.5.0"
-InternetLink="https://github.com/TransDecoder/TransDecoder/archive/TransDecoder-v5.5.0.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/TransDecoder/TransDecoder/archive/TransDecoder-v5.5.0.tar.gz"
 #InternetLink="https://sourceforge.net/projects/old-software-collection/files/TransDecoder-TransDecoder-v5.5.0.tar.gz"
 NameUncompress="TransDecoder-TransDecoder-v5.5.0"
 TestCmd="./TransDecoder.LongOrfs --version"

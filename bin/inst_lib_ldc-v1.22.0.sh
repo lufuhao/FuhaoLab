@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="ldc2"
 PackageVers="v1.22.0"
-InternetLink="https://github.com/ldc-developers/ldc/releases/download/v1.22.0/ldc2-1.22.0-linux-x86_64.tar.xz"
+InternetLink="${GITHUB_CUSTOM_SITE}/ldc-developers/ldc/releases/download/v1.22.0/ldc2-1.22.0-linux-x86_64.tar.xz"
 NameUncompress="ldc2-1.22.0-linux-x86_64"
 #TestCmd="./ldc2 --help"
 

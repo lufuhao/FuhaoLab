@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="sambamba"
 PackageVersTemp="version"
-InternetLink='https://github.com/biod/sambamba.git'
+InternetLink='biod/sambamba.git'
 NameUncompress="sambamba"
 TestCmd="./sambamba markdup -h"
 
@@ -16,7 +16,7 @@ fi
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone --recursive $InternetLink
+git clone --recursive ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

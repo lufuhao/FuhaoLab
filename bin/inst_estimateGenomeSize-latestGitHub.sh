@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="estimate_genome_size"
 PackageVersTemp="version"
-InternetLink='https://github.com/josephryan/estimate_genome_size.pl.git'
+InternetLink='josephryan/estimate_genome_size.pl.git'
 NameUncompress="estimate_genome_size.pl"
 TestCmd="./estimate_genome_size.pl --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./estimate_genome_size.pl --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

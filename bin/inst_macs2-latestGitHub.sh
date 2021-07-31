@@ -5,18 +5,18 @@ source FuhaoLab.conf
 
 PackageName="macs"
 PackageVersTemp="version"
-InternetLink='https://github.com/macs3-project/MACS.git'
+InternetLink='macs3-project/MACS.git'
 NameUncompress="MACS"
 TestCmd="./macs2 --help"
 PackageVers="v2.2.7.1-2db0f0f"
-:<<EOM
+
 CheckPythonModules 'numpy' 'cython' 'pytest' 'pytest-cov' 'codecov' 'setuptools'
 
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -33,7 +33,7 @@ PrintInfo "Version: $PackageVers"
 #PrintInfo "Version: $PackageVers"
 #PackageVers=$(git describe --always --tags --dirty)
 #PrintInfo "Version: $PackageVers"
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 RunCmds "python3 setup.py build"
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE

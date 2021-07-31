@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="vcf2dis"
 PackageVersTemp="version"
-InternetLink='https://github.com/BGI-shenzhen/VCF2Dis.git'
+InternetLink='BGI-shenzhen/VCF2Dis.git'
 NameUncompress="VCF2Dis"
 TestCmd="./VCF2Dis --help"
 #PackageVers=""
@@ -12,7 +12,7 @@ TestCmd="./VCF2Dis --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

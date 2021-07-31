@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="fastqtools"
 PackageVers="v0.8"
-InternetLink="https://github.com/dcjones/fastq-tools/archive/v0.8.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/dcjones/fastq-tools/archive/v0.8.tar.gz"
 #InternetLink="http://homes.cs.washington.edu/~dcjones/fastq-tools/fastq-tools-0.8.tar.gz"
 NameUncompress="fastq-tools-0.8"
 TestCmd="./fastq-sample --help"

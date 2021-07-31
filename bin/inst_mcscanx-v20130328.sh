@@ -6,7 +6,7 @@ PackageName="mcscanx"
 PackageVers="v20130328"
 #InternetLink="http://chibba.pgml.uga.edu/mcscan2/MCScanX.zip"
 #NameUncompress="MCScanX"
-InternetLink="https://github.com/lufuhao/MCScanX/archive/v20130328.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/lufuhao/MCScanX/archive/v20130328.tar.gz"
 NameUncompress="MCScanX-20130328"
 TestCmd="./MCScanX -h"
 

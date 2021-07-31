@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="NOVOPlasty"
 PackageVersTemp="version"
-InternetLink='https://github.com/ndierckx/NOVOPlasty.git'
+InternetLink='ndierckx/NOVOPlasty.git'
 NameUncompress="NOVOPlasty"
 TestCmd="perl ./NOVOPlasty4.2.pl --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="hdf5"
 PackageVers="v1.12.0"
-#InternetLink="https://github.com/HDFGroup/hdf5/archive/hdf5-1_12_0.tar.gz"
+#InternetLink="${GITHUB_CUSTOM_SITE}/HDFGroup/hdf5/archive/hdf5-1_12_0.tar.gz"
 InternetLink="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.0/src/hdf5-1.12.0.tar.gz"
 NameUncompress="hdf5-1.12.0"
 

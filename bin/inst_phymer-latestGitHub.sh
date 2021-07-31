@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="phy-mer"
 PackageVersTemp="version"
-InternetLink='https://github.com/MEEIBioinformaticsCenter/phy-mer.git'
+InternetLink='MEEIBioinformaticsCenter/phy-mer.git'
 NameUncompress="phy-mer"
 TestCmd="./Phy-Mer.py --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -24,7 +24,7 @@ fi
 
 PackageName="trimgalore"
 PackageVers="v0.6.7"
-InternetLink="https://github.com/FelixKrueger/TrimGalore/archive/refs/tags/0.6.7.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/FelixKrueger/TrimGalore/archive/refs/tags/0.6.7.tar.gz"
 NameUncompress="TrimGalore-0.6.7"
 TestCmd="./trim_galore --help"
 

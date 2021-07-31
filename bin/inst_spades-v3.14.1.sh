@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="spades"
 PackageVers="v3.14.1"
-InternetLink="https://github.com/ablab/spades/releases/download/v3.14.1/SPAdes-3.14.1.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/ablab/spades/releases/download/v3.14.1/SPAdes-3.14.1.tar.gz"
 NameUncompress="SPAdes-3.14.1"
 TestCmd="./spades.py --help"
 

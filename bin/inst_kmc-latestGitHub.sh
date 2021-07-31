@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="kmc"
 PackageVersTemp="version"
-InternetLink='https://github.com/refresh-bio/KMC.git'
+InternetLink='refresh-bio/KMC.git'
 NameUncompress="KMC"
 TestCmd="./kmc --help"
 #PackageVers="v3.1.2rc1-cf66913"
@@ -12,7 +12,7 @@ TestCmd="./kmc --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

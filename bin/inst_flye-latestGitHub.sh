@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="flye"
 PackageVersTemp="version"
-InternetLink='https://github.com/fenderglass/Flye.git'
+InternetLink='fenderglass/Flye.git'
 NameUncompress="Flye"
 TestCmd="./flye --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

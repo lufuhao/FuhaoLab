@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="snpsplit"
 PackageVersTemp="version"
-InternetLink='https://github.com/FelixKrueger/SNPsplit.git'
+InternetLink='FelixKrueger/SNPsplit.git'
 NameUncompress="SNPsplit"
 TestCmd="./SNPsplit --help"
 PackageVers="v0.4.0-36fd82a"
@@ -15,7 +15,7 @@ CmdExit 'perl'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

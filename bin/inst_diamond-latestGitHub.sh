@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="diamond"
 PackageVersTemp="version"
-InternetLink='https://github.com/bbuchfink/diamond.git'
+InternetLink='bbuchfink/diamond.git'
 NameUncompress="diamond"
 TestCmd="./diamond --help"
 #PackageVers="v2.0.5-4219ee01"
@@ -12,7 +12,7 @@ TestCmd="./diamond --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

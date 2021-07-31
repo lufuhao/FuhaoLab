@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="NECAT"
 PackageVersTemp="version"
-InternetLink='https://github.com/xiaochuanle/NECAT.git'
+InternetLink='xiaochuanle/NECAT.git'
 NameUncompress="NECAT"
 TestCmd="./necat.pl --help"
 #PackageVers="v0.01-61e779e"
@@ -12,7 +12,7 @@ TestCmd="./necat.pl --help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

@@ -3,8 +3,8 @@ source FuhaoLab.conf
 
 PackageName="jcvi"
 PackageVersTemp="version"
-#InternetLink='https://github.com/lufuhao/jcvi.git'
-InternetLink='https://github.com/tanghaibao/jcvi.git'
+#InternetLink='lufuhao/jcvi.git'
+InternetLink='tanghaibao/jcvi.git'
 NameUncompress="jcvi"
 TestCmd="python3 -m jcvi.formats.fasta extract"
 #PackageVers="v20200321-7b6f7c80"
@@ -14,7 +14,7 @@ CheckPythonModules 'biopython' 'brewer2mpl' 'boto3' 'coveralls' 'cython' 'deap' 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

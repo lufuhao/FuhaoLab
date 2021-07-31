@@ -3,7 +3,7 @@ source FuhaoLab.conf
 
 PackageName="dsk"
 PackageVersTemp="version"
-InternetLink='https://github.com/GATB/dsk.git'
+InternetLink='GATB/dsk.git'
 NameUncompress="dsk"
 TestCmd="./dsk -help"
 #PackageVers="v2.3.3-68b79e4"
@@ -11,7 +11,7 @@ TestCmd="./dsk -help"
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone --recursive $InternetLink
+git clone --recursive ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

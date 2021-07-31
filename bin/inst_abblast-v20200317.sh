@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="abblast"
 PackageVers="v20200317"
-#InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
+#InternetLink="${GITHUB_CUSTOM_SITE}/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
 NameUncompress="ab-blast-20200317-linux-x64"
 TestCmd="./ab-blastn"
 MACHTYPE="x64"

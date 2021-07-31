@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="taxonkit"
 PackageVers="v0.6.2"
-InternetLink="https://github.com/shenwei356/taxonkit/releases/download/v0.6.2/taxonkit_linux_amd64.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/shenwei356/taxonkit/releases/download/v0.6.2/taxonkit_linux_amd64.tar.gz"
 NameUncompress="taxonkit_linux_amd64"
 TestCmd="./taxonkit --help"
 

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="masurca"
 PackageVers="v3.4.1"
-InternetLink="https://github.com/alekseyzimin/masurca/releases/download/v3.4.1/MaSuRCA-3.4.1.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/alekseyzimin/masurca/releases/download/v3.4.1/MaSuRCA-3.4.1.tar.gz"
 NameUncompress="MaSuRCA-3.4.1"
 TestCmd="./masurca --help"
 

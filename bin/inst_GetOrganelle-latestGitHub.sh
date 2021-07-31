@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="GetOrganelle"
 PackageVersTemp="version"
-InternetLink='https://github.com/Kinggerm/GetOrganelle.git'
+InternetLink='Kinggerm/GetOrganelle.git'
 NameUncompress="GetOrganelle"
 TestCmd="./get_organelle_from_reads.py --help"
 #PackageVers="v1.7.1-820880a"
@@ -14,7 +14,7 @@ CheckPythonModules 'numpy' 'scipy' 'sympy' 'requests'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -48,10 +48,10 @@ cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 #curl -L https://github.com/Kinggerm/GetOrganelleDep/releases/download/v0.0.0/v0.0.0.tar.gz | tar zx
 #get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./0.0.0
 #OR
-svn co https://github.com/Kinggerm/GetOrganelleDB/trunk/0.0.0
+svn co ${GITHUB_CUSTOM_SITE}/Kinggerm/GetOrganelleDB/trunk/0.0.0
 get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./0.0.0
 #OR
-#git clone https://github.com/Kinggerm/GetOrganelleDB
+#git clone ${GITHUB_CUSTOM_SITE}/Kinggerm/GetOrganelleDB
 #get_organelle_config.py -a embplant_pt,embplant_mt --use-local ./GetOrganelleDB/0.0.0
 
 ### Database in ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/lib/python3.8/site-packages/GetOrganelle-1.7.1a0-py3.8.egg/GetOrganelleLib/SeedDatabase

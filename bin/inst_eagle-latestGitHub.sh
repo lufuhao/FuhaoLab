@@ -5,14 +5,14 @@ source FuhaoLab.conf
 
 PackageName="eagle"
 PackageVersTemp="version"
-InternetLink='https://github.com/tony-kuo/eagle.git'
+InternetLink='tony-kuo/eagle.git'
 NameUncompress="eagle"
 TestCmd="./eagle --version"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
@@ -21,7 +21,7 @@ cd ${PROGPATH}/$PackageName/$NameUncompress
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
 cd ${PROGPATH}/$PackageName/$NameUncompress
-git clone https://github.com/samtools/htslib.git
+git clone ${GITHUB_CUSTOM_SITE}/samtools/htslib.git
 if [ $? -ne 0 ] || [ ! -d ${PROGPATH}/$PackageName/$NameUncompress/htslib ]; then
 	echo "Error: failed to download HTSLIB" >&2
 	exit 100

@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="salmon"
 PackageVers="v1.2.1"
-InternetLink="https://github.com/COMBINE-lab/salmon/releases/download/v1.2.1/salmon-1.2.1_linux_x86_64.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/COMBINE-lab/salmon/releases/download/v1.2.1/salmon-1.2.1_linux_x86_64.tar.gz"
 NameUncompress="salmon-latest_linux_x86_64"
 TestCmd="./salmon --help"
 

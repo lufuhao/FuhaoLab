@@ -5,14 +5,14 @@ source FuhaoLab.conf
 
 PackageName="jellyfish"
 PackageVersTemp="version"
-InternetLink='https://github.com/gmarcais/Jellyfish.git'
+InternetLink='gmarcais/Jellyfish.git'
 NameUncompress="Jellyfish"
 TestCmd="./jellyfish --version"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

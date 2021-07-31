@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="htslib"
 PackageVersTemp="version"
-InternetLink='https://github.com/samtools/htslib.git'
+InternetLink='samtools/htslib.git'
 NameUncompress="htslib"
 
 
 CheckLibPath $PackageName
 cd ${PROGPATH}/libraries/$PackageName/
 DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
-git clone --recursive $InternetLink
+git clone --recursive ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

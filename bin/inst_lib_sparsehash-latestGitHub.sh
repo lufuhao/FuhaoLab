@@ -4,14 +4,14 @@ source FuhaoLab.conf
 
 PackageName="sparsehash"
 PackageVersTemp="version"
-InternetLink='https://github.com/sparsehash/sparsehash.git'
+InternetLink='sparsehash/sparsehash.git'
 NameUncompress="sparsehash"
 PackageVers="v2.0.4-1dffea3"
 
 CheckLibPath $PackageName
 cd ${PROGPATH}/libraries/$PackageName/
 DeletePath ${PROGPATH}/libraries/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
