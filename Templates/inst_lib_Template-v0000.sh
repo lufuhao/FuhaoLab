@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="htslib"
 PackageVers="v1.10.2"
-InternetLink="https://github.com/samtools/htslib/archive/1.10.2.tar.gz"
+InternetLink="${GITHUB_CUSTOM_SITE}/samtools/htslib/archive/1.10.2.tar.gz"
 NameUncompress="htslib-1.10.2"
 
 

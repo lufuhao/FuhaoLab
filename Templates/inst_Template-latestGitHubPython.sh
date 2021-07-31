@@ -4,7 +4,7 @@ source FuhaoLab.conf
 
 PackageName="cutadapt"
 PackageVersTemp="version"
-InternetLink='https://github.com/marcelm/cutadapt.git'
+InternetLink='marcelm/cutadapt.git'
 NameUncompress="cutadapt"
 TestCmd="./cutadapt --help"
 #PackageVers=""
@@ -14,7 +14,7 @@ CheckPythonModules 'dnaio' 'xopen'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

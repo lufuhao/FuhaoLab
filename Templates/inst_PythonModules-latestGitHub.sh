@@ -1,11 +1,9 @@
 #!/bin/bash
 source FuhaoLab.conf
-#https://multiqc.info/
-#https://github.com/ewels/MultiQC
 
 PackageName="jcvi"
 PackageVersTemp="version"
-InternetLink='https://github.com/lufuhao/jcvi.git'
+InternetLink='lufuhao/jcvi.git'
 NameUncompress="jcvi"
 TestCmd="python -m jcvi.formats.fasta extract"
 #PackageVers="v1.10dev-9760f756"
@@ -16,7 +14,7 @@ CheckPythonModules 'numpy' 'scipy' 'sympy' 'requests'
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $InternetLink
+git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100

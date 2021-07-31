@@ -2,9 +2,9 @@
 source FuhaoLab.conf
 
 
-PackageName="bowtie"
+PackageName="XXXXX"
 PackageVers="v1.2.3"
-InternetLink="https://github.com/BenLangmead/bowtie/archive/v1.2.3.tar.gz"
+InternetLink="XXXXX"
 NameUncompress="bowtie-1.2.3"
 TestCmd="./bowtie --help"
 
