@@ -12,7 +12,6 @@ InternetLink='lufuhao/MCScanX.git'
 NameUncompress="MCScanX"
 TestCmd="./MCScanX -h"
 
-:<<EOH
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -21,7 +20,6 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOH
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')

@@ -8,7 +8,7 @@ InternetLink='josephryan/estimate_genome_size.pl.git'
 NameUncompress="estimate_genome_size.pl"
 TestCmd="./estimate_genome_size.pl --help"
 #PackageVers=""
-:<<EOM
+
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
@@ -17,7 +17,7 @@ if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
 #              VERSION   => '0.03',
 PackageVers="v"$(grep 'VERSION' ${PROGPATH}/$PackageName/$NameUncompress/Makefile.PL | sed "s/^.*VERSION.*=>\s\+'//;s/'.*$//")"-"$(git branch -vv | cut -f 3 -d' ')
