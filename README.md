@@ -937,12 +937,12 @@ pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 m
 pip3 install --user brewer2mpl ftpretty goatools more-itertools natsort ortools rich scikit_image webcolors
 ```
 
-## [MACS2](https://github.com/macs3-project/MACS)
+## [MACS](https://github.com/macs3-project/MACS)
 
-> GCC 5.2.0; cython (Optional)
+> GCC 5.2.0; [NumPy](http://www.scipy.org/Download); cython (Optional); [cykhash](https://github.com/realead/cykhash);[fermi-lite](https://github.com/lh3/fermi-lite)/[simde](https://github.com/simd-everywhere/simde)
 
 ```
-pip3 install --user numpy cython pytest pytest-cov codecov setuptools
+pip3 install --user numpy cython cykhash pytest pytest-cov codecov setuptools
 ```
 
 ## [MultiQC](https://multiqc.info/) [GitHub](https://github.com/ewels/MultiQC)
@@ -1218,7 +1218,10 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 
 
+[kingfisher](https://github.com/wwood/kingfisher-download)
 
+
+[bioconvert](https://github.com/bioconvert/bioconvert)
 
 
 
