@@ -695,6 +695,10 @@ perl ./configure
 
 > Requirements: perl 5.5+, RepeatMasker-open3.0+, [nseg](ftp://ftp.ncbi.nih.gov/pub/seg/nseg), [trf](http://tandem.bu.edu/trf/trf.html)
 
+## [REPET](https://urgi.versailles.inra.fr/Tools/REPET)
+
+>
+
 ## [RMBlast](http://www.repeatmasker.org/RMBlast.html)
 
 > 
