@@ -11,24 +11,40 @@ TestCmd="./cnvnator --help"
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
-#:<<EOM
+:<<EOM
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 git clone $InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-#EOM
+EOM
+
+cd ${PROGPATH}/$NameUncompress/$PackageName
+git clone --recursive ${GITHUB_CUSTOM_SITE}/samtools/htslib.git
+RunCmds "autoheader"
+RunCmds "autoconf"
+RunCmds "./configure"
+RunCmds "make"
+
+cd ${PROGPATH}/$NameUncompress/$PackageName
+git clone ${GITHUB_CUSTOM_SITE}/samtools/samtools.git
+cd ${PROGPATH}/$PackageName/$NameUncompress/samtools
+RunCmds "autoheader"
+RunCmds "autoconf -Wno-syntax"
+RunCmds "./configure $configureOptions "
+RunCmds "make all all-htslib"
+
+
+
 cd ${PROGPATH}/$PackageName/$NameUncompress
-#AC_INIT([MUMmer], [4.0.0beta2], [gmarcais@umd.edu])
-#PackageVers="v"$(grep 'AC_INIT' ${PROGPATH}/$PackageName/$NameUncompress/configure.ac | sed 's/^AC_INIT.*jellyfish\], \[//;s/\].*$//g')
-#PrintInfo "Version: $PackageVers"
 PackageVers=$(git tag -l | tail -n 1)"-"$(git branch -vv | cut -f 3 -d' ')
 PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
-PrintInfo "Version: $PackageVers"
-PackageVers=$(git describe --always --tags --dirty)
-PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --abbrev=7 --always  --long --match v* origin/master)
+#PrintInfo "Version: $PackageVers"
+#PackageVers=$(git describe --always --tags --dirty)
+#PrintInfo "Version: $PackageVers"
+
 
 
 exit 0
