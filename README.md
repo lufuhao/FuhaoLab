@@ -52,7 +52,7 @@ mkdir -p $PROGPATH $BIODATABASES ${PROGPATH}/bin/modules
 
 ```
 
-sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl libxml2-dev make mpack perl perl-doc p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common
+sudo apt-get install arj autoconf automake build-essential cmake convmv curl cython3 doxygen fig2dev g++ gcc git-all gnuplot libboost-dev libboost-all-dev libbz2-dev libcurl4-gnutls-dev libexpat1-dev libgd-dev libgd3 libglu1-mesa-dev libgsl0-dev libhdf5-dev libhpdf-dev libjemalloc-dev libjsoncpp-dev liblzma-dev libncurses5-dev libperl-dev libpng-dev qt5-default libreadline-dev libsparsehash-dev libsqlite3-dev libssl-dev libtbb-dev libterm-readline-gnu-perl libtool libxml-dom-xpath-perl libxml2-dev make mpack perl perl-doc p7zip-full p7zip-rar pigz python3-dev python3-pip python-setuptools python3-setuptools qtcreator rar sharutils sqlite3 subversion tcsh texlive-extra-utils texlive-fonts-extra texlive-latex-extra unace unrar unzip uudeview xfig xml2 yaggo zip zlib1g zlib1g-dev zsh zsh-common zstd
 
 ### Invalid libcurl4-openssl-dev python-pip
 
@@ -73,6 +73,10 @@ sudo apt-get install typora
 ```
 
 ## Python modules
+
+```
+sudo apt-get install python3.8-venv
+```
 
 ```
 pip3 install --user biopython cython matplotlib numpy pandas plotly psutil pysam scipy tabulate
@@ -703,9 +707,11 @@ perl ./configure
 
 > Requirements: perl 5.5+, RepeatMasker-open3.0+, [nseg](ftp://ftp.ncbi.nih.gov/pub/seg/nseg), [trf](http://tandem.bu.edu/trf/trf.html)
 
-## [REPET](https://urgi.versailles.inra.fr/Tools/REPET)
+## [REPET](https://urgi.versailles.inra.fr/Tools/REPET) NOT working
 
->
+> Python2: MySQLdb, logging, yaml; MySQL v5.0+ with engine MyISAM; SLURM; BLAST+ v2.2.26+
+
+> Optional: [RECON](http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz), [PILER](http://www.drive5.com/piler/), [hmmer3](http://hmmer.org/), blastclust v2.2.20+/[MCL](https://micans.org/mcl/src) v1.008, [RepeatMasker](http://www.repeatmasker.org/RMDownload.html), [TRF](http://tandem.bu.edu/trf/trf.download.html) v4.04, [MAFFT](https://mafft.cbrc.jp/alignment/software/), [RepeatScout](https://bix.ucsd.edu/repeatscout/) v1.0.5, [LTRHarvest](http://genometools.org/pub/)
 
 ## [RMBlast](http://www.repeatmasker.org/RMBlast.html)
 
@@ -1234,12 +1240,14 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 [bioconvert](https://github.com/bioconvert/bioconvert)
 
+> easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 pyexcel-xls xlrd pyBigWig py2bit
 
-
+> pyexcel-xls 0.6.2 has requirement xlrd<2
+```
+pip3 install --user easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 xlrd pyBigWig py2bit
+```
 
 [ECtools](https://github.com/jgurtowski/ectools)
-
-
 
 [CLARI-TE](https://github.com/jdaron/CLARI-TE)
 
