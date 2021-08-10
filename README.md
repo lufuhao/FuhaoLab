@@ -1243,7 +1243,7 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 [CLARI-TE](https://github.com/jdaron/CLARI-TE)
 
-
+sudo apt install zstd
 
 
 
