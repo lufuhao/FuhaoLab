@@ -29,7 +29,7 @@ cd ${PROGPATH}/libraries/$PackageName/$NameUncompress
 DeletePath ${PROGPATH}/libraries/$PackageName/build
 CreatePath ${PROGPATH}/libraries/$PackageName/build
 cd ${PROGPATH}/libraries/$PackageName/build
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE ../root"
+RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE -DCMAKE_CXX_STANDARD=11 ../root"
 DeletePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 CreatePath ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
 #RunCmds "cmake --build . -- install j4"
