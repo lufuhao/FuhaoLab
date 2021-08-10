@@ -2,35 +2,27 @@
 source FuhaoLab.conf
 
 
-PackageName="XXXXX"
-PackageVers="v1.2.3"
-InternetLink="XXXXX"
-NameUncompress="https://urgi.versailles.inrae.fr/download/repet/REPET_linux-x64-3.0.tar.gz"
-TestCmd="./bowtie --help"
+PackageName="repet"
+PackageVers="v3.0"
+InternetLink="https://urgi.versailles.inrae.fr/download/repet/REPET_linux-x64-3.0.tar.gz"
+NameUncompress="REPET_linux-x64-3.0"
+TestCmd="./repet --help"
+MACHTYPE="x64"
 
-libOpt=""
-if [ -z "$JEMALLOC_ROOT" ]; then
-	LibExist "libjemalloc"
-else
-	libOpt=" --with-jemalloc=$JEMALLOC_ROOT/lib"
-fi
-
-NameCompress=$PackageName-$PackageVers.tar.gz
+NameCompress=$PackageName-$PackageVers.linux.x64.tar.gz
 CheckPath $PackageName $PackageVers
 DownloadWget $InternetLink $NameCompress
 if [ ! -d $NameUncompress ]; then
 	RunCmds "tar xzvf $NameCompress"
 fi
 
-
-
 cd ${PROGPATH}/$PackageName/$PackageVers
 DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 RunCmds "mv ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 
+exit 0
 cd ${PROGPATH}/$PackageName/$PackageVers/$NameUncompress
-
 RunCmds "./configure --enable-lib --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE --with-gmapdb=$BIODATABASES/gmapdb"
 RunCmds "make"
 RunCmds "make check"
