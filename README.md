@@ -240,7 +240,15 @@ perl -MCPAN -e'install($_) for qw( Carp Clone Config::General Data::Dumper Diges
 
 ## [CNVnator](https://github.com/abyzovlab/CNVnator)
 
-> [ROOT](https://root.cern/) [github](https://github.com/root-project/root.git), samtools, [YEPPP](http://www.yeppp.info/)
+> make, gcc, readline
+
+> [CERN ROOT](https://root.cern/) [github](https://github.com/root-project/root.git), samtools with HTSlib, [YEPPP](http://www.yeppp.info/)
+
+```
+sudo apt-get install libreadline-dev
+```
+CMAKE_CXX_STANDARD=14 
+
 
 ## [csvtk](https://github.com/shenwei356/csvtk)
 
@@ -1117,14 +1125,13 @@ sudo apt-get install autoconf automake make gcc perl zlib1g-dev libbz2-dev liblz
 
 ## [ROOT](https://root.cern/) [GitHub](https://github.com/root-project/root)
 
+> [Install_notes]: https://root.cern/install/
+
 ```
-sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev python openssl-dev libssl-dev
-sudo apt-get install gfortran libpcre3-dev \
-xlibmesa-glu-dev libglew1.5-dev libftgl-dev \
-libmysqlclient-dev libfftw3-dev libcfitsio-dev \
-graphviz-dev libavahi-compat-libdnssd-dev \
-libldap2-dev python-dev libxml2-dev libkrb5-dev \
-libgsl0-dev libqt4-dev
+sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev \
+ libxft-dev libxext-dev python openssl
+
+sudo apt-get install gfortran libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev
 ```
 
 ## [seqan3](http://www.seqan.de/) [GitHub](https://github.com/seqan/seqan3)
