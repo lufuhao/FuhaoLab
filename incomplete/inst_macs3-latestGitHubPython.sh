@@ -6,20 +6,19 @@ PackageName="macs"
 PackageVersTemp="version"
 InternetLink='macs3-project/MACS.git'
 NameUncompress="MACS"
-TestCmd="./MACS3 --help"
+TestCmd="./macs3 --help"
 #PackageVers=""
-:<<EOM
+
 CheckPythonModules 'numpy' 'cython' 'cykhash' 'pytest' 'pytest-cov' 'codecov' 'setuptools'
 
 CheckPath $PackageName
 cd ${PROGPATH}/$PackageName/
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-git clone $GITHUB_CUSTOM_SITE/$InternetLink
+git clone --recursive $GITHUB_CUSTOM_SITE/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-EOM
 
 
 cd ${PROGPATH}/$PackageName/$NameUncompress
