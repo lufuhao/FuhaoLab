@@ -984,7 +984,7 @@ pip3 install --user bird_tool_utils extern
 
 ## [MACS](https://github.com/macs3-project/MACS)
 
-> GCC 5.2.0; [NumPy](http://www.scipy.org/Download); cython (Optional); [cykhash](https://github.com/realead/cykhash);[fermi-lite](https://github.com/lh3/fermi-lite)/[simde](https://github.com/simd-everywhere/simde)
+> GCC 5.2.0; [NumPy](http://www.scipy.org/Download); cython (Optional); [cykhash](https://github.com/realead/cykhash);[fermi-lite](https://github.com/lh3/fermi-lite)/[simde](https://github.com/simd-everywhere/simde) (Included)
 
 ```
 pip3 install --user numpy cython cykhash pytest pytest-cov codecov setuptools
@@ -1228,9 +1228,9 @@ MAC:
 [ ] [Circoletto](https://github.com/infspiredBAT/Circoletto) [online server](http://tools.bat.infspire.org/circoletto/): Circos可视化blast结果
 
 > circos &amp; circos-tools http://circos.ca/software/download/tools
->
+
 > BLAST
->
+
 > BioPerl
 
 [ ] [LIII](https://github.com/aliakseis/LIII): BT download
@@ -1238,15 +1238,12 @@ MAC:
 [ ] [CPAT](http://rna-cpat.sourceforge.net) [Publication](http://nar.oxfordjournals.org/content/41/6/e74.long)
 
 [ ] [CPC2](https://github.com/biocoder/CPC2) [online](http://cpc2.gao-lab.org/)
-
 > 为CPC 的升级版，发布于2017 年，是目前最新的lncRNA 鉴定工具，也代表着lncRNA  鉴定的最新研究进展。在经过大量的特征选择后，CPC2 最终的特征主要包括四条：最长ORF 长度，ORF 的完整性，Fickett 分数以及等电点 (isoelectric point, pI)[39,40]。其中等电点特征主要是通过将最长ORF  翻译为氨基酸序列，而后根据氨基酸等电点这一理化性质计算而得。与大多lncRNA 鉴定工具相同，CPC2 也使用了支持向量机来构建分类器。
 
 [ ] [PLEK](https://sourceforge.net/projects/plek)
-
 > PLEK软件通过序列的kmer构成来区分编码和非编码转录本，不需要通过比对来完成，所以运行速度较快，同时其性能受到测序错误的影响的概率较低，比较稳定。
 
 [ ] [lncFinder](http://bmbl.sdstate.edu/lncfinder/)
-
 > LncFinder是一种新的lncRNA识别工具。基于六聚体的对数距离，多尺度结构信息和从快速离散傅立叶变换获得的理化特征。为了确定最佳分类器，使用10倍交叉验证对五种广泛使用的机器学习算法进行了验证：逻辑回归，支持向量机（SVM），随机森林，极限学习机器和深度学习。最终选择SVM作为LncFinder的分类器。经过全面的功能选择和模型验证方案的评估，LncFinder在多个物种上的表现优于几种最先进的工具。用户可以轻松，高效地使用新的数据集或不同的机器学习算法对LncFinder进行重新训练。
 
 [ ] [BETA](http://cistrome.org/BETA/) doi: 10.1038/nprot.2013.150
@@ -1254,7 +1251,6 @@ MAC:
 > Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 [ ] [SeqAcademy](http://www.seqacademy.org/) [GitHub](https://github.com/NCBI-Hackathons/seqacademy)
-
 
 [ ] [ECtools](https://github.com/jgurtowski/ectools)
 
