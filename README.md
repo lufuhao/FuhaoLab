@@ -895,6 +895,16 @@ mysql>exit;
 
 > 
 
+## [bioconvert](https://github.com/bioconvert/bioconvert)
+
+> easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 pyexcel-xls xlrd pyBigWig py2bit
+
+> pyexcel-xls 0.6.2 has requirement xlrd<2
+
+```
+pip3 install --user easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 xlrd pyBigWig py2bit
+```
+
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: dnaio xopen isal
@@ -953,6 +963,14 @@ pip3 install --user scipy
 pip3 install --user biopython boto3 coveralls cython deap ete3 gffutils jinja2 matplotlib networkx numpy graphviz PyPDF2 pytest pytest-cov pytest-benchmark PyYAML scipy seaborn
 
 pip3 install --user brewer2mpl ftpretty goatools more-itertools natsort ortools rich scikit_image webcolors
+```
+
+## [kingfisher](https://github.com/wwood/kingfisher-download)
+
+> bird_tool_utils>=0.2.17; extern
+
+```
+pip3 install --user bird_tool_utils extern
 ```
 
 ## [MACS](https://github.com/macs3-project/MACS)
@@ -1235,23 +1253,13 @@ Target analysis by integration of transcriptome and ChIP-seq data with BETA
 
 
 
-[kingfisher](https://github.com/wwood/kingfisher-download)
 
-
-[bioconvert](https://github.com/bioconvert/bioconvert)
-
-> easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 pyexcel-xls xlrd pyBigWig py2bit
-
-> pyexcel-xls 0.6.2 has requirement xlrd<2
-```
-pip3 install --user easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 xlrd pyBigWig py2bit
-```
 
 [ECtools](https://github.com/jgurtowski/ectools)
 
 [CLARI-TE](https://github.com/jdaron/CLARI-TE)
 
-sudo apt install zstd
+
 
 
 
