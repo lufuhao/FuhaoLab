@@ -1,10 +1,9 @@
-# Program installation scripts of Fu-Hao's Lab in Henan University, China
+# Fu-Hao Lab's scripts in Henan University, China
 
 This repository is setup to further simplify the compilation and installation of BioSoft in Linux.
 
 Just run the required scripts under bin/.
 
-Any problem should you report to the issue part, please.
 
 
 ---
@@ -19,12 +18,12 @@ Check out your machtype and set up your **MACHTYPE** variable
 uname -m
 ```
 
-Add folloing lines into "~/.bashrc"
+Add following lines into your env file, such as "~/.bashrc"
 
 ```
 export PROGPATH=${HOME}/Programs
 export BIODATABASES=${HOME}/Databases
-export MACHTYPE=x86_64
+export MACHTYPE="x86_64"
 export MODULEPATH=${PROGPATH}/bin/modules:$MODULEPATH
 ### $PROGPATH is the program installation root, all the programs will be installed in the folder
 ### $BIODATABASES id the database root, all the DB related files ill be installed in the folder
@@ -905,6 +904,16 @@ mysql>exit;
 pip3 install --user easydev colorlog pandas biopython>=1.70 mappy matplotlib networkx pyyaml pysam pyexcel pyexcel-ods3 xlrd pyBigWig py2bit
 ```
 
+## [CNVpytor](https://github.com/abyzovlab/CNVpytor) NOT working
+
+> requests>=2.0, gnureadline, pathlib>=1.0, pysam>=0.15, numpy>=1.16, scipy>=1.1, matplotlib>=2.2, h5py>=2.9, xlsxwriter>=1.3
+
+> Note: difficult to install gnureadline
+
+```
+pip3 install --user requests gnureadline pathlib pysam numpy scipy matplotlib h5py xlsxwriter
+```
+
 ## [CutAdapt](https://github.com/marcelm/cutadapt)
 
 > Python modules: dnaio xopen isal
@@ -1226,38 +1235,30 @@ MAC:
 
 [ ] [LIII](https://github.com/aliakseis/LIII): BT download
 
+[ ] [CPAT](http://rna-cpat.sourceforge.net) [Publication](http://nar.oxfordjournals.org/content/41/6/e74.long)
+
+[ ] [CPC2](https://github.com/biocoder/CPC2) [online](http://cpc2.gao-lab.org/)
+
+> 为CPC 的升级版，发布于2017 年，是目前最新的lncRNA 鉴定工具，也代表着lncRNA  鉴定的最新研究进展。在经过大量的特征选择后，CPC2 最终的特征主要包括四条：最长ORF 长度，ORF 的完整性，Fickett 分数以及等电点 (isoelectric point, pI)[39,40]。其中等电点特征主要是通过将最长ORF  翻译为氨基酸序列，而后根据氨基酸等电点这一理化性质计算而得。与大多lncRNA 鉴定工具相同，CPC2 也使用了支持向量机来构建分类器。
+
+[ ] [PLEK](https://sourceforge.net/projects/plek)
+
+> PLEK软件通过序列的kmer构成来区分编码和非编码转录本，不需要通过比对来完成，所以运行速度较快，同时其性能受到测序错误的影响的概率较低，比较稳定。
+
+[ ] [lncFinder](http://bmbl.sdstate.edu/lncfinder/)
+
+> LncFinder是一种新的lncRNA识别工具。基于六聚体的对数距离，多尺度结构信息和从快速离散傅立叶变换获得的理化特征。为了确定最佳分类器，使用10倍交叉验证对五种广泛使用的机器学习算法进行了验证：逻辑回归，支持向量机（SVM），随机森林，极限学习机器和深度学习。最终选择SVM作为LncFinder的分类器。经过全面的功能选择和模型验证方案的评估，LncFinder在多个物种上的表现优于几种最先进的工具。用户可以轻松，高效地使用新的数据集或不同的机器学习算法对LncFinder进行重新训练。
+
+[ ] [BETA](http://cistrome.org/BETA/) doi: 10.1038/nprot.2013.150
+
+> Target analysis by integration of transcriptome and ChIP-seq data with BETA
+
+[ ] [SeqAcademy](http://www.seqacademy.org/) [GitHub](https://github.com/NCBI-Hackathons/seqacademy)
 
 
-[CPAT](http://rna-cpat.sourceforge.net) [paper](http://nar.oxfordjournals.org/content/41/6/e74.long)
+[ ] [ECtools](https://github.com/jgurtowski/ectools)
 
-[CPC2](https://github.com/biocoder/CPC2) [online](http://cpc2.gao-lab.org/)
-
-为CPC 的升级版，发布于2017 年，是目前最新的lncRNA 鉴定工具，也代表着lncRNA  鉴定的最新研究进展。在经过大量的特征选择后，CPC2 最终的特征主要包括四条：最长ORF 长度，ORF 的完整性，Fickett 分数以及等电点 (isoelectric point, pI)[39,40]。其中等电点特征主要是通过将最长ORF  翻译为氨基酸序列，而后根据氨基酸等电点这一理化性质计算而得。与大多lncRNA 鉴定工具相同，CPC2 也使用了支持向量机来构建分类器。
-
-[PLEK](https://sourceforge.net/projects/plek)
-
-PLEK软件通过序列的kmer构成来区分编码和非编码转录本，不需要通过比对来完成，所以运行速度较快，同时其性能受到测序错误的影响的概率较低，比较稳定。
-
-[lncFinder](http://bmbl.sdstate.edu/lncfinder/)
-
-LncFinder是一种新的lncRNA识别工具。基于六聚体的对数距离，多尺度结构信息和从快速离散傅立叶变换获得的理化特征。为了确定最佳分类器，使用10倍交叉验证对五种广泛使用的机器学习算法进行了验证：逻辑回归，支持向量机（SVM），随机森林，极限学习机器和深度学习。最终选择SVM作为LncFinder的分类器。经过全面的功能选择和模型验证方案的评估，LncFinder在多个物种上的表现优于几种最先进的工具。用户可以轻松，高效地使用新的数据集或不同的机器学习算法对LncFinder进行重新训练。
-
-[]()
-
-[BETA](http://cistrome.org/BETA/) doi: 10.1038/nprot.2013.150
-
-Target analysis by integration of transcriptome and ChIP-seq data with BETA
-
-[SeqAcademy](http://www.seqacademy.org/) [GitHub](https://github.com/NCBI-Hackathons/seqacademy)
-
-
-
-
-
-
-[ECtools](https://github.com/jgurtowski/ectools)
-
-[CLARI-TE](https://github.com/jdaron/CLARI-TE)
+[ ] [CLARI-TE](https://github.com/jdaron/CLARI-TE)
 
 
 
