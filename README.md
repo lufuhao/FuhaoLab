@@ -289,6 +289,10 @@ apt-get install libjemalloc-dev
 
 > g++
 
+## [EDTA](https://github.com/oushujun/EDTA)
+
+> conda
+
 ## [EMBOSS](http://emboss.sourceforge.net/download)
 
 > JDK (JAVA_HOME), libhpdf-dev, libpng-dev
@@ -1256,7 +1260,7 @@ MAC:
 
 [ ] [CLARI-TE](https://github.com/jdaron/CLARI-TE)
 
-[EDTA](https://github.com/oushujun/EDTA)
+
 
 
 
