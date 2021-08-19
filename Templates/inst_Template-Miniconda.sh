@@ -1,58 +1,58 @@
 #!/bin/bash
 source FuhaoLab.conf
 
-
 PackageName="edta"
 EnvName="EDTA"
 PackageVersTemp="version"
-InternetLink='oushujun/EDTA.git'
-NameUncompress="EDTA"
-TestCmd="./EDTA.pl --help"
+TestCmd="EDTA.pl --help"
 #PackageVers=""
 
-CheckPath $PackageName
-cd ${PROGPATH}/$PackageName/
+getCondaPackVers "$PackageName" "bioconda"
+PackageVers=$condaPackVersion
+PrintInfo "Package: $PackageName"
+PrintInfo "Version: $PackageVers"
+DeletePath ${PROGPATH}/$PackageName/$PackageVers
+
+#exit 0
+
+CheckPath $PackageName $PackageVers
+CreatePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
+conda create -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName --yes
+if [ $? -ne 0 ]; then
+	PrintError "Error: conda failed to create ENV: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName"
+	exit 100
+fi
+source activate ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName
+if [ -z "$CONDA_DEFAULT_ENV" ] || [ -z "$CONDA_PREFIX" ]; then
+	PrintError "Error: conda failed to activate ENV: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName"
+	exit 100
+else
+	PrintInfo "Current ENV: $CONDA_DEFAULT_ENV"
+	PrintInfo " ENV prefix: $CONDA_PREFIX"
+fi
+
+#exit 0
+
+cd ${PROGPATH}/$PackageName
+InternetLink='oushujun/EDTA.git'
+NameUncompress="EDTA"
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
 git clone ${GITHUB_CUSTOM_SITE}/$InternetLink
 if [ $? -ne 0 ]; then
 	echo "Error: failed to download $PackageName" >&2
 	exit 100
 fi
-
 cd ${PROGPATH}/$PackageName/$NameUncompress
-PackageVers=$()
-
-conda create -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName --yes
-conda activate ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName
-conda env update --file EDTA.yml
-
-exit 0
-cd ${PROGPATH}/$PackageName
-DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "mkdir -p ${PROGPATH}/$PackageName/$PackageVers"
-RunCmds "mv ${PROGPATH}/$PackageName/$NameUncompress ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-
-
-cd ${PROGPATH}/$PackageName/$NameUncompress
-RunCmds "cmake -DCMAKE_INSTALL_PREFIX=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE .."
-RunCmds "./configure --prefix=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
-RunCmds "make"
-RunCmds "make test"
-DeletePath ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-RunCmds "make install"
-
-
-
-exit 0
-if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
-	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin
-elif [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE ]; then
-	cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-else
-	PrintError "Error: install path not found: ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+conda env update --file EDTA.yml -p ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/$EnvName
+if [ $? -ne 0 ]; then
+	echo "Error: failed to update YML" >&2
 	exit 100
 fi
+
+#exit 0
+
+cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
 $TestCmd
 if [ $? -ne 0 ]; then
 	echo "Error: failed to install $PackageName-$PackageVers" >&2
@@ -60,11 +60,12 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
-
-export CONDA_ENVS_PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:$CONDA_ENVS_PATH
-
+ModuleInfo "module load $PackageName/$PackageVers"
+ModuleInfo "conda activate $EnvName"
+ModuleAppend "prepend-path    CONDA_ENVS_PATH    ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE"
+AddBashrc "### $PackageName-$PackageVers"
+AddBashrc "export CONDA_ENVS_PATH=${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE:\$CONDA_ENVS_PATH"
 
 DeletePath ${PROGPATH}/$PackageName/$NameUncompress
-
+conda deactivate
 exit 0
