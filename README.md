@@ -289,10 +289,6 @@ apt-get install libjemalloc-dev
 
 > g++
 
-## [EDTA](https://github.com/oushujun/EDTA)
-
-> conda
-
 ## [EMBOSS](http://emboss.sourceforge.net/download)
 
 > JDK (JAVA_HOME), libhpdf-dev, libpng-dev
@@ -1186,6 +1182,15 @@ sudo apt-get install gfortran libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libft
 ---
 
 # MiniConda3
+
+## [EDTA](https://github.com/oushujun/EDTA)
+
+> conda
+
+```
+module load edta
+conda activate EDTA
+```
 
 ## [pb-assembly](https://github.com/PacificBiosciences/pb-assembly)
 

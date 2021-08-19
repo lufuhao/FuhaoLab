@@ -19,7 +19,8 @@ RunCmds "rsync -aP rsync://hgdownload.soe.ucsc.edu/genome/admin/exe/linux.x86_64
 #RunCmds "rsync -aP rsync://hgdownload-sd.soe.ucsc.edu/genome/admin/exe/linux.x86_64/ ./"
 
 cd ${PROGPATH}/$PackageName
-PackageVers="v"$(stat -c '%y%m' twoBitToFa | sed 's/\s\+.*$//;s/-//g;')
+PackageVers="v"$(stat -c '%y%m' ${PROGPATH}/$PackageName/$PackageVersTmp/$MACHTYPE/twoBitToFa | sed 's/\s\+.*$//;s/-//g;')
+PrintError "Version: $PackageVers"
 mv ${PROGPATH}/$PackageName/$PackageVersTmp ${PROGPATH}/$PackageName/$PackageVers
 
 if [ -d ${PROGPATH}/$PackageName/$PackageVers/$MACHTYPE/bin ]; then
