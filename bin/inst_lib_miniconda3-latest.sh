@@ -32,21 +32,33 @@ fi
 #./conda init
 
 condaRC_file="${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/.condarc"
-if [ -e $condaRC_file ]
+if [ -e $condaRC_file ]; then
 	rm -rf $condaRC_file > /dev/null 2>&1
 fi
-echo "conda config --add channels conda-forge" > $condaRC_file
-echo "conda config --add channels defaults" >> $condaRC_file
-echo "conda config --add channels r" >> $condaRC_file
-echo "conda config --add channels bioconda" >> $condaRC_file
-echo "conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/" >> $condaRC_file
-echo "conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/" >> $condaRC_file
-echo "conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/" >> $condaRC_file
-echo "conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/" > $condaRC_file
-echo "conda config --set show_channel_urls yes" > $condaRC_file
-
+condaConfRc $condaRC_file
 
 cd ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE
-AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+#AddEnvironVariable ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE "$PackageName-$PackageVers"
+AddBashrc "### $PackageName-$PackageVers"
+AddBashrc "export CONDA_ROOT=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
+ModuleAppend "setenv    CONDA_ROOT    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE"
+#if [ -s ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/etc/profile.d/conda.sh ]; then
+#	AddBashrc "source ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/etc/profile.d/conda.sh"
+#	ModuleAppend "source-sh    bash    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/etc/profile.d/conda.sh"
+#else
+	AddBashrc "export PATH=${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/bin:\$PATH"
+	ModuleAppend "prepend-path    PATH    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/bin"
+#fi
+AddBashrc "export CONDARC=$condaRC_file:\$CONDARC"
+ModuleAppend "prepend-path    CONDARC    $condaRC_file"
+#AddBashrc "export CONDA_ENVS_PATH=${PROGPATH}/libraries/$PackageName/envs:${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/envs:\$CONDA_ENVS_PATH"
+#ModuleAppend "prepend-path    CONDA_ENVS_PATH    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/envs"
+#ModuleAppend "prepend-path    CONDA_ENVS_PATH    ${PROGPATH}/libraries/$PackageName/envs"
+#AddBashrc "export CONDA_PKGS_DIRS=${PROGPATH}/libraries/$PackageName/pkgs:${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/pkgs:\$CONDA_PKGS_DIRS"
+#ModuleAppend "prepend-path    CONDA_PKGS_DIRS    ${PROGPATH}/libraries/$PackageName/$PackageVers/$MACHTYPE/pkgs"
+#ModuleAppend "prepend-path    CONDA_PKGS_DIRS    ${PROGPATH}/libraries/$PackageName/pkgs"
 
+if [ -e ${PROGPATH}/libraries/$PackageName/$NameCompress ]; then
+	rm ${PROGPATH}/libraries/$PackageName/$NameCompress > /dev/null 2>&1
+fi
 exit 0
